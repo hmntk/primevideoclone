@@ -21,7 +21,7 @@ function App() {
       <span>THis is chnage made by Hemanth</span>
 
 
-      <h1> Final change on test branch at Bhawani</h1><<<<<<< demo1
+      <h1> Final change on test branch at Bhawani</h1>demo1
       <h1>Change inside new demo branch Bhawani</h1>
       <h2>This again change from Bhawani Demo1</h2>
       <h2>This again change from Bhawani Demo1 again</h2>
