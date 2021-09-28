@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import "./Components/Signup";
+import Signup from './Components/Signup';
 
 function App() {
   return (
     <div className="App">
-      <h1>This is Abhay's branch</h1>
-      <h2>Prime</h2>
+        <Signup></Signup>
     </div>
   );
 }
