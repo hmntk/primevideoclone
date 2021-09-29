@@ -5,6 +5,7 @@ import { Homepage } from '../Homepage'
 import { Navbar1 } from '../Navbar1'
 import Signin from '../Signin'
 import CreateAccount from '../CreateAccount'
+import { PaymentPage } from '../PaymentPage'
 
 export const Routes = () => {
     return (
@@ -19,7 +20,10 @@ export const Routes = () => {
                     <Signin />
                 </Route>
                 <Route path="/createaccount">
-                    <CreateAccount/>
+                    <CreateAccount />
+                </Route>
+                <Route path="/payment">
+                    <PaymentPage />
                 </Route>
             </Switch>
         </div>
