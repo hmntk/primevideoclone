@@ -68,6 +68,7 @@ export const PaymentPage = () => {
                 </div>
                
             <div className="continue"><button>Continue</button></div>
+            <br />
         </div>
     );
 };
