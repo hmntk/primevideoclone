@@ -18,6 +18,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 14px;
+    font-size: 14px;
+    font-family: Amazon Ember;
+    font-style: Regular;
 }
 
 .footer1_bottomDiv_font {

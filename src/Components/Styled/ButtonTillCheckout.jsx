@@ -14,7 +14,9 @@ const Button_LoginToPrime = styled.button`
     line-height: 150%;
     border: none;
 
-    color: #ffffff;
+    & > a{
+        color: #ffffff;
+    }
 
     &:hover {
         background: #00a8e1;
@@ -35,6 +37,10 @@ const Button_getStarted = styled.button`
     border: none;
     color: #ffffff;
 
+    & > a {
+        color: #ffffff;
+    }
+
     &:hover {
         background: #00a8e1;
     }
@@ -53,6 +59,10 @@ const Button_getPrimePerMonth = styled.button`
     line-height: 150%;
     border: none;
     color: #ffffff;
+
+    & > a {
+        color: #ffffff;
+    }
 
     &:hover {
         background: #00a8e1;
@@ -73,6 +83,32 @@ const Button_continueAtPayment = styled.button`
     border: none;
     color: #ffffff;
 
+    & > a {
+        color: #ffffff;
+    }
+
+    &:hover {
+        background: #00a8e1;
+    }
+`;
+
+const Button_watchNow = styled.button`
+    width: 131px;
+    height: 41px;
+    background: #0f79af;
+    border-radius: 4px;
+
+    font-family: Amazon Ember;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 150%;
+    border: none;
+    color: #ffffff;
+
+    & > a {
+        color: #ffffff;
+    }
+
     &:hover {
         background: #00a8e1;
     }
@@ -83,4 +119,5 @@ export {
     Button_getStarted,
     Button_getPrimePerMonth,
     Button_continueAtPayment,
+    Button_watchNow,
 };
