@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Modules_Css/Navbar1.module.css";
 import Primelogo from "../images/Primelogo.svg";
 import LanguageEnLogo from "../images/Nav1_LanguageEnglishLogo.svg";
+import { Link } from "react-router-dom";
 
 export const Navbar1 = () => {
     return (
@@ -15,7 +16,12 @@ export const Navbar1 = () => {
                 <div className={styles.nav1_rightDiv_language}>
                     <img src={LanguageEnLogo} alt="" />
                 </div>
-                <div className={styles.nav1_rightDiv_signIn}>Sign In</div>
+                <div className={styles.nav1_rightDiv_signIn}>
+                    {" "}
+                    <Link className={styles.nav1_rightDiv_signIn_link} to="/signin">
+                        Sign In
+                    </Link>
+                </div>
             </div>
         </div>
     );
