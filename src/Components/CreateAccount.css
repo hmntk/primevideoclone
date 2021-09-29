@@ -2,10 +2,17 @@ body {
 	font-family: Arial, sans-serif;
 	font-style: normal;
 }
+
+.CreateAccountInLogoImg {
+	width: 150px;
+	height: 47px;
+	margin: 40px auto;
+}
+
 .signupBox {
 	width: 372px;
 	height: 590px;
-	margin-top: 90px;
+	margin-top: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 48px;
@@ -27,6 +34,7 @@ body {
 	line-height: 14px;
 	letter-spacing: 0.02cm;
 	color: #111111;
+	margin-left: 0px !important;
 }
 
 .passwordLine {
@@ -127,7 +135,7 @@ body {
 	width: 350px;
 	display: flex;
 	justify-content: space-evenly;
-	margin-left: 500px;
+	margin-left: 37%;
 }
 
 .conditions p {
@@ -154,7 +162,7 @@ body {
 	font-size: 10px;
 	line-height: 12px;
 	color: #222222;
-	margin-left: 580px;
+	margin-left: 43%;
 }
 
 .forSignin {

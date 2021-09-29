@@ -1,17 +1,18 @@
 import "./CreateAccount.css";
 
 const CreateAccount = () => {
+   
+   
     return (
         <div>
-            <div>
-                 <img src="" alt="" />
+            <div className="CreateAccountInLogoImg" >
+                 <img src="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/avod/AV_Logo_150._CB430404026_.png" alt="" />
             </div>
             
-            <div className="signupBox">
+            <div className="signupBox" >
                 <h2 >Create account</h2>
-                
                 <label htmlFor="">Your name</label>
-                <input type="text" className=""/>
+                <input type="text" className="name"/>
                  <label htmlFor="">Email</label>
                 <input type="text" />
                 <label htmlFor="" className="passwordLine">Password</label>

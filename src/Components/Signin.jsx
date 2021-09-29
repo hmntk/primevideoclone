@@ -3,8 +3,8 @@ import "./Signin.css";
 const Signin = () => {
     return (
         <div>
-            <div>
-                 <img src="" alt="" />
+            <div className="signupInLogoImg">
+                 <img src="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/avod/AV_Logo_150._CB430404026_.png" alt="" />
             </div>
             
             <div className="signupBox">
