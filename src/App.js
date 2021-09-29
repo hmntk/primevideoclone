@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-import { Navbar1 } from "./Components/Navbar1";
-import Signin from "./Components/Signin";
-import CreateAccount from "./Components/CreateAccount";
-
-function App() {
-    return (
-        <div className="App">
-        {/* <Navbar1 /> */}
-        {/* <Signin></Signin> */}
-        <CreateAccount></CreateAccount>
-        </div>
-=======
 import "./App.css";
 
 import { Footer1 } from "./Components/Footer1";
@@ -29,8 +15,14 @@ function App() {
         <>
             <Routes />
         </>
->>>>>>> 5d2af1ec7e7cd5962c6346ab084a16c56b5c2ae7
     );
 }
 
 export default App;
+
+        // {
+        //     /* <Navbar1 /> */
+        // }
+        // {
+        //     /* <Signin></Signin> */
+        // }
