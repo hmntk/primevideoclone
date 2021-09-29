@@ -1,0 +1,35 @@
+.Home_mainDiv{
+    font-family: Amazon Ember;
+    background: #252E39;
+    width: 100%;
+    margin: auto;
+    color: white;
+    margin-top: 72px;
+}
+
+.Home_mainDiv_flexDiv{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+    align-items:center;
+}
+.Home_mainDiv_flexDiv1{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items:center;
+}
+
+
+.Home_mainDiv_flexDiv_ContentDiv{
+    margin-left: 56px;
+}
+.Home_mainDiv_flexDiv_ContentDiv_h1{
+    font-size: 36px;
+    margin: 0px;
+}
+
+.Home_mainDiv_flexDiv_ContentDiv_p{
+    font-size: 20px;
+    line-height: 20px;
+}

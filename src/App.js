@@ -1,13 +1,15 @@
 
+import {Routes} from "./components/Routes/Routes"
 import './App.css';
-import { PaymentPage } from './components/PaymentPage';
 
 function App() {
-  return (
-    <div className="App">
-        <PaymentPage/>
-    </div>
-  );
+    return (
+        <>
+           <Routes/>
+        </>
+
+    );
+
 }
 
 export default App;
