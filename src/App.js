@@ -1,4 +1,5 @@
 import "./App.css";
+import { Footer1 } from "./Components/Footer1";
 import { Navbar1 } from "./Components/Navbar1";
 import rectangle12 from "./images/Rectangle12.png";
 import rectangle13 from "./images/Rectangle13.png";
@@ -8,6 +9,8 @@ import rectangle16 from "./images/Rectangle16.png";
 
 function App() {
   return (
+    <>
+    <Navbar1 />
     <div
       style={{
         background: "#252E39",
@@ -176,7 +179,9 @@ function App() {
           </button>
         </div>
       </div>
-    </div>
+      </div>
+      <Footer1/>
+      </>
   );
 }
 
