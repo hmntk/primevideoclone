@@ -1,14 +1,14 @@
 
-import {Routes} from "./components/Routes/Routes"
+import { PaymentPage } from './Components/PaymentPage';
+
 import './App.css';
 
 function App() {
-    return (
-        <>
-           <Routes/>
-        </>
-
-    );
+  return (
+      <div>
+        <PaymentPage/>
+      </div>
+    )
 
 }
 

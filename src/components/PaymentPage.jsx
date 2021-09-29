@@ -33,7 +33,7 @@ export const PaymentPage = () => {
                 </div>
                 <div className="info">
                     <span className="i">i </span>
-                    <span>
+                    <span >
                         Rs129 will be automatically charged every month for your Prime
                         membership.Cancel anytime.
                     </span>
