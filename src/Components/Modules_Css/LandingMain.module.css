@@ -1,0 +1,19 @@
+body {
+	background-color: #0f171e;
+}
+
+h1 {
+	color: whitesmoke;
+}
+
+.recommended {
+	width: 96%;
+	margin: 20px 30px;
+}
+
+.recommendedHeading {
+	font-size: 18px;
+	line-height: 22px;
+	color: #ffffff;
+	margin-bottom: 10px;
+}

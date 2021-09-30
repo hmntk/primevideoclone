@@ -14,13 +14,15 @@ const Movies = () => {
         e.target.play();
       }
       function handleMouseOut(e) {
-        e.target.pause();
+          e.target.pause();
+        //   e.poster={movieImg}
+          console.log(e);
       }
       
     return (
         <div className="moviesDiv">
             <div className="movies">
-                <video muted onMouseEnter={handleMouseIn} onMouseOut={handleMouseOut}><source src={MIRZAPUR}></source> </video>
+                <video muted onMouseEnter={handleMouseIn}  onMouseOut={handleMouseOut}><source src={MIRZAPUR}></source> </video>
                {/* <img src={movieImg} alt="" /> */}
             </div>
             <div className="movieDetails">

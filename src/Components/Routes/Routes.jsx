@@ -2,10 +2,13 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { Footer1 } from '../Footer1'
 import { Homepage } from '../Homepage'
+import LandingMain from "../LandingMain";
 import { Navbar1 } from '../Navbar1'
 import Signin from '../Signin'
 import CreateAccount from '../CreateAccount'
 import { PaymentPage } from '../PaymentPage'
+import { Navbar2 } from '../Navbar2';
+import TvShows from '../TvShows';
 
 export const Routes = () => {
     return (
@@ -24,6 +27,16 @@ export const Routes = () => {
                 </Route>
                 <Route path="/payment">
                     <PaymentPage />
+                </Route>
+                <Route path="/home">
+                    <Navbar2 displayPage="home" />
+                    <LandingMain />
+                    <Footer1 />
+                </Route>
+                <Route path="/tvshows">
+                    <Navbar2 displayPage="tvshows" />
+                    <TvShows />
+                    <Footer1 />
                 </Route>
             </Switch>
         </div>

@@ -1,0 +1,178 @@
+.nav2_mainDiv {
+    position: absolute;
+    width: 100%;
+    height: 72px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    background: #1a242f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8) !important;
+    z-index: 2;
+}
+.nav2_leftDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav2_leftDiv_primelogo {
+    margin-left: 56px;
+}
+
+.nav2_leftDiv_common {
+    margin-left: 16px;
+}
+
+.nav2_leftDiv_home {
+    margin-left: 30px;
+}
+
+.nav2_rightDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav2_rightDiv_search {
+    margin-right: 10px;
+    width: 233px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.nav2_rightDiv_search:hover{
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255);
+}
+
+.nav2_rightDiv_signIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 104px;
+    height: 35px;
+    margin-left: 32px;
+    margin-right: 56px;
+
+    font-family: Amazon Ember;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: rgba(255, 255, 255, 0.8) !important;
+    cursor: pointer;
+}
+
+.nav2_rightDiv_signIn :hover{
+    color: #ffffff;
+}
+
+
+.nav2_rightDiv_searchInput {
+    height: 100%;
+    width: 80%;
+    background-color: #1a242f;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Amazon Ember;
+    font-style: Regular;
+    font-size: 16px;
+}
+
+
+
+.nav2_rightDiv_searchIcon {
+    margin-right: 16px;
+    margin-left: 10px;
+}
+
+.common_link_color {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.common_link_color:hover {
+    color: #ffffff !important;
+}
+
+.nav2_rightDiv_userImage {
+    margin-right: 8px;
+}
+.nav2_rightDiv_un {
+    margin-right: 11.33px;
+    font-family: Amazon Ember;
+    font-style: Regular;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.nav2_rightDiv_dd {
+    margin-right: 3.33px;
+}
+
+.profileDropdown {
+    position: absolute;
+    right: 60px;
+    width: 354px;
+    height: 204px;
+    background-color: #252e39;
+    display: grid;
+    grid-template-columns: 187px 187px;
+    padding-left: 20px;
+    padding-top: 14px;
+    font-family: Amazon Ember;
+    font-style: Regular;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: -5%;
+    z-index: 1;
+}
+
+.profileDropdown1 {
+    display: none;
+}
+
+.withIcon_dropdown {
+    display: flex;
+    justify-content: left;
+}
+
+.withIcon_dropdown img {
+    width: 24px;
+    margin-right: 10px;
+    margin-top: -22px;
+}
+.withIcon_dropdown_p {
+    display: inline;
+}
+
+.searchDropdown{
+    position: absolute;
+    right: 201px;
+    width: 233px;
+    min-height: 0px;
+    background-color: #252e39;
+    display: grid;
+    grid-template-columns: 233px;
+    padding-left: 20px;
+    font-family: Amazon Ember;
+    font-style: Regular;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: -5%;
+    z-index: 2;
+}
+
+.searchDropdown > div{
+   width: 233px;
+   height: 37px;  
+   margin-top: 5px;
+}
+
+.nav2_right_Xicon{
+    margin-right: 5px;
+}
