@@ -9,7 +9,7 @@ import actionAndAdventure from "../image/actionAndAdventure.png";
 import Ellipse6 from "../image/Ellipse6.png";
 
 import {
-    Button_continueAtPayment,
+    Button_continueAtPayment
 } from "./Styled/ButtonTillCheckout";
 
 export const PaymentPage = () => {
@@ -37,7 +37,7 @@ export const PaymentPage = () => {
                 </div>
                 <div className="info">
                     <span className="i">i </span>
-                    <span>
+                    <span >
                         Rs129 will be automatically charged every month for your Prime
                         membership.Cancel anytime.
                     </span>

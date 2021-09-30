@@ -115,7 +115,6 @@
 }
 
 .profileDropdown {
-    margin-top: 72px;
     position: absolute;
     right: 60px;
     width: 354px;
@@ -152,7 +151,6 @@
 }
 
 .searchDropdown{
-    margin-top: 72px;
     position: absolute;
     right: 201px;
     width: 233px;
@@ -166,6 +164,7 @@
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: -5%;
+    z-index: 2;
 }
 
 .searchDropdown > div{

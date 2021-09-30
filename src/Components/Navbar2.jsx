@@ -10,8 +10,18 @@ import kidIcon_dropdown from "../images/kidIcon_dropdown.svg";
 import addIcon_dropdown from "../images/addIcon_dropdown.svg";
 import close_X_search_button from "../images/close_X_search_button.svg";
 
-export const Navbar2 = () => {
-    const [displayDD, setDisplayDD] = useState(false)
+const pageDisplay = {
+    "textDecoration": "underline",
+    "color": "#ffffff"
+}
+const empty = {
+};
+
+export const Navbar2 = ({ displayPage}) => {
+    console.log('displayPage:', displayPage)
+    const [displayDD, setDisplayDD] = useState(false);
+    const [searchItem, setSearchItem] = useState([]);
+    console.log('searchItem:', searchItem)
     return (
         <>
             <div className={styles.nav2_mainDiv}>
@@ -20,7 +30,12 @@ export const Navbar2 = () => {
                         <img src={Primelogo} alt="" />
                     </div>
                     <div className={styles.nav2_leftDiv_home}>
-                        <Link className={styles.common_link_color} to="/home">
+                        <Link
+                            style={displayPage === "home" ? pageDisplay : empty}
+                            
+                            className={styles.common_link_color}
+                            to="/home"
+                        >
                             Home
                         </Link>
                     </div>
@@ -30,6 +45,9 @@ export const Navbar2 = () => {
                         }
                     >
                         <Link
+                            style={
+                                displayPage === "tvshows" ? pageDisplay : empty
+                            }
                             className={styles.common_link_color}
                             to="/tvshows"
                         >
@@ -42,7 +60,13 @@ export const Navbar2 = () => {
                             styles.nav2_leftDiv_common)
                         }
                     >
-                        <Link className={styles.common_link_color} to="/movies">
+                        <Link
+                            style={
+                                displayPage === "movies" ? pageDisplay : empty
+                            }
+                            className={styles.common_link_color}
+                            to="/movies"
+                        >
                             Movies
                         </Link>
                     </div>
@@ -52,7 +76,11 @@ export const Navbar2 = () => {
                             styles.nav2_leftDiv_common)
                         }
                     >
-                        <Link className={styles.common_link_color} to="/kids">
+                        <Link
+                            style={displayPage === "kids" ? pageDisplay : empty}
+                            className={styles.common_link_color}
+                            to="/kids"
+                        >
                             Kids
                         </Link>
                     </div>
@@ -122,7 +150,9 @@ export const Navbar2 = () => {
             </div>
 
             <div className={styles.searchDropdown}>
-                {/* We will take our search items here for search time only */}
+                {searchItem.map((item) => (
+                    <div>{item}</div>
+                ))}
             </div>
         </>
     );

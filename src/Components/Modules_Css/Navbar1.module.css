@@ -10,7 +10,6 @@
     justify-content: space-between;
     align-items: center;
     color: rgba(255, 255, 255, 0.8) !important;
-    z-index: 2;
 }
 .nav1_leftDiv {
     /* display: flex;
