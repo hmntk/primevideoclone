@@ -9,8 +9,20 @@ import CreateAccount from '../CreateAccount'
 import { PaymentPage } from '../PaymentPage'
 import { Navbar2 } from '../Navbar2';
 import TvShows from '../TvShows';
+import axios from "axios";
+import { useState } from "react";
+import { VideoPlayer1 } from '../VideoPlayer';
 
 export const Routes = () => {
+
+    // const [test, setTest] = useState("");
+
+    // async function getData() {
+    //     let res = await axios.get("/prime");
+    //     console.log(res);
+    //     setTest(res.data);
+    // }
+    getData();
     return (
         <div>
             <Switch>
@@ -37,6 +49,9 @@ export const Routes = () => {
                     <Navbar2 displayPage="tvshows" />
                     <TvShows />
                     <Footer1 />
+                </Route>
+                <Route path="/videoplayer">
+                    <VideoPlayer1 />
                 </Route>
             </Switch>
         </div>

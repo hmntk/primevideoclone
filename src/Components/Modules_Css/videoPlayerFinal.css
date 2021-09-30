@@ -1,0 +1,27 @@
+.video_mainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.video-js {
+    margin-top: 100px;
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+}
+
+.video-js .vjs-big-play-button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-size: 70px;
+}
+.closeTheVideo{
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    font-size: 50px;
+    z-index: 1;
+    display: block;
+}
