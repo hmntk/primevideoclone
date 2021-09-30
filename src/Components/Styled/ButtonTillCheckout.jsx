@@ -114,10 +114,49 @@ const Button_watchNow = styled.button`
     }
 `;
 
+const Button_Play = styled.button`
+    width: 87px;
+    height: 41px;
+    background: #0f79af;
+
+    font-family: Amazon Ember;
+    font-style: normal;
+    font-size: 14px;
+    border: none;
+    color: #ffffff;
+
+    & > a {
+        color: #ffffff;
+    }
+
+    &:hover {
+        background: #00a8e1;
+    }
+`;
+
+const Button_playSignOnlyRound = styled.button`
+    width: 40px;
+    height: 40px;
+    background: #252e39;
+    border-radius: 50%;
+    border: none;
+    color: #ffffff;
+
+    & > a {
+        color: #ffffff;
+    }
+
+    &:hover {
+        background: #4b5c70;
+    }
+`;
+
 export {
     Button_LoginToPrime,
     Button_getStarted,
     Button_getPrimePerMonth,
     Button_continueAtPayment,
     Button_watchNow,
+    Button_Play,
+    Button_playSignOnlyRound,
 };

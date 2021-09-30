@@ -1,0 +1,125 @@
+.mainLeft {
+    width: 45%;
+    height: 88px;
+    color: #ffffff;
+    font-family: Amazon Ember;
+    font-style: Regular;
+    font-size: 16px;
+    margin-left: 55px;
+    margin-top: 100px;
+}
+
+.allButtons_flex {
+    display: flex;
+    justify-content: left;
+    margin-top: 27px;
+    margin-bottom: 28px;
+}
+
+.allButtons_flex button {
+    margin-left: 12px;
+}
+.playButton_main {
+    display: flex;
+    margin-left: 0px !important;
+    margin-right: 36px;
+}
+
+.playButton_main img {
+    margin-left: 10px;
+    margin-top: 12px;
+}
+.playButton_main h2 {
+    margin-left: 15px;
+    margin-top: 12px;
+    display: inline;
+    font-family: Amazon Ember;
+    font-style: Regular;
+    font-size: 16px;
+}
+.description {
+    font-family: Amazon Ember;
+    font-style: Regular;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 21.71px;
+    letter-spacing: 0.2px;
+}
+
+.top10_mainDiv {
+    margin: 14px 15px 18px 0px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.top10_mainDiv p {
+    display: inline;
+    margin-left: 15px;
+}
+.top10_mainDiv img {
+    display: inline;
+}
+.ratingImg {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 18px;
+}
+.directorName_mainDiv {
+    display: flex;
+    font-family: Amazon Ember;
+    font-style: Bold;
+    font-size: 16px;
+}
+
+.directorName_leftDiv {
+    color: #999ea3;
+}
+.directorName_rightDiv {
+    color: #0f79af;
+    cursor: pointer;
+}
+.directorName_rightDiv > div:hover {
+    color: #00a8e1;
+}
+.termsOfuse_mainDiv {
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 36px;
+    margin-bottom: 38px;
+}
+.termsOfuse_mainDiv span {
+    color: #0f79af;
+}
+.termsOfuse_mainDiv span:hover {
+    color: #00a8e1;
+}
+
+.backGroundVideo {
+    position: absolute;
+    width: 80%;
+    left: 20%;
+    right: 0;
+    top: 94px;
+    height: 640px;
+    z-index: -1;
+    margin-top: -100px;
+}
+.related_detail_flex {
+    font-family: Amazon Ember;
+    font-style: Bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 407px;
+}
+
+.related_detail_flex div:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.related_detail_flex :nth-child(1) {
+    margin-right: 32px;
+    color: #ffffff;
+    text-decoration: underline;
+}

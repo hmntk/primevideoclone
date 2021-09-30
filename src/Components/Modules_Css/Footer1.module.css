@@ -24,13 +24,11 @@
     font-family: Amazon Ember;
     font-style: Regular;
     font-size: 14px;
-    color: #0F79AF;
+    color: #0f79af;
     margin-right: 16px;
     cursor: pointer;
 }
 
-.footer1_bottomDiv_font:hover{
-    color: #00A8E1;
+.footer1_bottomDiv_font:hover {
+    color: #00a8e1;
 }
-
-

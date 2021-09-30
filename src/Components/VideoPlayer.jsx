@@ -1,20 +1,20 @@
 import React from "react";
 import VideoPlayer from 'react-video-js-player';
-import dummyVideo from './video/dummyVideo.mp4'
-import posterImage from '../images/Rectangle20.png'
+import AeDilHeMuskil from "./video/AeDilHeMuskil.mp4";
+import posterImage from './video/aedilWallpaper.webp'
 import './Modules_Css/videoPlayerFinal.css'
 import close_X_search_button from '../images/close_X_search_button.svg'
 import { Link } from "react-router-dom";
 
 
 export const VideoPlayer1 = () => {
-    const videoSrc = dummyVideo;
+    const videoSrc = AeDilHeMuskil;
     const poster = posterImage;
     return (
         <>
             {/* <h1>VideoJs</h1> */}
             <div className='video_mainDiv'>
-                <Link to='/home'>
+                <Link to='/moviedetail'>
                 <img
                     className="closeTheVideo"
                     src={close_X_search_button}

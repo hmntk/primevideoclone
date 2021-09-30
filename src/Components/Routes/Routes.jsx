@@ -12,6 +12,7 @@ import TvShows from '../TvShows';
 import axios from "axios";
 import { useState } from "react";
 import { VideoPlayer1 } from '../VideoPlayer';
+import { MovieDetailPage } from '../MovieDetailPage';
 
 export const Routes = () => {
 
@@ -22,7 +23,7 @@ export const Routes = () => {
     //     console.log(res);
     //     setTest(res.data);
     // }
-    getData();
+    // getData();
     return (
         <div>
             <Switch>
@@ -52,6 +53,11 @@ export const Routes = () => {
                 </Route>
                 <Route path="/videoplayer">
                     <VideoPlayer1 />
+                </Route>
+                <Route path="/moviedetail">
+                    <Navbar2 displayPage="" />
+                    <MovieDetailPage />
+                    <Footer1 />
                 </Route>
             </Switch>
         </div>
