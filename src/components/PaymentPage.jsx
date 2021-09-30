@@ -8,6 +8,10 @@ import raamRaavan from "../image/raamRaavan.png";
 import actionAndAdventure from "../image/actionAndAdventure.png";
 import Ellipse6 from "../image/Ellipse6.png";
 
+import {
+    Button_continueAtPayment
+} from "./Styled/ButtonTillCheckout";
+
 export const PaymentPage = () => {
     return (
         <div style={{ width: "100 %",height:"100vh"}}>
@@ -67,7 +71,7 @@ export const PaymentPage = () => {
                     </div>
                 </div>
                
-            <div className="continue"><button>Continue</button></div>
+            <div className="continue"><Button_continueAtPayment>Continue</Button_continueAtPayment></div>
             <br />
         </div>
     );
