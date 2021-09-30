@@ -4,6 +4,7 @@
 
 
 
+
 import './App.css';
 import Movies from './Components/Movies';
 
@@ -12,6 +13,7 @@ function App() {
     <div>
        <Movies/>
       {/* <Routes /> */}
+      
     </div>
   )
 }

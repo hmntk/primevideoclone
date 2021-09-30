@@ -4,33 +4,10 @@ import Play from "../images/Play.png"
 import plus from "../images/plus.png" 
 import stop from "../images/stop.png" 
 import UA13 from "../images/UA13.png" 
-import addToWishlist from "../images/addToWishlist.png" 
-// import HoverVideoPlayer from 'react-hover-video-player';
+import addToWishlist from "../images/addToWishlist.png"
+import React from "react"
 
-// function MyComponent () {
-//     return (
-//       <HoverVideoPlayer
-//         videoSrc="https://www.youtube.com/embed/EwG9UCKvGzQ"
-//         pausedOverlay={
-//           <img
-//             src={movieImg}
-//             alt=""
-//             style={{
-//               width: "100%",
-//               height: "100%",
-//               objectFit: "cover",
-//             }}
-//           />
-//         }
-//         loadingOverlay={
-//           <div className="loading-overlay">
-//             <div className="loading-spinner" />
-//           </div>
-//         }
-//       />
-//     );
-// }
-// MyComponent()
+
 
 const Movies = () => {
     return (
@@ -60,8 +37,9 @@ const Movies = () => {
                     </div>
                 </div>
             </div>
-            <br />
-            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/EwG9UCKvGzQ" title="YouTube video player" frameborder="0" allow="fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+          
+           
+          
         </div>
      )
 }
