@@ -1,0 +1,187 @@
+body {
+	font-family: Arial, sans-serif;
+	font-style: normal;
+}
+
+.CreateAccountInLogoImg {
+	width: 150px;
+	height: 47px;
+	margin: 40px auto;
+}
+
+.signupBox {
+	width: 372px;
+	height: 590px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 48px;
+	background: #ffffff;
+	border: 1px solid #e0dfdf;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 48px;
+}
+
+.signupBox h2 {
+	margin-top: 0px;
+	font-size: 24px;
+}
+
+.signupBox label {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 14px;
+	letter-spacing: 0.02cm;
+	color: #111111;
+	margin-left: 0px !important;
+}
+
+.passwordLine {
+	display: flex;
+	justify-content: space-between;
+}
+
+.passwordInput {
+	margin-bottom: 4px !important;
+}
+
+.passwordLine p {
+	margin-top: 0px;
+}
+
+.forgot {
+	color: #0f79af;
+}
+
+.signupBox input {
+	width: 276px;
+	height: 30px;
+	margin-bottom: 20px;
+	box-shadow: 0px 2px 4px rgba(196, 196, 196, 0.8);
+	border-radius: 2px;
+}
+
+.butt {
+	width: 285px;
+	height: 30px;
+	background: #f77d0099;
+	margin-bottom: 24px;
+	box-shadow: 0px 2px 4px rgba(196, 196, 196, 0.8);
+	border-radius: 2px;
+}
+
+.text {
+	width: 284px;
+	height: 36px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 150%;
+	margin-top: 0px;
+}
+
+.checkBoxDiv {
+	display: flex;
+	margin-top: 37px;
+}
+
+.check {
+	width: 10px !important;
+	height: 10px !important;
+}
+
+.checkBoxDiv p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 150%;
+	margin-left: 5px;
+	margin-top: 0px;
+}
+
+.newToAmazon {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 150%;
+	display: flex;
+	justify-content: center;
+	margin-top: 0px;
+}
+
+.createAccountButt {
+	width: 285px;
+	height: 30px;
+	background: #f2f3f5;
+	margin-bottom: 24px;
+	box-shadow: 0px 2px 4px rgba(196, 196, 196, 0.8);
+	border-radius: 2px;
+}
+
+.footerBox {
+	width: 100%;
+	height: 296px;
+	margin-top: 0px;
+	background: linear-gradient(
+		180.47deg,
+		rgba(196, 196, 196, 0.2) 0.41%,
+		rgba(233, 228, 228, 0.2) 0.42%,
+		rgba(250, 243, 243, 0) 99.59%
+	);
+}
+
+.conditions {
+	width: 350px;
+	display: flex;
+	justify-content: space-evenly;
+	margin-left: 37%;
+}
+
+.conditions p {
+	font-family: Amazon Ember Display;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 12px;
+	color: #6366c4;
+}
+
+.passwordGuide {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 15px;
+	margin-top: 0px;
+	margin-left: 8px;
+	margin-bottom: 16px;
+}
+
+.copyRight {
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 12px;
+	color: #222222;
+	margin-left: 43%;
+}
+
+.forSignin {
+	width: 100%;
+	background: linear-gradient(
+		180.47deg,
+		rgba(196, 196, 196, 0.2) 0.41%,
+		rgba(233, 228, 228, 0.2) 0.42%,
+		rgba(250, 243, 243, 0) 99.59%
+	);
+	margin-top: 50px;
+}
+
+button:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+a:hover {
+	cursor: pointer;
+	color: #b85f0699;
+}

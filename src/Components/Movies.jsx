@@ -5,15 +5,23 @@ import plus from "../images/plus.png"
 import stop from "../images/stop.png" 
 import UA13 from "../images/UA13.png" 
 import addToWishlist from "../images/addToWishlist.png"
-import React from "react"
-
+import MIRZAPUR from "../Video/MIRZAPUR.mp4"
 
 
 const Movies = () => {
+    function handleMouseIn(e) {
+        // console.log(e);
+        e.target.play();
+      }
+      function handleMouseOut(e) {
+        e.target.pause();
+      }
+      
     return (
         <div className="moviesDiv">
             <div className="movies">
-               <img src={movieImg} alt="" />
+                <video muted onMouseEnter={handleMouseIn} onMouseOut={handleMouseOut}><source src={MIRZAPUR}></source> </video>
+               {/* <img src={movieImg} alt="" /> */}
             </div>
             <div className="movieDetails">
                 <div className="Div1">
@@ -38,7 +46,7 @@ const Movies = () => {
                 </div>
             </div>
           
-           
+          
           
         </div>
      )
