@@ -1,15 +1,19 @@
 
 .moviesDiv{
-    width: 42.32vh;
-    height:340px;
+    width: 250px;
+    /* height:340px; */
+    /* min-height: 200px; */
+    /* position: ; */
+    /* top: 100px; */
     margin: auto;
     
 }
 
 .movies{
 height: 146px;
-width: 42.32vh;
+width: 250px;
 border-radius: 0px;
+/* position: relative; */
 }
 
 .movies>img{
@@ -25,15 +29,16 @@ border-radius: 0px;
 
 
 .movieDetails{
-    width: 42.32vh;
-    height: 194px;
+    width: 250px;
+    height: 220px;
     background: #1A242F;
     padding-top: 18px;
     font-family: Amazon Ember;
-    /* display: none; */
-    position: absolute;
-    top:146px;
-    z-index: 23;
+    display: none;
+    /* position:relative; */
+    /* top:146px; */
+    margin-top: -5px;
+    z-index: 50;
 }   
 
 .movies:hover + .movieDetails{
@@ -104,8 +109,10 @@ border-radius: 0px;
     
 }
 .Div2>img:nth-child(2){
-    margin-left: 107px;
+    margin-left: 160px;
+    margin-top: -15px;
 }
+
 .movieDetails>p:nth-child(4){
     font-family: Amazon Ember;
     font-style: normal;
@@ -123,6 +130,7 @@ color: #FFFFFF;
 .Div3{
    margin-top: 16px;
    margin-left: 16px;
+   display: flex;
 }
 .Div3>span{
     font-family: Amazon Ember;
@@ -138,4 +146,9 @@ margin-right: 8px;
 .Div3>div{
     display: inline;
     margin-left: 28px;
+}
+
+.subtitle{
+    margin-left: 20px;
+    /* display: inline; */
 }

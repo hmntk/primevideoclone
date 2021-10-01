@@ -18,7 +18,7 @@ const Movies = () => {
     }
     function handleMouseOut(e) {
         e.target.pause();
-        // e.target.src={movieImg}
+        e.target.src={movieImg}
         //   console.log(e.target);
       }
  
@@ -40,18 +40,23 @@ const Movies = () => {
                 <div className="Div2">
                     <span > Bell Bottom</span>
                     <img src={UA13} alt="" />
+                    
                 </div>
                 <p>An undercover agent code-named Bellbottom embarks on a covert mission to free 210 hostages held by hijackers.</p>
                 <div className="Div3">
                     <span>2021</span>
                     <span>Family/Comedy </span>
                     <span>1h 41m </span>
-                    <div>
-                       <img src={addToWishlist}alt="" />
-                    </div>
+                  
+                    <img className="subtitle" src={addToWishlist} alt="" />
+                  
                 </div>
+                </div>
+               {/* <img style={{position:"relative"}} src={movieImg} alt="" /> */}
+                
             </div>
-            </div>
+
+
             </>
      )
 }

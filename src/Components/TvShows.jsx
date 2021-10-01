@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import style from "../Components/Modules_Css/LandingMain.module.css";
 import marathi from "../images/marathi.png";
 import "./carausol.css";
+import { Link } from "react-router-dom";
 
 
 function TvShows() {
@@ -50,193 +51,312 @@ function TvShows() {
    
     return (
         <>
-            <div style={{ margin: "24px", marginTop: '72px'}}>
-            <Slider >
-                <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ModernloveReviews/7b1a3248-afce-4022-a295-fdef63056883._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ThematicCampaignSep21/7403bd7d-a9cc-4f77-8754-440050b87cbb._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_TheFather_StarvsFoodS2_Judy_LDM/a1c87c74-2b4c-4cfa-8518-135e0cd7c578._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_TheGoodDoctorS3/8e35e161-29aa-4026-a720-186cecc58d07._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-                  <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_2andhalfmen_v1/efa21f30-ca41-4819-8679-04081d7dd3b9._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-                  <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-                  <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/G/01/digital/video/sonata/PV_IN_PataalLokDubbedTamilnTelugu/a88c93c6-64cd-4ab5-b3ff-63f054705e71._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-            </Slider>
+            <div style={{ margin: "24px", marginTop: "72px" }}>
+                <Slider>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ModernloveReviews/7b1a3248-afce-4022-a295-fdef63056883._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ThematicCampaignSep21/7403bd7d-a9cc-4f77-8754-440050b87cbb._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_TheFather_StarvsFoodS2_Judy_LDM/a1c87c74-2b4c-4cfa-8518-135e0cd7c578._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_TheGoodDoctorS3/8e35e161-29aa-4026-a720-186cecc58d07._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_2andhalfmen_v1/efa21f30-ca41-4819-8679-04081d7dd3b9._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/PV_IN_PataalLokDubbedTamilnTelugu/a88c93c6-64cd-4ab5-b3ff-63f054705e71._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                </Slider>
             </div>
 
             <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Continue watching</h2>
-                <div>
-                    <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
+                <Link to="/moviedetail">
+                    <div>
+                        <Slider {...settings}>
+                            {recommended.map((e) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
+                                    <div
+                                        style={{
+                                            width: "26px",
+                                            marginLeft: "10px",
+                                        }}
+                                    >
+                                        <img
+                                            src={e.imgUrl}
+                                            alt=""
+                                            style={{
+                                                width: "250px",
+                                                height: "146px",
+                                            }}
+                                        />
                                     </div>
                                 );
-                            })
-                        }
-                    </Slider>
-                </div>
-               
+                            })}
+                        </Slider>
+                    </div>
+                </Link>
             </div>
 
             <div className={style.recommended}>
-                <h2 className={style.recommendedHeading}>Top-rated TV shows on IMDb</h2>
+                <h2 className={style.recommendedHeading}>
+                    Top-rated TV shows on IMDb
+                </h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {recommended.map((e) => {
+                            return (
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
             <div className={style.recommended}>
-                <h2 className={style.recommendedHeading}>Amazon Original Movies</h2>
+                <h2 className={style.recommendedHeading}>
+                    Amazon Original Movies
+                </h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {recommended.map((e) => {
+                            return (
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
-             <div className={style.recommended}>
-                <h2 className={style.recommendedHeading}>TV shows we think you'll like</h2>
+            <div className={style.recommended}>
+                <h2 className={style.recommendedHeading}>
+                    TV shows we think you'll like
+                </h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {recommended.map((e) => {
+                            return (
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
-             <div className={style.recommended}>
-                <h2 className={style.recommendedHeading}>Amazon Original series</h2>
+            <div className={style.recommended}>
+                <h2 className={style.recommendedHeading}>
+                    Amazon Original series
+                </h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {recommended.map((e) => {
+                            return (
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Comedy TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {recommended.map((e) => {
+                            return (
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                            );
+                        })}
                     </Slider>
                 </div>
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Drama TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {recommended.map((e) => {
+                            return (
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                            );
+                        })}
                     </Slider>
-                </div>  
+                </div>
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Thriller TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {recommended.map((e) => {
+                            return (
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                            );
+                        })}
                     </Slider>
-                </div>   
+                </div>
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Throwback TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {recommended.map((e) => {
+                            return (
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                            );
+                        })}
                     </Slider>
-                </div> 
+                </div>
             </div>
-       </>     
+        </>
     );
 }
 

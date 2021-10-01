@@ -97,13 +97,7 @@ function LandingMain() {
         },
              
     ]
-    function handleMouseIn(e) {
-        e.target.play();
-      }
-      function handleMouseOut(e) {
-          e.target.pause();
-          console.log(e.target);
-      }
+   
 
     return (
         <>
@@ -172,16 +166,18 @@ function LandingMain() {
                                         marginLeft: "10px",
                                     }}
                                 >
-                                    <img
+                                    {/* <img
                                         src={e.imgUrl}
                                         alt=""
                                         style={{
                                             width: "250px",
                                             height: "146px",
                                         }}
-                                    />
+                                    /> */}
                 
-                                    <Movies/>
+                                    <Movies />
+                                   
+                                    
                                 </div>
                             );
                         })}
@@ -189,7 +185,7 @@ function LandingMain() {
                 </div>
             </div>
 
-            <div className={style.recommended}>
+            <div className={style.recommended1}>
                 <h2 className={style.recommendedHeading}>Recommended movies</h2>
                 <div>
                     <Slider {...settings}>

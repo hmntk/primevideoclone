@@ -9,6 +9,16 @@ h1 {
 .recommended {
 	width: 96%;
 	margin: 20px 30px;
+	/* position: relative; */
+	z-index: 10;
+	/* top: -100px; */
+}
+.recommended1 {
+	width: 96%;
+	margin: 20px 30px;
+	/* position: relative; */
+	/* z-index: 50; */
+	top: -250px;
 }
 
 .recommendedHeading {
