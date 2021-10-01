@@ -1,12 +1,12 @@
 import "../style/PaymentPage.css";
-import logo from "../image/amazonLogo.png";
-import visa from "../image/visa.png";
-import rupay from "../image/rupay.png";
-import mastercard from "../image/mastercard.png";
-import discover from "../image/discover.png";
-import raamRaavan from "../image/raamRaavan.png";
-import actionAndAdventure from "../image/actionAndAdventure.png";
-import Ellipse6 from "../image/Ellipse6.png";
+import logo from "../images/amazonLogo.png";
+import visa from "../images/visa.png";
+import rupay from "../images/rupay.png";
+import mastercard from "../images/mastercard.png";
+import discover from "../images/discover.png";
+import raamRaavan from "../images/raamRaavan.png";
+import actionAndAdventure from "../images/actionAndAdventure.png";
+import Ellipse6 from "../images/Ellipse6.png";
 
 import {
     Button_continueAtPayment

@@ -38,14 +38,15 @@ function Homepage() {
               </div>
               <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
                   <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
-                      Welcome to Prime Video
+                  Great Entertainment
                   </h1>
                   <p className={styles.Home_mainDiv_flexDiv_ContentDiv_p}>
-                      Join Prime to watch the latest movies and TV Shows and
-                      award-winning Amazon originals
+                  With your Prime memberships, you have access to exclusive 
+                  Amazon Originals, blockbuster Bollywood movies, regional 
+                  movies and more.
                   </p>
                   <Button_LoginToPrime>
-                      <Link to="/signin">Login to Prime Video</Link>
+                      <Link to="/signin">Get started</Link>
                   </Button_LoginToPrime>
               </div>
           </div>
@@ -55,14 +56,15 @@ function Homepage() {
               </div>
               <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
                   <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
-                      Welcome to Prime Video
+                  One membership, many benefits
                   </h1>
                   <p className={styles.Home_mainDiv_flexDiv_ContentDiv_p}>
-                      Join Prime to watch the latest movies and TV Shows and
-                      award-winning Amazon originals
+                  Your Prime membership now also inccludes ad-free musicc
+along with umlimited free, fast delivery on eligible items,
+exclusive access to deals & more.
                   </p>
                   <Button_LoginToPrime>
-                      <Link to="/signin">Login to Prime Video</Link>
+                      <Link to="/signin">Get started</Link>
                   </Button_LoginToPrime>
               </div>
           </div>
@@ -72,14 +74,16 @@ function Homepage() {
               </div>
               <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
                   <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
-                      Welcome to Prime Video
+                  Even better with Fire TV Stick
                   </h1>
                   <p className={styles.Home_mainDiv_flexDiv_ContentDiv_p}>
-                      Join Prime to watch the latest movies and TV Shows and
-                      award-winning Amazon originals
+                  The biggest movies and TV shows are always better on a big
+sccreen. Simply plug in your Amazon Fire TV Stick and stream
+on any HDTV. Press the voicce button on the remote and say
+the name of the title you want to watcch to find it in seconds.
                   </p>
                   <Button_LoginToPrime>
-                      <Link to="/signin">Login to Prime Video</Link>
+                      <Link to="/signin">Get started</Link>
                   </Button_LoginToPrime>
               </div>
           </div>
@@ -89,14 +93,14 @@ function Homepage() {
               </div>
               <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
                   <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
-                      Welcome to Prime Video
+                  Family Friendly
                   </h1>
                   <p className={styles.Home_mainDiv_flexDiv_ContentDiv_p}>
-                      Join Prime to watch the latest movies and TV Shows and
-                      award-winning Amazon originals
+                  With easy to use Parental Controls and a dediccated kids page, enjoy
+seccure, ad-free kids entertainment , Kids ccan enjoy popular TVshows like Peppa Pig, Powerpuff Girls, and Cchhota Bheem
                   </p>
                   <Button_LoginToPrime>
-                      <Link to="/signin">Login to Prime Video</Link>
+                      <Link to="/signin">Get started</Link>
                   </Button_LoginToPrime>
               </div>
           </div>

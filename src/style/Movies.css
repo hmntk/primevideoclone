@@ -1,38 +1,56 @@
 
 .moviesDiv{
-    width: 50.24vh;
-    height:403.59px;
-    /* border: 1px solid red; */
+    width: 250px;
+    /* height:340px; */
+    /* min-height: 200px; */
+    /* position: ; */
+    /* top: 100px; */
     margin: auto;
+    
 }
 
 .movies{
-height: 173.31px;
-width: 50.24vh;
+height: 146px;
+width: 250px;
 border-radius: 0px;
-/* border: 1px solid red; */
-}
-.movies>img{
-  width: 100%;
-  height: 173.31px;
+/* position: relative; */
 }
 
+.movies>img{
+  width: 100%;
+  height: 146px;
+}
+
+.movies>video{
+  width: 100%;
+  height: 146px;
+  
+}
+
+
 .movieDetails{
-    width: 50.24vh;
-    height: 230.28px;
+    width: 250px;
+    height: 220px;
     background: #1A242F;
-    padding-top: 29.03px;
+    padding-top: 18px;
     font-family: Amazon Ember;
     display: none;
+    /* position:relative; */
+    /* top:146px; */
+    margin-top: -5px;
+    z-index: 50;
 }   
 
 .movies:hover + .movieDetails{
     display: block;
 }
+
+.movieDetails:hover{
+    display: block;
+}
 .Div1{
     width: 100%;
     padding-left: 18px;
-    /* border: 1px solid white; */
     display: flex;
     align-items: center;
 }
@@ -43,75 +61,76 @@ border-radius: 0px;
 
 .Div1>span:nth-child(2){
     font-family: Amazon Ember;
-font-style: normal;
-font-weight: 500;
-font-size: 16.6183px;
-line-height: 20px;
-letter-spacing: 0.01em;
-color: #FFFFFF;
-margin-left: 13.98px;
-
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;  
+    letter-spacing: 0.01em;
+    margin-left: 13.98px;
+    color: #FFFFFF;
+    
 }
 
 .Div1>img:nth-child(3){
-  width: 16px;
+    width: 16px;
   height: 16px;
-  margin-left: 128px;
+  margin-left: 118px;
   
 }
 .Div1>img:nth-child(4){
-  width: 20px;
-  height: 20px;
-  margin-left: 19px;
+    width: 20px;
+    height: 20px;
+    margin-left: 14px;
   
 }
 
-.movieDetails>p{
+.movieDetails>p:nth-child(2){
     font-style: normal;
     font-weight: 500;
     font-size: 14.2443px;
     line-height: 17px;
     letter-spacing: 0.01em;
     color: #8096A3;
-    margin-top: 22.73px;
-    margin-left: 19px;
+    margin-top: 15px;
+    margin-left: 16px;
 }
 .Div2{
-    /* border: 1px solid red; */
-    margin-top: 14.02px;
+    margin-top: 9px;
 }
 
 .Div2>span:nth-child(1){
-   font-style: normal;
-   font-weight: bold;
-   font-size: 16.6183px;
-   line-height: 20px;
-   letter-spacing: 0.01em;
-   color: #FFFFFF;
-   margin-left: 18.99px;
+    font-family: Amazon Ember;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 16px;
+    color: #FFFFFF;
+    
 }
 .Div2>img:nth-child(2){
-    /* width: 45.22px;
-    height: 14.24px; */
-    margin-left: 107px;
+    margin-left: 160px;
+    margin-top: -15px;
 }
+
 .movieDetails>p:nth-child(4){
     font-family: Amazon Ember;
-font-style: normal;
-font-weight: normal;
-font-size: 10px;
-line-height: 12px;
-letter-spacing: 0.01em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    margin-left: 16px;
+    margin-top: 14px;
+    margin-right: 16px;
 color: #FFFFFF;
 
 }
 
 .Div3{
-   /* border: 1px solid red; */
-   margin-top: 18px;
+   margin-top: 16px;
+   margin-left: 16px;
    display: flex;
-   justify-content: space-between;
-   margin-left: 18.99px;
 }
 .Div3>span{
     font-family: Amazon Ember;
@@ -122,9 +141,14 @@ line-height: 14px;
 align-items: center;
 letter-spacing: 0.01em;
 color: #FFFFFF;
+margin-right: 8px;
 }
 .Div3>div{
-    flex-basis: 105px;
-   /* border: 1px solid red; */
-   padding-left: 66.8px;
+    display: inline;
+    margin-left: 28px;
+}
+
+.subtitle{
+    margin-left: 20px;
+    /* display: inline; */
 }

@@ -24,4 +24,5 @@ export const Footer1 = () => {
             </div>
         </div>
     );
-};
+
+}; 

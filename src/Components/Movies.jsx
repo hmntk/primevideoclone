@@ -5,15 +5,29 @@ import plus from "../images/plus.png"
 import stop from "../images/stop.png" 
 import UA13 from "../images/UA13.png" 
 import addToWishlist from "../images/addToWishlist.png"
-import React from "react"
-
+import MIRZAPUR from "../Video/MIRZAPUR.mp4"
 
 
 const Movies = () => {
+    
+    function handleMouseIn(e) {
+        
+       e.target.play();
+        
+        // e.target.src={MIRZAPUR}
+    }
+    function handleMouseOut(e) {
+        e.target.pause();
+        e.target.src={movieImg}
+        //   console.log(e.target);
+      }
+ 
     return (
+        <>
         <div className="moviesDiv">
             <div className="movies">
-               <img src={movieImg} alt="" />
+                <video muted onMouseEnter={handleMouseIn} poster={movieImg} src={MIRZAPUR} onMouseOut={handleMouseOut}></video>
+               {/* <img src={movieImg} alt="" /> */}
             </div>
             <div className="movieDetails">
                 <div className="Div1">
@@ -26,21 +40,24 @@ const Movies = () => {
                 <div className="Div2">
                     <span > Bell Bottom</span>
                     <img src={UA13} alt="" />
+                    
                 </div>
                 <p>An undercover agent code-named Bellbottom embarks on a covert mission to free 210 hostages held by hijackers.</p>
                 <div className="Div3">
                     <span>2021</span>
                     <span>Family/Comedy </span>
                     <span>1h 41m </span>
-                    <div>
-                       <img src={addToWishlist}alt="" />
-                    </div>
+                  
+                    <img className="subtitle" src={addToWishlist} alt="" />
+                  
                 </div>
+                </div>
+               {/* <img style={{position:"relative"}} src={movieImg} alt="" /> */}
+                
             </div>
-          
-           
-          
-        </div>
+
+
+            </>
      )
 }
  

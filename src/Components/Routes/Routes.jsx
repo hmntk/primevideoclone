@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { Footer1 } from '../Footer1'
 import { Homepage } from '../Homepage'
+import { SubscriptionPage } from '../SubscriptionPage'
 import LandingMain from "../LandingMain";
 import { Navbar1 } from '../Navbar1'
 import Signin from '../Signin'
@@ -9,12 +10,13 @@ import CreateAccount from '../CreateAccount'
 import { PaymentPage } from '../PaymentPage'
 import { Navbar2 } from '../Navbar2';
 import TvShows from '../TvShows';
-import axios from "axios";
-import { useState } from "react";
 import { VideoPlayer1 } from '../VideoPlayer';
 import { MovieDetailPage } from '../MovieDetailPage';
 import KidsPage from '../KidsPage';
 import MoviesTabPage from '../MoviesTabPage';
+import Movies from '../Movies'
+// import axios from "axios";
+// import { useState } from "react";
 
 export const Routes = () => {
 
@@ -32,6 +34,11 @@ export const Routes = () => {
                 <Route exact path="/">
                     <Navbar1 />
                     <Homepage />
+                    <Footer1 />
+                </Route>
+                <Route exact path="/subsciption">
+                    <Navbar1 />
+                    <SubscriptionPage />
                     <Footer1 />
                 </Route>
                 <Route path="/signin">
@@ -62,6 +69,9 @@ export const Routes = () => {
                     <Navbar2 displayPage="Kids" />
                     <KidsPage />
                     <Footer1 />
+                </Route>
+                <Route path="/movie">
+                    <Movies /> 
                 </Route>
                 <Route path="/videoplayer">
                     <VideoPlayer1 />

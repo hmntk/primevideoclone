@@ -10,6 +10,8 @@ import telugu from "../images/telugu.png";
 import axios from "axios";
 import "./carausol.css";
 import { useState, useEffect } from "react";
+// import MIRZAPUR from "../Video/MIRZAPUR.mp4"
+import Movies from './Movies';
 
 
 function LandingMain() {
@@ -135,55 +137,57 @@ function LandingMain() {
         },
              
     ]
+   
+
     return (
         <>
             <div style={{ margin: "24px", marginTop: "72px" }}>
                 <Slider>
                     <div>
                         <img
-                            style={{ width: "100%", height: "50vh" }}
+                            style={{ width: "100%", height: "50vh" }}  alt=""
                             src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_RARALaunch/0a9db673-4715-4013-9b81-63207f969f17._UR3000,600_SX1500_FMwebp_.jpeg"
                         ></img>
                     </div>
                     <div>
                         <img
-                            style={{ width: "100%", height: "50vh" }}
+                            style={{ width: "100%", height: "50vh" }} alt=""
                             src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UN_WrathofMan_NormalPeople_TheGirlfriendExperience_LP/dc969450-8e3c-496c-9def-e36252897997._UR3000,600_SX1500_FMwebp_.jpeg"
                         ></img>
                     </div>
                     <div>
                         <img
-                            style={{ width: "100%", height: "50vh" }}
+                            style={{ width: "100%", height: "50vh" }} alt=""
                             src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_MumbaiDiariesIMDBReview/ad9b8ebc-018e-43ba-829e-b3c07841a12f._UR3000,600_SX1500_FMwebp_.jpeg"
                         ></img>
                     </div>
                     <div>
                         <img
-                            style={{ width: "100%", height: "50vh" }}
+                            style={{ width: "100%", height: "50vh" }} alt=""
                             src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ThematicCampaignSep21/7403bd7d-a9cc-4f77-8754-440050b87cbb._UR3000,600_SX1500_FMwebp_.jpeg"
                         ></img>
                     </div>
                     <div>
                         <img
-                            style={{ width: "100%", height: "50vh" }}
+                            style={{ width: "100%", height: "50vh" }} alt=""
                             src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_ADHM_Film/en_us-hero_in_adhm_film-3000-600._UR3000,600_SX1500_FMwebp_.jpg"
                         ></img>
                     </div>
                     <div>
                         <img
-                            style={{ width: "100%", height: "50vh" }}
+                            style={{ width: "100%", height: "50vh" }} alt=""
                             src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ModernloveReviews/7b1a3248-afce-4022-a295-fdef63056883._UR3000,600_SX1500_FMwebp_.jpeg"
                         ></img>
                     </div>
                     <div>
                         <img
-                            style={{ width: "100%", height: "50vh" }}
+                            style={{ width: "100%", height: "50vh" }} alt=""
                             src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"
                         ></img>
                     </div>
                     <div>
                         <img
-                            style={{ width: "100%", height: "50vh" }}
+                            style={{ width: "100%", height: "50vh" }} alt=""
                             src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UE_StarvsFood_VandeBharat_SecretsofSinauli_Dis/013228d0-c3aa-408f-8136-fcbfce84b7cd._UR3000,600_SX1500_FMwebp_.jpeg"
                         ></img>
                     </div>
@@ -208,7 +212,7 @@ function LandingMain() {
                
             </div>
 
-            <div className={style.recommended}>
+            <div className={style.recommended1}>
                 <h2 className={style.recommendedHeading}>Recommended movies</h2>
                 <div>
                     <Slider {...settings}>

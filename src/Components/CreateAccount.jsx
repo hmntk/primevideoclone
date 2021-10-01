@@ -1,9 +1,28 @@
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CreateAccount.css";
 
 const CreateAccount = () => {
    
-   
+    const initState = {
+        name: "",
+        email: "",
+        password: "",
+        reEnterPassword:""
+    }
+    
+        const [signUpData, setsignUpData] = useState(initState)
+    
+        const handleChange=((e) => {
+            
+            const { name, value } = e.target;
+            setsignUpData({...signUpData,
+                [name]: value,
+            })
+        })
+    // console.log(signUpData);
+    
     return (
         <div>
             <div className="CreateAccountInLogoImg" >
@@ -13,14 +32,14 @@ const CreateAccount = () => {
             <div className="signupBox" >
                 <h2 >Create account</h2>
                 <label htmlFor="">Your name</label>
-                <input type="text" className="name"/>
+                <input onChange={handleChange} name="name" type="text" className="name"/>
                  <label htmlFor="">Email</label>
-                <input type="text" />
+                <input onChange={handleChange} name="email" type="text" />
                 <label htmlFor="" className="passwordLine">Password</label>
-                <input type="password" className="passwordInput" />
+                <input onChange={handleChange} name="password" type="password" className="passwordInput" />
                 <p className="passwordGuide">Passwords must be at least 6 characters.</p>
                  <label htmlFor="" className="passwordLine">Re-enter password</label>
-                <input type="password" />
+                <input onChange={handleChange} name="reEnterPassword" type="password" />
                 <button className="butt">Create your Amazon account</button>
 
                 <p className="text">By continuing, you agree to Amaxon's Conditions of Use and Privacy Notice</p>
