@@ -47,6 +47,11 @@ export const Routes = () => {
                 <Route path="/createaccount">
                     <CreateAccount />
                 </Route>
+                <Route path="/subscription">
+                    <Navbar2 />
+                    <SubscriptionPage />
+                    <Footer1 />
+                </Route>
                 <Route path="/payment">
                     <PaymentPage />
                 </Route>
@@ -60,18 +65,18 @@ export const Routes = () => {
                     <TvShows />
                     <Footer1 />
                 </Route>
-                 <Route path="/movies">
+                <Route path="/movies">
                     <Navbar2 displayPage="Movies" />
                     <MoviesTabPage />
                     <Footer1 />
                 </Route>
-                  <Route path="/kids">
+                <Route path="/kids">
                     <Navbar2 displayPage="Kids" />
                     <KidsPage />
                     <Footer1 />
                 </Route>
                 <Route path="/movie">
-                    <Movies /> 
+                    <Movies />
                 </Route>
                 <Route path="/videoplayer">
                     <VideoPlayer1 />
