@@ -44,7 +44,7 @@
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-.nav2_rightDiv_search:hover{
+.nav2_rightDiv_search:hover {
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255);
 }
@@ -68,10 +68,9 @@
     cursor: pointer;
 }
 
-.nav2_rightDiv_signIn :hover{
+.nav2_rightDiv_signIn :hover {
     color: #ffffff;
 }
-
 
 .nav2_rightDiv_searchInput {
     height: 100%;
@@ -84,8 +83,6 @@
     font-style: Regular;
     font-size: 16px;
 }
-
-
 
 .nav2_rightDiv_searchIcon {
     margin-right: 16px;
@@ -150,10 +147,11 @@
     display: inline;
 }
 
-.searchDropdown{
+.searchDropdown {
     position: absolute;
     right: 201px;
     width: 233px;
+    top: 72px;
     min-height: 0px;
     background-color: #252e39;
     display: grid;
@@ -165,14 +163,20 @@
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: -5%;
     z-index: 2;
+    overflow: hidden;
 }
 
-.searchDropdown > div{
-   width: 233px;
-   height: 37px;  
-   margin-top: 5px;
+.searchDropdown div {
+    width: 233px;
+    height: 37px;
+    margin-top: 5px;
 }
 
-.nav2_right_Xicon{
+.nav2_right_Xicon {
     margin-right: 5px;
+    cursor: pointer;
+}
+
+.nav2_right_Xicon_hide {
+    display: none;
 }
