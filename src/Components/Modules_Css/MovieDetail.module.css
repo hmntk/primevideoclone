@@ -123,3 +123,12 @@
     color: #ffffff;
     text-decoration: underline;
 }
+.video_boxShadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 640px;
+    box-shadow: 175px -140px 75px #0F171E inset, 15px -0px 75px #0F171E;
+    z-index: -1;
+}
