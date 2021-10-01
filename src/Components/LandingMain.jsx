@@ -13,7 +13,6 @@ import { useState, useEffect } from "react";
 
 
 function LandingMain() {
-     const [recommend, setRecommend] = useState([]);
     const [popular, setPopular] = useState([]);
     const [original, setOriginal] = useState([]);
     const [toprated, setToprated] = useState([]);
@@ -23,20 +22,31 @@ function LandingMain() {
     const [horrer, setHorrer] = useState([]);
     const [dubbed, setDubbed] = useState([]);
     const [telgu, setTelgu] = useState([]);
+    const [continu, setContinu] = useState([]);
 
     useEffect(() => {
         dataFetch();
+        dataFetchForContinue();
+        dataFetchForkidsCumRecommended();
     }, []);
     
+    const dataFetchForContinue = async () => {
+        const res = await axios.get("/continue");
+        console.log(res.data[0].recommended);
+        setContinu(res.data[0].recommended);
+    }
+
+     const dataFetchForkidsCumRecommended = async () => {
+        const res = await axios.get("/kids");
+         setKids(res.data[0].kidsAndFamilyMovies);
+    }
     const dataFetch = async () => {
         const res = await axios.get("/prime");
         console.log(res.data[0]);
-        setRecommend(res.data[0].recommended);
         setPopular(res.data[0].PopularMovies);
         setOriginal(res.data[0].AmazonOriginalMovies);
         setToprated(res.data[0].AmazonOriginalSeries);
         setAction(res.data[0].ActionAndAdventureMovies);
-        setKids(res.data[0].kidsAndFamilyMovies);
         setThriller(res.data[0].ThrillerMovies);
         setDubbed(res.data[0].MoviesDubbedInHindi);
         setTelgu(res.data[0].TeluguMovies);
@@ -127,34 +137,57 @@ function LandingMain() {
     ]
     return (
         <>
-        <div style={{margin:"24px"}}>
-            <h1>Home Page</h1>
-            <Slider >
-                <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_RARALaunch/0a9db673-4715-4013-9b81-63207f969f17._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UN_WrathofMan_NormalPeople_TheGirlfriendExperience_LP/dc969450-8e3c-496c-9def-e36252897997._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_MumbaiDiariesIMDBReview/ad9b8ebc-018e-43ba-829e-b3c07841a12f._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ThematicCampaignSep21/7403bd7d-a9cc-4f77-8754-440050b87cbb._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_ADHM_Film/en_us-hero_in_adhm_film-3000-600._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-                  <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ModernloveReviews/7b1a3248-afce-4022-a295-fdef63056883._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                  <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-                  <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UE_StarvsFood_VandeBharat_SecretsofSinauli_Dis/013228d0-c3aa-408f-8136-fcbfce84b7cd._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-            </Slider>
+            <div style={{ margin: "24px", marginTop: "72px" }}>
+                <Slider>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_RARALaunch/0a9db673-4715-4013-9b81-63207f969f17._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UN_WrathofMan_NormalPeople_TheGirlfriendExperience_LP/dc969450-8e3c-496c-9def-e36252897997._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_MumbaiDiariesIMDBReview/ad9b8ebc-018e-43ba-829e-b3c07841a12f._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ThematicCampaignSep21/7403bd7d-a9cc-4f77-8754-440050b87cbb._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_ADHM_Film/en_us-hero_in_adhm_film-3000-600._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ModernloveReviews/7b1a3248-afce-4022-a295-fdef63056883._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UE_StarvsFood_VandeBharat_SecretsofSinauli_Dis/013228d0-c3aa-408f-8136-fcbfce84b7cd._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                </Slider>
             </div>
 
             <div className={style.recommended}>
@@ -162,7 +195,7 @@ function LandingMain() {
                 <div>
                     <Slider {...settings}>
                         {
-                            recommend.map((e) => {
+                            continu.map((e) => {
                                 return (
                                     <div style={{width: "26px" ,marginLeft:"10px"}}>
                                         <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
@@ -180,7 +213,7 @@ function LandingMain() {
                 <div>
                     <Slider {...settings}>
                         {
-                            recommended.map((e) => {
+                            kids.map((e) => {
                                 return (
                                     <div style={{width: "26px" ,marginLeft:"10px"}}>
                                         <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
@@ -190,7 +223,23 @@ function LandingMain() {
                         }
                     </Slider>
                 </div>
-               
+            </div>
+
+            <div className={style.recommended}>
+                <h2 className={style.recommendedHeading}>Watch in your Language</h2>
+                <div>
+                    <Slider {...settingsLanguage}>
+                        {
+                            language.map((e) => {
+                                return (
+                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
+                                        <img src={e.imgPath} alt="" style={{ width: "128px", height: "126px" }} />
+                                    </div>
+                                );
+                            })
+                        }
+                    </Slider>
+                </div>
             </div>
 
             <div className={style.recommended}>
@@ -212,29 +261,11 @@ function LandingMain() {
             </div>
 
              <div className={style.recommended}>
-                <h2 className={style.recommendedHeading}>Watch in your Language</h2>
-                <div>
-                    <Slider {...settingsLanguage}>
-                        {
-                            language.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgPath} alt="" style={{ width: "128px", height: "126px" }} />
-                                    </div>
-                                );
-                            })
-                        }
-                    </Slider>
-                </div>
-               
-            </div>
-
-             <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Kids and family movies</h2>
                 <div>
                     <Slider {...settings}>
                         {
-                            kids.map((e) => {
+                            recommended.map((e) => {
                                 return (
                                     <div style={{width: "26px" ,marginLeft:"10px"}}>
                                         <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />

@@ -5,6 +5,7 @@ import style from "../Components/Modules_Css/LandingMain.module.css";
 import marathi from "../images/marathi.png";
 import "./carausol.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 
@@ -19,18 +20,29 @@ function TvShows() {
     const [horrer, setHorrer] = useState([]);
     const [dubbed, setDubbed] = useState([]);
     const [telgu, setTelgu] = useState([]);
+     const [continu, setContinu] = useState([]);
  
     
     useEffect(() => {
         dataFetch();
-    },[]);
+        dataFetchForContinue();
+        dataFetchForOriginal();
+    }, []);
+    
+     const dataFetchForContinue = async () => {
+        const res = await axios.get("/continue");
+        setContinu(res.data[0].recommended);
+    }
+
+      const dataFetchForOriginal = async () => {
+        const res = await axios.get("/OriginalMovies");
+          setOriginal(res.data[0].AmazonOriginalMovies);
+    }
 
     const dataFetch = async () => {
         const res = await axios.get("/prime");
         console.log(res.data[0]);
-        setRecommend(res.data[0].recommended);
         setPopular(res.data[0].PopularMovies);
-        setOriginal(res.data[0].AmazonOriginalMovies);
         setToprated(res.data[0].AmazonOriginalSeries);
         setAction(res.data[0].ActionAndAdventureMovies);
         setKids(res.data[0].kidsAndFamilyMovies);
@@ -39,10 +51,14 @@ function TvShows() {
         setTelgu(res.data[0].TeluguMovies);
     }
     
+
+
+
     const settings = {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 3,
+        width: "269px",
     };
 
     const recommended = [
@@ -80,34 +96,58 @@ function TvShows() {
    
     return (
         <>
-        <div style={{margin:"24px"}}>
-            <h1>Tv Shows</h1>
-            <Slider >
-                <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ModernloveReviews/7b1a3248-afce-4022-a295-fdef63056883._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ThematicCampaignSep21/7403bd7d-a9cc-4f77-8754-440050b87cbb._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_TheFather_StarvsFoodS2_Judy_LDM/a1c87c74-2b4c-4cfa-8518-135e0cd7c578._UR3000,600_SX1500_FMwebp_.jpeg"></img>
-                </div>
-                 <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_TheGoodDoctorS3/8e35e161-29aa-4026-a720-186cecc58d07._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-                  <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_2andhalfmen_v1/efa21f30-ca41-4819-8679-04081d7dd3b9._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-                  <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-                  <div>
-                    <img style={{width:"100%", height:"50vh"}} src="https://m.media-amazon.com/images/G/01/digital/video/sonata/PV_IN_PataalLokDubbedTamilnTelugu/a88c93c6-64cd-4ab5-b3ff-63f054705e71._UR3000,600_SX1500_FMwebp_.jpg"></img>
-                </div>
-            </Slider>
+       
+            <div style={{ margin: "24px", marginTop: "72px" }}>
+                <Slider>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ModernloveReviews/7b1a3248-afce-4022-a295-fdef63056883._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_ThematicCampaignSep21/7403bd7d-a9cc-4f77-8754-440050b87cbb._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_TheFather_StarvsFoodS2_Judy_LDM/a1c87c74-2b4c-4cfa-8518-135e0cd7c578._UR3000,600_SX1500_FMwebp_.jpeg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_TheGoodDoctorS3/8e35e161-29aa-4026-a720-186cecc58d07._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_2andhalfmen_v1/efa21f30-ca41-4819-8679-04081d7dd3b9._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_Office_v1/2efa5ef6-b2f4-4c6f-ab0f-a120fa7d934a._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                    <div>
+                        <img
+                            style={{ width: "100%", height: "50vh" }}
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/PV_IN_PataalLokDubbedTamilnTelugu/a88c93c6-64cd-4ab5-b3ff-63f054705e71._UR3000,600_SX1500_FMwebp_.jpg"
+                        ></img>
+                    </div>
+                </Slider>
             </div>
 
             <div className={style.recommended}>
@@ -115,7 +155,7 @@ function TvShows() {
                 <div>
                     <Slider {...settings}>
                         {
-                            recommend.map((e) => {
+                            continu.map((e) => {
                                 return (
                                     <div style={{width: "26px" ,marginLeft:"10px"}}>
                                         <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
@@ -133,7 +173,7 @@ function TvShows() {
                 <div>
                     <Slider {...settings}>
                         {
-                            toprated.map((e) => {
+                            original.map((e) => {
                                 return (
                                     <div style={{width: "26px" ,marginLeft:"10px"}}>
                                         <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
@@ -143,7 +183,6 @@ function TvShows() {
                         }
                     </Slider>
                 </div>
-               
             </div>
 
             <div className={style.recommended}>
@@ -151,7 +190,7 @@ function TvShows() {
                 <div>
                     <Slider {...settings}>
                         {
-                            original.map((e) => {
+                            toprated.map((e) => {
                                 return (
                                     <div style={{width: "26px" ,marginLeft:"10px"}}>
                                         <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./CreateAccount.css";
 
 const CreateAccount = () => {
@@ -25,7 +26,7 @@ const CreateAccount = () => {
                 <p className="text">By continuing, you agree to Amaxon's Conditions of Use and Privacy Notice</p>
     
                 <div className="forSignin">
-                    <p>Already have an account?<a href="">Sign-In</a></p>
+                    <p>Already have an account?<Link to='/signin'>Sign-In</Link></p>
                  </div>
             </div>
             
