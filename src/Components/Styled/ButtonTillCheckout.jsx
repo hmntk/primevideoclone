@@ -5,6 +5,7 @@ const Button_LoginToPrime = styled.button`
     height: 48px;
     background: #0f79af;
     border-radius: 4px;
+    margin-top: 47px;
 
     font-family: Amazon Ember;
     font-style: normal;

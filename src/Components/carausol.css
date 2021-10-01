@@ -1,0 +1,16 @@
+.slick-arrow.slick-next {
+	/* background-color: black; */
+	width: 50px;
+	height: 150px;
+}
+
+.slick-arrow.slick-prev {
+	width: 30px;
+	height: 150px;
+}
+
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-next:hover {
+	opacity: 0.6;
+	background-color: black;
+}
