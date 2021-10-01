@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "./Modules_Css/Navbar2.module.css";
 import Primelogo from "../images/Primelogo.svg";
 import LanguageEnLogo from "../images/Nav1_LanguageEnglishLogo.svg";
@@ -9,6 +9,8 @@ import searchIcon from '../images/searchIcon.svg'
 import kidIcon_dropdown from "../images/kidIcon_dropdown.svg";
 import addIcon_dropdown from "../images/addIcon_dropdown.svg";
 import close_X_search_button from "../images/close_X_search_button.svg";
+import axios from "axios";
+import debounce  from "lodash.debounce";
 
 const pageDisplay = {
     "textDecoration": "underline",
@@ -18,10 +20,51 @@ const empty = {
 };
 
 export const Navbar2 = ({ displayPage}) => {
-    console.log('displayPage:', displayPage)
     const [displayDD, setDisplayDD] = useState(false);
-    const [searchItem, setSearchItem] = useState([]);
-    console.log('searchItem:', searchItem)
+    const [searchItem, setSearchItem] = useState('');
+    const [searchItem1, setSearchItem1] = useState('');
+    const [storeSearchResult, setStoreSearchResult] = useState([]);
+    const [closeDisplay, setCloseDisplay] = useState(false);
+    console.log('closeDisplay:', closeDisplay)
+    console.log("searchItem:", storeSearchResult);
+    let timer;
+    
+    const handleSearch = async() => {
+        let res = await axios.get(
+            `http://www.omdbapi.com/?s=${searchItem}&i=tt4559006&apikey=3b96dacc&_limit=5`
+        );
+        if (res.data.Search !== undefined) {
+            setStoreSearchResult(res.data.Search);
+            console.log('in',res.data.Search)
+        }
+        console.log("out", res.data.Search);
+    }
+
+    useEffect(() => {
+        handleSearch();
+    }, [searchItem]);
+
+    useEffect(() => {
+        closeButtonSearch();
+    }, [displayPage]);
+
+    const deb = useCallback(
+        debounce((txt) => setSearchItem(txt), 500)
+    );
+
+    const handleText = (e) => {
+        console.log('e:', e)
+        let txt = e.target.value;
+        setCloseDisplay(true);
+        setSearchItem1(txt)
+        deb(txt)
+    }
+
+    const closeButtonSearch = () => {
+        setCloseDisplay(false)
+        setSearchItem1('')
+    }
+
     return (
         <>
             <div className={styles.nav2_mainDiv}>
@@ -32,7 +75,6 @@ export const Navbar2 = ({ displayPage}) => {
                     <div className={styles.nav2_leftDiv_home}>
                         <Link
                             style={displayPage === "home" ? pageDisplay : empty}
-                            
                             className={styles.common_link_color}
                             to="/home"
                         >
@@ -93,13 +135,20 @@ export const Navbar2 = ({ displayPage}) => {
                             alt=""
                         />
                         <input
+                            onChange={handleText}
                             className={styles.nav2_rightDiv_searchInput}
                             placeholder="Search"
                             type="text"
+                            value={searchItem1}
                             name=""
                         ></input>
                         <img
-                            className={styles.nav2_right_Xicon}
+                            onClick={closeButtonSearch}
+                            className={
+                                closeDisplay
+                                    ? styles.nav2_right_Xicon
+                                    : styles.nav2_right_Xicon_hide
+                            }
                             src={close_X_search_button}
                             alt=""
                         />
@@ -150,9 +199,16 @@ export const Navbar2 = ({ displayPage}) => {
             </div>
 
             <div className={styles.searchDropdown}>
-                {searchItem.map((item) => (
-                    <div>{item}</div>
-                ))}
+                {setStoreSearchResult.length !== 0 && closeDisplay
+                    ? storeSearchResult.map((item) => (
+                        <Link onClick={closeButtonSearch}
+                              className={styles.common_link_color}
+                              to="/moviedetail"
+                          >
+                              <div>{item.Title}</div>
+                          </Link>
+                      ))
+                    : ""}
             </div>
         </>
     );
