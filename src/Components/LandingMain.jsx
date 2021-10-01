@@ -10,11 +10,17 @@ import telugu from "../images/telugu.png";
 import axios from "axios";
 import "./carausol.css";
 import { useState, useEffect } from "react";
-// import MIRZAPUR from "../Video/MIRZAPUR.mp4"
-import Movies from './Movies';
+import "../style/hower.css"
+import Play from "../images/Play.png";
+import plus from "../images/plus.png";
+import stop from "../images/stop.png";
+import UA13 from "../images/UA13.png";
+import addToWishlist from "../images/addToWishlist.png"
+
 
 
 function LandingMain() {
+
     const [popular, setPopular] = useState([]);
     const [original, setOriginal] = useState([]);
     const [toprated, setToprated] = useState([]);
@@ -27,6 +33,7 @@ function LandingMain() {
     const [continu, setContinu] = useState([]);
 
     useEffect(() => {
+        console.log("hey I am here");
         dataFetch();
         dataFetchForContinue();
         dataFetchForkidsCumRecommended();
@@ -138,7 +145,11 @@ function LandingMain() {
              
     ]
    
+    const handleWatchLish = (el) => {
+        //console.log(el);
+    }
 
+    console.log(popular);
     return (
         <>
             <div style={{ margin: "24px", marginTop: "72px" }}>
@@ -199,11 +210,42 @@ function LandingMain() {
                 <div>
                     <Slider {...settings}>
                         {
-                            continu.map((e) => {
+                            continu.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
-                                    </div>
+                                    <>
+                                        <div onClick={() => { handleWatchLish(el) }} style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div>      
+                                        <div className="movieDetails">
+                                            <div>
+                                          <div className="Div1">
+                                               <img src={Play} alt="" />
+                                               <span>Play</span>
+                                               <img src={plus} alt="" />
+                                               <img src={stop} alt="" />
+                                           </div>
+                                             <p>Included with Prime</p>
+                                            <div className="Div2">
+                                                <span > Bell Bottom</span>
+                                                <img src={UA13} alt="" />
+                                            </div>
+                                            <p>An undercover agent code-named Bellbottom embarks on a covert mission to free 210 hostages held by hijackers.</p>
+                                           <div className="Div3">
+                                                <span>2021</span>
+                                                <span>Family/Comedy </span>
+                                                <span>1h 41m </span>
+                                               <img className="subtitle" src={addToWishlist} alt="" />
+                                            </div>
+                                            </div>
+                                       </div>
+                                
+                                   </> 
                                 );
                             })
                         }
@@ -217,11 +259,17 @@ function LandingMain() {
                 <div>
                     <Slider {...settings}>
                         {
-                            kids.map((e) => {
+                            kids.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "250px", height: "146px" }} />
-                                    </div>
+                                    <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }

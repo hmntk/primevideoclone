@@ -25,19 +25,18 @@
 }
 
 .movieDetails {
-	width: 250px;
-	height: 220px;
+	width: 280px;
+	height: 250px;
 	background: #1a242f;
 	padding-top: 18px;
 	font-family: Amazon Ember;
+	position: absolute;
 	display: none;
-	/* position:relative; */
-	/* top:146px; */
-	margin-top: -5px;
-	z-index: 50;
+	margin-top: 50px;
+	z-index: 100px;
 }
 
-.movies:hover + .movieDetails {
+.howerEffect:hover + .movieDetails {
 	display: block;
 }
 

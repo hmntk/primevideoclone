@@ -24,6 +24,7 @@ const Movies = () => {
  
     return (
         <>
+            
         <div className="moviesDiv">
             <div className="movies">
                 <video muted onMouseEnter={handleMouseIn} poster={movieImg} src={MIRZAPUR} onMouseOut={handleMouseOut}></video>

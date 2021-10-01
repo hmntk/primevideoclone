@@ -185,11 +185,17 @@ function MoviesTabPage() {
                 <div>
                     <Slider {...settings}>
                         {
-                            continu.map((e) => {
+                            continu.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
+                                    <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }
@@ -221,11 +227,17 @@ function MoviesTabPage() {
                 <div>
                     <Slider {...settings}>
                         {
-                            popular.map((e) => {
+                            popular.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
+                                    <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }
@@ -239,11 +251,17 @@ function MoviesTabPage() {
                 <div>
                     <Slider {...settings}>
                         {
-                            marathi.map((e) => {
+                            marathi.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
+                                    <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }
@@ -257,11 +275,17 @@ function MoviesTabPage() {
                 <div>
                     <Slider {...settings}>
                         {
-                            kids.map((e) => {
+                            kids.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
+                                    <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }
@@ -275,11 +299,17 @@ function MoviesTabPage() {
                 <div>
                     <Slider {...settings}>
                         {
-                            horrer.map((e) => {
+                            horrer.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
+                                    <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }
@@ -292,11 +322,17 @@ function MoviesTabPage() {
                 <div>
                     <Slider {...settings}>
                         {
-                            dubbed.map((e) => {
+                            dubbed.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{width: "96%", height: "146px" }} />
-                                    </div>
+                                   <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }
@@ -309,11 +345,17 @@ function MoviesTabPage() {
                 <div>
                     <Slider {...settings}>
                         {
-                            thriller.map((e) => {
+                            thriller.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{width: "96%", height: "146px" }} />
-                                    </div>
+                                   <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }
@@ -326,11 +368,17 @@ function MoviesTabPage() {
                 <div>
                     <Slider {...settings}>
                         {
-                            telgu.map((e) => {
+                            telgu.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{width: "96%", height: "146px" }} />
-                                    </div>
+                                     <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }

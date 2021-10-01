@@ -155,11 +155,17 @@ function TvShows() {
                 <div>
                     <Slider {...settings}>
                         {
-                            continu.map((e) => {
+                            continu.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
+                                    <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }
@@ -173,11 +179,17 @@ function TvShows() {
                 <div>
                     <Slider {...settings}>
                         {
-                            original.map((e) => {
+                            original.map((el) => {
                                 return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
+                                   <div style={{ width: "0px", marginLeft: "10px" }}>
+                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }} onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                    </div> 
                                 );
                             })
                         }
