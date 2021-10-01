@@ -14,12 +14,13 @@ const Button_LoginToPrime = styled.button`
     line-height: 150%;
     border: none;
 
-    & > a{
+    & > a {
         color: #ffffff;
     }
 
     &:hover {
         background: #00a8e1;
+        color: #ffffff;
     }
 `;
 
@@ -43,6 +44,7 @@ const Button_getStarted = styled.button`
 
     &:hover {
         background: #00a8e1;
+        color: #ffffff;
     }
 `;
 
@@ -66,6 +68,7 @@ const Button_getPrimePerMonth = styled.button`
 
     &:hover {
         background: #00a8e1;
+        color: #ffffff;
     }
 `;
 
@@ -89,6 +92,7 @@ const Button_continueAtPayment = styled.button`
 
     &:hover {
         background: #00a8e1;
+        color: #ffffff;
     }
 `;
 
@@ -111,6 +115,7 @@ const Button_watchNow = styled.button`
 
     &:hover {
         background: #00a8e1;
+        color: #ffffff;
     }
 `;
 
@@ -131,6 +136,7 @@ const Button_Play = styled.button`
 
     &:hover {
         background: #00a8e1;
+        color: #ffffff;
     }
 `;
 
@@ -148,6 +154,7 @@ const Button_playSignOnlyRound = styled.button`
 
     &:hover {
         background: #4b5c70;
+        color: #ffffff;
     }
 `;
 

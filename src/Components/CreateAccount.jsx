@@ -1,18 +1,19 @@
 
+import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./CreateAccount.css";
 
-const CreateAccount = () => {
-   
     const initState = {
         name: "",
         email: "",
         password: "",
-        reEnterPassword:""
-    }
-    
-        const [signUpData, setsignUpData] = useState(initState)
+        confirmPassword: "",
+    };
+
+const CreateAccount = () => {
+    const [signUpData, setsignUpData] = useState(initState)
+    const history = useHistory();
     
         const handleChange=((e) => {
             
@@ -22,41 +23,103 @@ const CreateAccount = () => {
             })
         })
     // console.log(signUpData);
+    const sendDataToDatabase = async(e) => {
+        e.preventDefault();
+        const {password, confirmPassword } = signUpData;
+        if (password === confirmPassword) {
+            let res = await axios.post("/users/signup", signUpData);
+            if (res.data === 'Email already exist') {
+                alert('Email already exist')
+            } else {
+                history.push("/signin");
+            }
+        } else {
+            alert('Password & Confirm Password not matched')
+        }
+    }
+
     
     return (
         <div>
-            <div className="CreateAccountInLogoImg" >
-                 <img src="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/avod/AV_Logo_150._CB430404026_.png" alt="" />
+            <div className="CreateAccountInLogoImg">
+                <img
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/avod/AV_Logo_150._CB430404026_.png"
+                    alt=""
+                />
             </div>
-            
-            <div className="signupBox" >
-                <h2 >Create account</h2>
-                <label htmlFor="">Your name</label>
-                <input onChange={handleChange} name="name" type="text" className="name"/>
-                 <label htmlFor="">Email</label>
-                <input onChange={handleChange} name="email" type="text" />
-                <label htmlFor="" className="passwordLine">Password</label>
-                <input onChange={handleChange} name="password" type="password" className="passwordInput" />
-                <p className="passwordGuide">Passwords must be at least 6 characters.</p>
-                 <label htmlFor="" className="passwordLine">Re-enter password</label>
-                <input onChange={handleChange} name="reEnterPassword" type="password" />
-                <button className="butt">Create your Amazon account</button>
 
-                <p className="text">By continuing, you agree to Amaxon's Conditions of Use and Privacy Notice</p>
-    
+            <div className="signupBox">
+                <form method='POST' onSubmit={sendDataToDatabase}>
+                    <h2>Create account</h2>
+                    <label htmlFor="">Your name</label>
+                    <input
+                        onChange={handleChange}
+                        name="name"
+                        type="text"
+                        className="name"
+                        required
+                    />
+                    <label htmlFor="">Email</label>
+                    <input
+                        onChange={handleChange}
+                        name="email"
+                        type="text"
+                        required
+                    />
+                    <label htmlFor="" className="passwordLine">
+                        Password
+                    </label>
+                    <input
+                        onChange={handleChange}
+                        name="password"
+                        type="password"
+                        minLength="6"
+                        className="passwordInput"
+                        required
+                    />
+                    <p className="passwordGuide">
+                        Passwords must be at least 6 characters.
+                    </p>
+                    <label htmlFor="" className="passwordLine">
+                        Re-enter password
+                    </label>
+                    <input
+                        onChange={handleChange}
+                        name="confirmPassword"
+                        type="password"
+                        minLength="6"
+                        required
+                    />
+                    <input
+                        type="submit"
+                        className="butt"
+                        value="Create your Amazon account"
+                    />
+                </form>
+
+                <p className="text">
+                    By continuing, you agree to Amaxon's Conditions of Use and
+                    Privacy Notice
+                </p>
+
                 <div className="forSignin">
-                    <p>Already have an account?<Link to='/signin'>Sign-In</Link></p>
-                 </div>
+                    <p>
+                        Already have an account?
+                        <Link to="/signin">Sign-In</Link>
+                    </p>
+                </div>
             </div>
-            
+
             <div className="footerBox">
                 <div className="conditions">
                     <p>Conditions of Use</p>
                     <p>Privacy Notice</p>
-                     <p>Help</p>
+                    <p>Help</p>
                 </div>
                 <div>
-                    <p className="copyRight">&#169;1996-2021, Amazon.com, Inc. or its affilates</p>
+                    <p className="copyRight">
+                        &#169;1996-2021, Amazon.com, Inc. or its affilates
+                    </p>
                 </div>
             </div>
         </div>

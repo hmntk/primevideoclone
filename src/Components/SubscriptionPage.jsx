@@ -28,7 +28,7 @@ function SubscriptionPage() {
                       award-winning Amazon originals
                   </p>
                   <Button_LoginToPrime>
-                      <Link to="/signin">Get Prime at Rs 129 per month</Link>
+                      <Link to="/payment">Get Prime at Rs 129 per month</Link>
                   </Button_LoginToPrime>
                   <p >
                       With any credit card or select debit cards
@@ -37,7 +37,7 @@ function SubscriptionPage() {
                   <p style={{marginLeft:"18vh"}}>or</p>
                
                   <Button_LoginToPrime>
-                      <Link to="/signin">Get Prime at Rs 999 per year</Link>
+                      <Link to="/payment">Get Prime at Rs 999 per year</Link>
                   </Button_LoginToPrime>
                   <p >
                   With all electronic payment methods and Payon Delivery for select PINs
