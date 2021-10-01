@@ -1,6 +1,24 @@
+import { useState } from "react";
 import "./Signin.css";
 
+const initState = {
+    name: "",
+    password:""
+}
+
 const Signin = () => {
+
+    const [signinData, setsigninData] = useState(initState)
+
+    const handleChange=((e) => {
+        
+        const { name, value } = e.target;
+        setsigninData({...signinData,
+            [name]: value,
+        })
+    })
+//   console.log(formdata);    
+
     return (
         <div>
             <div className="signupInLogoImg">
@@ -11,12 +29,12 @@ const Signin = () => {
                 <h2 >Sign-In</h2>
                 
                 <label htmlFor=""><p>Email or Mobile Phone Number</p></label>
-                <input type="text" />
+                <input onChange={handleChange} name="name" type="text" />
                 <label htmlFor="" className="passwordLine">
                     <p>Password</p>
                     <p className="forgot"><a href="">Forgot your password</a></p>
                 </label>
-                <input type="password" />
+                <input onChange={handleChange} name="password" type="password" />
                 <button className="butt">Sign-In</button>
 
                 <p className="text">By continuing, you agree to Amaxon's Conditions of Use and Privacy Notice</p>

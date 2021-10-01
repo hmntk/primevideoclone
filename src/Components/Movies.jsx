@@ -9,20 +9,24 @@ import MIRZAPUR from "../Video/MIRZAPUR.mp4"
 
 
 const Movies = () => {
+    
     function handleMouseIn(e) {
-        // console.log(e);
-        e.target.play();
+        
+       e.target.play();
+        
+        // e.target.src={MIRZAPUR}
+    }
+    function handleMouseOut(e) {
+        e.target.pause();
+        // e.target.src={movieImg}
+        //   console.log(e.target);
       }
-      function handleMouseOut(e) {
-          e.target.pause();
-        //   e.poster={movieImg}
-          console.log(e);
-      }
-      
+ 
     return (
+        <>
         <div className="moviesDiv">
             <div className="movies">
-                <video muted onMouseEnter={handleMouseIn}  onMouseOut={handleMouseOut}><source src={MIRZAPUR}></source> </video>
+                <video muted onMouseEnter={handleMouseIn} poster={movieImg} src={MIRZAPUR} onMouseOut={handleMouseOut}></video>
                {/* <img src={movieImg} alt="" /> */}
             </div>
             <div className="movieDetails">
@@ -47,10 +51,8 @@ const Movies = () => {
                     </div>
                 </div>
             </div>
-          
-          
-          
-        </div>
+            </div>
+            </>
      )
 }
  

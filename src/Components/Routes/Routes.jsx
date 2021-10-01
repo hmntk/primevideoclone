@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { Footer1 } from '../Footer1'
 import { Homepage } from '../Homepage'
+import { SubscriptionPage } from '../SubscriptionPage'
 import LandingMain from "../LandingMain";
 import { Navbar1 } from '../Navbar1'
 import Signin from '../Signin'
@@ -9,6 +10,7 @@ import CreateAccount from '../CreateAccount'
 import { PaymentPage } from '../PaymentPage'
 import { Navbar2 } from '../Navbar2';
 import TvShows from '../TvShows';
+import Movies from '../Movies'
 
 export const Routes = () => {
     return (
@@ -17,6 +19,11 @@ export const Routes = () => {
                 <Route exact path="/">
                     <Navbar1 />
                     <Homepage />
+                    <Footer1 />
+                </Route>
+                <Route exact path="/subsciption">
+                    <Navbar1 />
+                    <SubscriptionPage />
                     <Footer1 />
                 </Route>
                 <Route path="/signin">
@@ -37,6 +44,9 @@ export const Routes = () => {
                     <Navbar2 displayPage="tvshows" />
                     <TvShows />
                     <Footer1 />
+                </Route>
+                <Route path="/movie">
+                    <Movies />
                 </Route>
             </Switch>
         </div>

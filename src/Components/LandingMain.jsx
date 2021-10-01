@@ -8,6 +8,8 @@ import lang7 from "../images/lang7.png";
 import marathi from "../images/marathi.png";
 import telugu from "../images/telugu.png";
 import "./carausol.css";
+// import MIRZAPUR from "../Video/MIRZAPUR.mp4"
+import Movies from './Movies'
 
 
 function LandingMain() {
@@ -95,6 +97,14 @@ function LandingMain() {
         },
              
     ]
+    function handleMouseIn(e) {
+        e.target.play();
+      }
+      function handleMouseOut(e) {
+          e.target.pause();
+          console.log(e.target);
+      }
+
     return (
         <>
             <div style={{ margin: "24px", marginTop: "72px" }}>
@@ -170,6 +180,8 @@ function LandingMain() {
                                             height: "146px",
                                         }}
                                     />
+                
+                                    <Movies/>
                                 </div>
                             );
                         })}

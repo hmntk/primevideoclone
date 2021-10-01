@@ -12,7 +12,7 @@ import rectangle15 from "../images/Rectangle15.png";
 import rectangle16 from "../images/Rectangle16.png";
 import { Link } from 'react-router-dom';
 
-function Homepage() {
+function SubscriptionPage() {
   return (
       <div className={styles.Home_mainDiv}>
           <div className={styles.Home_mainDiv_flexDiv}>
@@ -28,8 +28,20 @@ function Homepage() {
                       award-winning Amazon originals
                   </p>
                   <Button_LoginToPrime>
-                      <Link to="/signin">Login to Prime Video</Link>
+                      <Link to="/signin">Get Prime at Rs 129 per month</Link>
                   </Button_LoginToPrime>
+                  <p >
+                      With any credit card or select debit cards
+                  </p>
+                  <br />
+                  <p style={{marginLeft:"18vh"}}>or</p>
+               
+                  <Button_LoginToPrime>
+                      <Link to="/signin">Get Prime at Rs 999 per year</Link>
+                  </Button_LoginToPrime>
+                  <p >
+                  With all electronic payment methods and Payon Delivery for select PINs
+                  </p>
               </div>
           </div>
           <div className={styles.Home_mainDiv_flexDiv1}>
@@ -108,4 +120,4 @@ seccure, ad-free kids entertainment , Kids ccan enjoy popular TVshows like Peppa
   );
 }
 
-export { Homepage };
+export { SubscriptionPage };
