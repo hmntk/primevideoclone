@@ -62,47 +62,73 @@ function OriginalMovies() {
    
 
     return (
-        <>
-        <div className={style.watchlist}>
-             
-            <div className={style.names}>
-                <div className={style.allnames}>
-                   
-                    <p className={style.all}>Amazon Original Movies</p>
+        <div
+            style={{
+                background: "#0F171E",
+                marginBottom: "-90px",
+                marginTop: "-18px",
+            }}
+        >
+            <div className={style.watchlist}>
+                <div className={style.names}>
+                    <div className={style.allnames}>
+                        <p className={style.all}>Amazon Original Movies</p>
+                    </div>
+                    <div>
+                        <div>
+                            Sort by:{" "}
+                            <a className={style.all}>
+                                {" "}
+                                Most Recent Addition{" "}
+                                <a className={style.yee}>v </a>{" "}
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div>Sort by: <a className={style.all}> Most Recent Addition <a className={style.yee}>v </a> </a></div>
-                </div>
-                </div>
-                
 
-            <div className={style.showGrid}>
-                    {
-                        original.map((el) => {
-                            return (
-                                <div className={style.watchlistEveryDiv}>
-                               <video muted  poster={el.imgUrl} onMouseEnter={(e) => {
-                                            e.target.src = el.videoUrl;
-                                            e.target.play();
-                                        }} onMouseOut={(e) => {
-                                            e.target.pause();
-                                            e.target.src = el.videoUrl;
-                                                }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                
-                                    <div className={style.playDiv} >
-                                        <p className={style.movieName}>{el.title}</p>
-                                        <div style={{display:"flex"}}>
-                                            <p style={{marginTop:"5px"}}>{el.year} <img className={style.subtitleImg} src={addToWishlist} /></p>
-                                            <img className={style.plusImg} src={plus}/>
-                                        </div> 
-                                    </div>   
-                                </div>  
-                            )
-                        })
-                  }  
-            </div>    
+                <div className={style.showGrid}>
+                    {original.map((el) => {
+                        return (
+                            <div className={style.watchlistEveryDiv}>
+                                <video
+                                    muted
+                                    poster={el.imgUrl}
+                                    onMouseEnter={(e) => {
+                                        e.target.src = el.videoUrl;
+                                        e.target.play();
+                                    }}
+                                    onMouseOut={(e) => {
+                                        e.target.pause();
+                                        e.target.src = el.videoUrl;
+                                    }}
+                                    src={el.videoUrl}
+                                    style={{ width: "250px", height: "146px" }}
+                                />
+
+                                <div className={style.playDiv}>
+                                    <p className={style.movieName}>
+                                        {el.title}
+                                    </p>
+                                    <div style={{ display: "flex" }}>
+                                        <p style={{ marginTop: "5px" }}>
+                                            {el.year}{" "}
+                                            <img
+                                                className={style.subtitleImg}
+                                                src={addToWishlist}
+                                            />
+                                        </p>
+                                        <img
+                                            className={style.plusImg}
+                                            src={plus}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
         </div>
-       </>         
     );
 }
 

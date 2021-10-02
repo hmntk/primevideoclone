@@ -125,8 +125,7 @@ function MoviesTabPage() {
 
    
     return (
-        <>
-       
+        <div style={{ background: "#0F171E", marginBottom: "-20px" }}>
             <div style={{ margin: "24px", marginTop: "72px" }}>
                 <Slider>
                     <div>
@@ -184,208 +183,319 @@ function MoviesTabPage() {
                 <h2 className={style.recommendedHeading}>Continue watching</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            continu.map((el) => {
-                                return (
-                                    <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="movieHower" poster={el.imgUrl} onMouseEnter={(e) => {
+                        {continu.map((el) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{ width: "0px", marginLeft: "10px" }}
+                                >
+                                    <video
+                                        muted
+                                        className="movieHower"
+                                        poster={el.imgUrl}
+                                        onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
-                                        }} onMouseOut={(e) => {
+                                        }}
+                                        onMouseOut={(e) => {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
-                                );
-                            })
-                        }
+                                        }}
+                                        src={el.videoUrl}
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
             <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Recommended movies</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {recommended.map((e) => {
+                            return (
+                                
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                ><Link to="/moviedetail">
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "96%",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </Link>
+                                </div>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
             <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Movies in Hindi</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            popular.map((el) => {
-                                return (
-                                    <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                        {popular.map((el) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{ width: "0px", marginLeft: "10px" }}
+                                >
+                                    <video
+                                        muted
+                                        className="howerEffect"
+                                        poster={el.imgUrl}
+                                        onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
-                                        }} onMouseOut={(e) => {
+                                        }}
+                                        onMouseOut={(e) => {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
-                                );
-                            })
-                        }
+                                        }}
+                                        src={el.videoUrl}
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Movies in Marathi</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            marathi.map((el) => {
-                                return (
-                                    <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                        {marathi.map((el) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{ width: "0px", marginLeft: "10px" }}
+                                >
+                                    <video
+                                        muted
+                                        className="howerEffect"
+                                        poster={el.imgUrl}
+                                        onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
-                                        }} onMouseOut={(e) => {
+                                        }}
+                                        onMouseOut={(e) => {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
-                                );
-                            })
-                        }
+                                        }}
+                                        src={el.videoUrl}
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Comedy Movies</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            kids.map((el) => {
-                                return (
-                                    <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                        {kids.map((el) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{ width: "0px", marginLeft: "10px" }}
+                                >
+                                    <video
+                                        muted
+                                        className="howerEffect"
+                                        poster={el.imgUrl}
+                                        onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
-                                        }} onMouseOut={(e) => {
+                                        }}
+                                        onMouseOut={(e) => {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
-                                );
-                            })
-                        }
+                                        }}
+                                        src={el.videoUrl}
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Horror Movies</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            horrer.map((el) => {
-                                return (
-                                    <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                        {horrer.map((el) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{ width: "0px", marginLeft: "10px" }}
+                                >
+                                    <video
+                                        muted
+                                        className="howerEffect"
+                                        poster={el.imgUrl}
+                                        onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
-                                        }} onMouseOut={(e) => {
+                                        }}
+                                        onMouseOut={(e) => {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
-                                );
-                            })
-                        }
+                                        }}
+                                        src={el.videoUrl}
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
                 </div>
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Drama TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            dubbed.map((el) => {
-                                return (
-                                   <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                        {dubbed.map((el) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{ width: "0px", marginLeft: "10px" }}
+                                >
+                                    <video
+                                        muted
+                                        className="howerEffect"
+                                        poster={el.imgUrl}
+                                        onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
-                                        }} onMouseOut={(e) => {
+                                        }}
+                                        onMouseOut={(e) => {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
-                                );
-                            })
-                        }
+                                        }}
+                                        src={el.videoUrl}
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
-                </div>  
+                </div>
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Thriller TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            thriller.map((el) => {
-                                return (
-                                   <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                        {thriller.map((el) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{ width: "0px", marginLeft: "10px" }}
+                                >
+                                    <video
+                                        muted
+                                        className="howerEffect"
+                                        poster={el.imgUrl}
+                                        onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
-                                        }} onMouseOut={(e) => {
+                                        }}
+                                        onMouseOut={(e) => {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
-                                );
-                            })
-                        }
+                                        }}
+                                        src={el.videoUrl}
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
-                </div>   
+                </div>
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Throwback TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            telgu.map((el) => {
-                                return (
-                                     <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                        {telgu.map((el) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{ width: "0px", marginLeft: "10px" }}
+                                >
+                                    <video
+                                        muted
+                                        className="howerEffect"
+                                        poster={el.imgUrl}
+                                        onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
-                                        }} onMouseOut={(e) => {
+                                        }}
+                                        onMouseOut={(e) => {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
-                                );
-                            })
-                        }
+                                        }}
+                                        src={el.videoUrl}
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
-                </div> 
+                </div>
             </div>
-       </>     
+        </div>
     );
 }
 

@@ -18,75 +18,86 @@ import { Link } from "react-router-dom";
 export const MovieDetailPage = () => {
     return (
         <>
-            <div className={styles.mainLeft}>
-                {" "}
-                <div>
-                    <h1>Ae Dil Hai Mushkil</h1>
-                    <div className={styles.top10_mainDiv}>
-                        <img src={top10_Tag} alt="" />
-                        <p>Number 1 in india</p>
+            <div style={{ height: "30px", background: "#0F171E", marginTop: '72px' }}></div>
+            <div style={{ background: "#0F171E" }}>
+                <div className={styles.mainLeft}>
+                    {" "}
+                    <div>
+                        <h1>Ae Dil Hai Mushkil</h1>
+                        <div className={styles.top10_mainDiv}>
+                            <img src={top10_Tag} alt="" />
+                            <p>Number 1 in india</p>
+                        </div>
+                        <img
+                            className={styles.ratingImg}
+                            src={ratingAndAll}
+                            alt=""
+                        />
+                        <p className={styles.description}>
+                            This story explores love - the shapes it takes, the
+                            ways it changes us and the exhilarating and often
+                            terrifying ride it takes us on. It is the journey of
+                            two characters, Alizeh and Ayan, as they navigate
+                            life, love and heartbreak.
+                        </p>
                     </div>
-                    <img
-                        className={styles.ratingImg}
-                        src={ratingAndAll}
-                        alt=""
-                    />
-                    <p className={styles.description}>
-                        This story explores love - the shapes it takes, the ways
-                        it changes us and the exhilarating and often terrifying
-                        ride it takes us on. It is the journey of two
-                        characters, Alizeh and Ayan, as they navigate life, love
-                        and heartbreak.
-                    </p>
-                </div>
-                <div className={styles.allButtons_flex}>
-                    <Link to="/videoplayer">
-                        <Button_Play className={styles.playButton_main}>
-                            {" "}
-                            <img src={playSign_onButton} alt="" />
-                            <h2>Play</h2>
-                        </Button_Play>
-                    </Link>
-                    <Button_playSignOnlyRound>
-                        <img src={playSign_onButton1} alt="" />
-                    </Button_playSignOnlyRound>
-                    <Button_playSignOnlyRound>
-                        <img src={plusSign_onButton} alt="" />
-                    </Button_playSignOnlyRound>
-                    <Button_playSignOnlyRound>
-                        <img src={giftSign_onButton} alt="" />
-                    </Button_playSignOnlyRound>
-                    <Button_playSignOnlyRound>
-                        <img src={downloadSign_onButton} alt="" />
-                    </Button_playSignOnlyRound>
-                </div>
-                <div className={styles.directorName_mainDiv}>
-                    <div className={styles.directorName_leftDiv}>
-                        <div>Directors</div>
-                        <div>Starring</div>
-                        <div>Genres</div>
-                        <div>Subtitles</div>
-                        <div>Audio languages</div>
+                    <div className={styles.allButtons_flex}>
+                        <Link to="/videoplayer">
+                            <Button_Play className={styles.playButton_main}>
+                                {" "}
+                                <img src={playSign_onButton} alt="" />
+                                <h2>Play</h2>
+                            </Button_Play>
+                        </Link>
+                        <Button_playSignOnlyRound>
+                            <img src={playSign_onButton1} alt="" />
+                        </Button_playSignOnlyRound>
+                        <Button_playSignOnlyRound>
+                            <img src={plusSign_onButton} alt="" />
+                        </Button_playSignOnlyRound>
+                        <Button_playSignOnlyRound>
+                            <img src={giftSign_onButton} alt="" />
+                        </Button_playSignOnlyRound>
+                        <Button_playSignOnlyRound>
+                            <img src={downloadSign_onButton} alt="" />
+                        </Button_playSignOnlyRound>
                     </div>
-                    <div className={styles.directorName_rightDiv}>
-                        <div>Karan Johar</div>
-                        <div>Ranbir Kapoor, Anushka Sharma, Aishwarya Rai</div>
-                        <div>romantic drama film</div>
-                        <div>English</div>
+                    <div className={styles.directorName_mainDiv}>
+                        <div className={styles.directorName_leftDiv}>
+                            <div>Directors</div>
+                            <div>Starring</div>
+                            <div>Genres</div>
+                            <div>Subtitles</div>
+                            <div>Audio languages</div>
+                        </div>
+                        <div className={styles.directorName_rightDiv}>
+                            <div>Karan Johar</div>
+                            <div>
+                                Ranbir Kapoor, Anushka Sharma, Aishwarya Rai
+                            </div>
+                            <div>romantic drama film</div>
+                            <div>English</div>
+                        </div>
+                    </div>
+                    <div className={styles.termsOfuse_mainDiv}>
+                        By clicking play, you agree to our{" "}
+                        <span>Terms of Use</span>
                     </div>
                 </div>
-                <div className={styles.termsOfuse_mainDiv}>
-                    By clicking play, you agree to our <span>Terms of Use</span>
+                <div className={styles.backGroundVideo_mainDiv}>
+                    <video
+                        className={styles.backGroundVideo}
+                        autoPlay
+                        loop
+                        muted
+                    >
+                        <source src={AeDilHeMuskil} type="video/mp4" />
+                    </video>
                 </div>
-            </div>
-            <div className={styles.backGroundVideo_mainDiv}>
-                <video className={styles.backGroundVideo} autoPlay loop muted>
-                    <source src={AeDilHeMuskil} type="video/mp4" />
-                </video>
-            </div>
-            <div className={styles.related_detail_flex}>
-                <div>Related</div>
-                <div>Details</div>
+                <div className={styles.related_detail_flex}>
+                    <div>Related</div>
+                    <div>Details</div>
+                </div>
             </div>
         </>
     );

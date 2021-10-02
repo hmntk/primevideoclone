@@ -95,8 +95,7 @@ function TvShows() {
     ]
    
     return (
-        <>
-       
+        <div style={{ background: "#0F171E", marginBottom: "-20px" }}>
             <div style={{ margin: "24px", marginTop: "72px" }}>
                 <Slider>
                     <div>
@@ -154,171 +153,283 @@ function TvShows() {
                 <h2 className={style.recommendedHeading}>Continue watching</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            continu.map((el) => {
-                                return (
-                                    <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                        {continu.map((el) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{ width: "0px", marginLeft: "10px" }}
+                                >
+                                    <video
+                                        muted
+                                        className="howerEffect"
+                                        poster={el.imgUrl}
+                                        onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
-                                        }} onMouseOut={(e) => {
+                                        }}
+                                        onMouseOut={(e) => {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
-                                );
-                            })
-                        }
-                    </Slider>
-                </div>
-               
-            </div>
-
-            <div className={style.recommended}>
-                <h2 className={style.recommendedHeading}>Top-rated TV shows on IMDb</h2>
-                <div>
-                    <Slider {...settings}>
-                        {
-                            original.map((el) => {
-                                return (
-                                   <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
-                                            e.target.src = el.videoUrl;
-                                            e.target.play();
-                                        }} onMouseOut={(e) => {
-                                            e.target.pause();
-                                            e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
-                                );
-                            })
-                        }
+                                        }}
+                                        src={el.videoUrl}
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div></Link>
+                            );
+                        })}
                     </Slider>
                 </div>
             </div>
 
             <div className={style.recommended}>
-                <h2 className={style.recommendedHeading}>Amazon Original Movies</h2>
+                <h2 className={style.recommendedHeading}>
+                    Top-rated TV shows on IMDb
+                </h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            toprated.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {original.map((el) => {
+                            return (<Link to="/moviedetail">
+                                <div
+                                    style={{ width: "0px", marginLeft: "10px" }}
+                                >
+                                    <video
+                                        muted
+                                        className="howerEffect"
+                                        poster={el.imgUrl}
+                                        onMouseEnter={(e) => {
+                                            e.target.src = el.videoUrl;
+                                            e.target.play();
+                                        }}
+                                        onMouseOut={(e) => {
+                                            e.target.pause();
+                                            e.target.src = el.videoUrl;
+                                        }}
+                                        src={el.videoUrl}
+                                        style={{
+                                            width: "250px",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
-             <div className={style.recommended}>
-                <h2 className={style.recommendedHeading}>TV shows we think you'll like</h2>
+            <div className={style.recommended}>
+                <h2 className={style.recommendedHeading}>
+                    Amazon Original Movies
+                </h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            popular.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {toprated.map((e) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "96%",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
-             <div className={style.recommended}>
-                <h2 className={style.recommendedHeading}>Amazon Original series</h2>
+            <div className={style.recommended}>
+                <h2 className={style.recommendedHeading}>
+                    TV shows we think you'll like
+                </h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            action.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {popular.map((e) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "96%",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
                 </div>
-               
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
+                <h2 className={style.recommendedHeading}>
+                    Amazon Original series
+                </h2>
+                <div>
+                    <Slider {...settings}>
+                        {action.map((e) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "96%",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
+                    </Slider>
+                </div>
+            </div>
+
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Comedy TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            kids.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{ width: "96%", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {kids.map((e) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "96%",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
                 </div>
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Drama TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            dubbed.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{width: "96%", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {dubbed.map((e) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "96%",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
-                </div>  
+                </div>
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Thriller TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            thriller.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{width: "96%", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {thriller.map((e) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "96%",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
-                </div>   
+                </div>
             </div>
 
-             <div className={style.recommended}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Throwback TV</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            telgu.map((e) => {
-                                return (
-                                    <div style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{width: "96%", height: "146px" }} />
-                                    </div>
-                                );
-                            })
-                        }
+                        {telgu.map((e) => {
+                            return (
+                                <Link to="/moviedetail">
+                                <div
+                                    style={{
+                                        width: "26px",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    <img
+                                        src={e.imgUrl}
+                                        alt=""
+                                        style={{
+                                            width: "96%",
+                                            height: "146px",
+                                        }}
+                                    />
+                                </div>
+                                </Link>
+                            );
+                        })}
                     </Slider>
-                </div> 
+                </div>
             </div>
-       </>     
+        </div>
     );
 }
 

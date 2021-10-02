@@ -15,7 +15,6 @@ import { VideoPlayer1 } from '../VideoPlayer';
 import { MovieDetailPage } from '../MovieDetailPage';
 import KidsPage from '../KidsPage';
 import MoviesTabPage from '../MoviesTabPage';
-import Movies from '../Movies';
 import Watchlist from '../Watchlist';
 import OriginalMovies from '../OriginalMovies';
 import { PrivateRoutes } from '../Common/PrivateRoutes'

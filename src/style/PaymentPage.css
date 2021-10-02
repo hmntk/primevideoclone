@@ -1,7 +1,7 @@
 .Navbar {
     width: 100%;
     height: 187px;
-    /* background: #252E39; */
+    background: #252E39;
     padding-top: 23px;
 }
 
@@ -209,10 +209,7 @@
 }
 
 .continue {
-    /* border: 1px solid red; */
-    text-align: center;
-    margin-left: 270px;
-    width: 33vh;
+    margin-left: 292px;
     margin-top: 124px;
 }
 

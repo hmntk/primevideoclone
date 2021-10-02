@@ -93,60 +93,109 @@ function Watchlist() {
 
     return (
         <>
-        <div className={style.watchlist}>
-             
-            <div className={style.names}>
-                <div className={style.allnames}>
-                    <p>TV Shows</p>
-                    <p>Movies</p>
-                    <p className={style.all}>All</p>
-                </div>
-                <div>
-                    <div>Sort by: <a className={style.all}> Most Recent Addition <a className={style.yee}>v </a> </a></div>
-                </div>
-                </div>
-                
+            <div
+                style={{
+                    height: "30px",
+                    background: "#0F171E",
+                    marginTop: "72px",
+                }}
+            ></div>
+            <div style={{ background: "#0F171E", marginBottom: "-20px" }}>
+                <div className={style.watchlist}>
+                    <div className={style.names}>
+                        <div className={style.allnames}>
+                            <p>TV Shows</p>
+                            <p>Movies</p>
+                            <p className={style.all}>All</p>
+                        </div>
+                        <div>
+                            <div>
+                                Sort by:{" "}
+                                <a className={style.all}>
+                                    {" "}
+                                    Most Recent Addition{" "}
+                                    <a className={style.yee}>v </a>{" "}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-            <div className={style.showGrid}>
-                    {
-                        recommended.map((e) => {
+                    <div className={style.showGrid}>
+                        {recommended.map((e) => {
                             return (
                                 <div className={style.watchlistEveryDiv}>
-                                <img src={e.imgUrl} alt="" />
-                                
-                                    <div className={style.playDiv} >
-                                        <p className={style.movieName}>Name of Movie</p>
-                                        <div style={{display:"flex"}}>
-                                            <p>2021 <img className={style.subtitleImg} src={addToWishlist} /></p>
-                                            <img className={style.plusUa13} src={UA13}/>
-                                        </div> 
-                                    </div>   
-                                </div>  
-                            )
-                        })
-                  }  
-            </div>
-   
-                
+                                    <img src={e.imgUrl} alt="" />
 
-              <div className={style.recommended23}>
-                <h2 className={style.recommendedHeading} style={{color:"white", marginLeft:"45%", marginBottom:"15px"}}>Releated</h2>
-                <div>
-                    <Slider {...settings}>
-                        {
-                            recommended.map((e) => {
-                                return (
-                                    <div className={style.simpleHover} style={{width: "26px" ,marginLeft:"10px"}}>
-                                        <img src={e.imgUrl} alt="" style={{width: "96%", height: "146px" }} />
+                                    <div className={style.playDiv}>
+                                        <p className={style.movieName}>
+                                            Name of Movie
+                                        </p>
+                                        <div style={{ display: "flex" }}>
+                                            <p>
+                                                2021{" "}
+                                                <img
+                                                    className={
+                                                        style.subtitleImg
+                                                    }
+                                                    src={addToWishlist}
+                                                />
+                                            </p>
+                                            <img
+                                                className={style.plusUa13}
+                                                src={UA13}
+                                            />
+                                        </div>
                                     </div>
-                                );
-                            })
-                        }
-                    </Slider>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className={style.recommended23}>
+                        <h2
+                            className={style.recommendedHeading}
+                            style={{
+                                color: "white",
+                                marginLeft: "45%",
+                                marginBottom: "15px",
+                            }}
+                        >
+                            Releated
+                        </h2>
+                        <div>
+                            <Slider {...settings}>
+                                {recommended.map((e) => {
+                                    return (
+                                        <div
+                                            className={style.simpleHover}
+                                            style={{
+                                                width: "26px",
+                                                marginLeft: "10px",
+                                            }}
+                                        >
+                                            <img
+                                                src={e.imgUrl}
+                                                alt=""
+                                                style={{
+                                                    width: "96%",
+                                                    height: "146px",
+                                                }}
+                                            />
+                                        </div>
+                                    );
+                                })}
+                            </Slider>
+                        </div>
+                    </div>
                 </div>
-             </div>       
-        </div>
-       </>         
+            </div>
+            <div
+                style={{
+                    height: "30px",
+                    background: "#0F171E",
+                }}
+            ></div>
+        </>
     );
 }
 

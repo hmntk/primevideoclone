@@ -55,6 +55,7 @@ export const Navbar2 = ({ displayPage}) => {
 
     useEffect(() => {
         closeButtonSearch();
+        setDisplayDD(false);
     }, [displayPage]);
 
     const deb = useCallback(

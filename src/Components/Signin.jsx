@@ -36,6 +36,7 @@ const Signin = () => {
     };
 
     return (
+        <>
         <div>
             <div className="signupInLogoImg">
                 <img
@@ -115,7 +116,8 @@ const Signin = () => {
                     </p>
                 </div>
             </div>
-        </div>
+            </div>
+            </>
     );
 };
 

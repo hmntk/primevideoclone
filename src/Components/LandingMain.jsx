@@ -154,8 +154,7 @@ function LandingMain() {
 
     console.log(popular);
     return (
-        <>
-           
+        <div style={{ background: "#0F171E", marginBottom:'-20px' }}>
             <div
                 style={{
                     margin: "24px",
@@ -226,25 +225,40 @@ function LandingMain() {
                 <h2 className={style.recommendedHeading}>Continue watching</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            continu.map((el) => {
-                                return (
-                                    <>
-                                        <div onClick={() => { handleWatchLish(el) }} style={{ width: "26px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
-                                            e.target.src = el.videoUrl;
-                                            e.target.play();
-                                        }} onMouseOut={(e) => {
-                                            e.target.pause();
-                                            e.target.src = el.videoUrl;
-                                                }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                        
-                                    </div>      
-                                       
-                                   </> 
-                                );
-                            })
-                        }
+                        {continu.map((el) => {
+                            return (
+                                <>
+                                   <Link to="/moviedetail"> <div
+                                        onClick={() => {
+                                            handleWatchLish(el);
+                                        }}
+                                        style={{
+                                            width: "26px",
+                                            marginLeft: "10px",
+                                        }}
+                                    >
+                                        <video
+                                            muted
+                                            className="howerEffect"
+                                            poster={el.imgUrl}
+                                            onMouseEnter={(e) => {
+                                                e.target.src = el.videoUrl;
+                                                e.target.play();
+                                            }}
+                                            onMouseOut={(e) => {
+                                                e.target.pause();
+                                                e.target.src = el.videoUrl;
+                                            }}
+                                            src={el.videoUrl}
+                                            style={{
+                                                width: "250px",
+                                                height: "146px",
+                                            }}
+                                        />
+                                    </div></Link>
+                                </>
+                            );
+                        })}
                     </Slider>
                 </div>
             </div>
@@ -253,26 +267,39 @@ function LandingMain() {
                 <h2 className={style.recommendedHeading}>Recommended movies</h2>
                 <div>
                     <Slider {...settings}>
-                        {
-                            kids.map((el) => {
-                                return (
-                                    <>
-                                     <Link to='/moviedetail'>
-                                    <div  style={{ width: "26px", marginLeft: "10px" }}>
-                                   
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
-                                            e.target.src = el.videoUrl;
-                                            e.target.play();
-                                        }} onMouseOut={(e) => {
-                                            e.target.pause();
-                                            e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
+                        {kids.map((el) => {
+                            return (
+                                <>
+                                    <Link to="/moviedetail">
+                                        <div
+                                            style={{
+                                                width: "26px",
+                                                marginLeft: "10px",
+                                            }}
+                                        >
+                                            <video
+                                                muted
+                                                className="howerEffect"
+                                                poster={el.imgUrl}
+                                                onMouseEnter={(e) => {
+                                                    e.target.src = el.videoUrl;
+                                                    e.target.play();
+                                                }}
+                                                onMouseOut={(e) => {
+                                                    e.target.pause();
+                                                    e.target.src = el.videoUrl;
+                                                }}
+                                                src={el.videoUrl}
+                                                style={{
+                                                    width: "250px",
+                                                    height: "146px",
+                                                }}
+                                            />
+                                        </div>
                                     </Link>
-                                    </>
-                                );
-                            })
-                        }
+                                </>
+                            );
+                        })}
                     </Slider>
                 </div>
             </div>
@@ -285,7 +312,8 @@ function LandingMain() {
                     <Slider {...settingsLanguage}>
                         {language.map((e) => {
                             return (
-                                <div className="howerEffect"
+                                <Link to="/moviedetail"><div
+                                    className="howerEffect"
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
@@ -299,21 +327,24 @@ function LandingMain() {
                                             height: "126px",
                                         }}
                                     />
-                                </div>
+                                </div></Link>
                             );
                         })}
                     </Slider>
                 </div>
-            </div> 
+            </div>
 
             <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>
-                   <Link to="/originalMovies" style={{color:"white"}}>Amazon Original Movies</Link>
+                    <Link to="/originalMovies" style={{ color: "white" }}>
+                        Amazon Original Movies
+                    </Link>
                 </h2>
                 <div>
                     <Slider {...settings}>
                         {original.map((e) => {
                             return (
+                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
@@ -328,7 +359,7 @@ function LandingMain() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
+                                </div></Link>
                             );
                         })}
                     </Slider>
@@ -343,6 +374,7 @@ function LandingMain() {
                     <Slider {...settings}>
                         {recommended.map((e) => {
                             return (
+                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
@@ -357,7 +389,7 @@ function LandingMain() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
+                                </div></Link>
                             );
                         })}
                     </Slider>
@@ -370,6 +402,7 @@ function LandingMain() {
                     <Slider {...settings}>
                         {popular.map((e) => {
                             return (
+                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
@@ -384,7 +417,7 @@ function LandingMain() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
+                                </div></Link>
                             );
                         })}
                     </Slider>
@@ -399,6 +432,7 @@ function LandingMain() {
                     <Slider {...settings}>
                         {action.map((e) => {
                             return (
+                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
@@ -413,7 +447,7 @@ function LandingMain() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
+                                </div></Link>
                             );
                         })}
                     </Slider>
@@ -426,6 +460,7 @@ function LandingMain() {
                     <Slider {...settings}>
                         {telgu.map((e) => {
                             return (
+                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
@@ -440,7 +475,7 @@ function LandingMain() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
+                                </div></Link>
                             );
                         })}
                     </Slider>
@@ -455,6 +490,7 @@ function LandingMain() {
                     <Slider {...settings}>
                         {toprated.map((e) => {
                             return (
+                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
@@ -469,13 +505,13 @@ function LandingMain() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
+                                </div></Link>
                             );
                         })}
                     </Slider>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
