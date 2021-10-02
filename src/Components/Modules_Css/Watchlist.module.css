@@ -1,0 +1,90 @@
+.watchlist {
+	width: 100%;
+	margin: 90px;
+	color: #8197a4;
+}
+
+.names {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	margin-left: -50px;
+}
+
+.allnames {
+	display: flex;
+	margin-right: 61.5%;
+}
+
+.allnames p {
+	font-size: 20px;
+	font-weight: 500;
+	margin-left: 10px;
+}
+
+.all {
+	color: white;
+}
+
+.yee {
+	font-size: 12px;
+	margin-left: 7px;
+	margin-top: -10px;
+}
+
+.recommended23 {
+	width: 96%;
+	margin-left: -60px;
+	margin-top: 50px;
+	margin-bottom: -60px;
+}
+
+.simpleHover:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.showGrid {
+	width: 100%;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 400px 400px 400px;
+	grid-template-rows: 265px 265px 265px;
+}
+
+.showGrid .watchlistEveryDiv:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.playDivimg {
+	width: 40px;
+	height: 30px;
+}
+
+.playDiv {
+	width: 89.5%;
+	height: 50px;
+	background-color: #425265;
+	border: 1px solid black;
+	padding-left: 20px;
+	margin-top: -4px;
+	margin-right: 5px;
+	padding-top: 5px;
+}
+
+.movieName {
+	font-size: 20px;
+	color: white;
+}
+
+.subtitleImg {
+	margin-left: 10px;
+}
+
+.plusUa13 {
+	width: 60px;
+	height: 20px;
+	margin-left: 56%;
+	margin-top: -15px;
+}

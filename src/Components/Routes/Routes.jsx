@@ -14,7 +14,10 @@ import { VideoPlayer1 } from '../VideoPlayer';
 import { MovieDetailPage } from '../MovieDetailPage';
 import KidsPage from '../KidsPage';
 import MoviesTabPage from '../MoviesTabPage';
-import Movies from '../Movies'
+import Movies from '../Movies';
+import Watchlist from '../Watchlist';
+import OriginalMovies from '../OriginalMovies';
+
 // import axios from "axios";
 // import { useState } from "react";
 
@@ -80,6 +83,16 @@ export const Routes = () => {
                 </Route>
                 <Route path="/videoplayer">
                     <VideoPlayer1 />
+                </Route>
+                <Route path="/watchlist">
+                    <Navbar2 displayPage="WatchList" />
+                    <Watchlist />
+                     <Footer1 />
+                </Route>
+                 <Route path="/originalMovies">
+                    <Navbar2 displayPage="originalMovies" />
+                    <OriginalMovies />
+                     <Footer1 />
                 </Route>
                 <Route path="/moviedetail">
                     <Navbar2 displayPage="" />

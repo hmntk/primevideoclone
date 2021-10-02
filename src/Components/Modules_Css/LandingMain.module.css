@@ -7,10 +7,10 @@ h1 {
 }
 
 .recommended {
-	width: 96%;
+	width: 95%;
 	margin: 20px 30px;
-	/* position: relative; */
-	z-index: 10;
+	/* position: relative;
+	z-index: 10; */
 	/* top: -100px; */
 }
 .recommended1 {
@@ -26,4 +26,8 @@ h1 {
 	line-height: 22px;
 	color: #ffffff;
 	margin-bottom: 10px;
+}
+
+.recommendedHeading {
+	cursor: pointer;
 }

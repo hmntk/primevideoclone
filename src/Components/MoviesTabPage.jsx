@@ -188,7 +188,7 @@ function MoviesTabPage() {
                             continu.map((el) => {
                                 return (
                                     <div style={{ width: "0px", marginLeft: "10px" }}>
-                                        <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
+                                        <video muted className="movieHower" poster={el.imgUrl} onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
                                         }} onMouseOut={(e) => {

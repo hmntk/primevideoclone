@@ -10,12 +10,14 @@ import telugu from "../images/telugu.png";
 import axios from "axios";
 import "./carausol.css";
 import { useState, useEffect } from "react";
-import "../style/hower.css"
+// import "../style/hower.css";
 import Play from "../images/Play.png";
 import plus from "../images/plus.png";
 import stop from "../images/stop.png";
 import UA13 from "../images/UA13.png";
-import addToWishlist from "../images/addToWishlist.png"
+import addToWishlist from "../images/addToWishlist.png";
+import "../style/Movies.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -73,7 +75,8 @@ function LandingMain() {
         infinite: true,
         slidesToShow: 8,
         slidesToScroll: 3,
-        width: "269px",
+         width: "269px",
+        
     };
 
     const recommended = [
@@ -227,38 +230,17 @@ function LandingMain() {
                             continu.map((el) => {
                                 return (
                                     <>
-                                        <div onClick={() => { handleWatchLish(el) }} style={{ width: "0px", marginLeft: "10px" }}>
+                                        <div onClick={() => { handleWatchLish(el) }} style={{ width: "26px", marginLeft: "10px" }}>
                                         <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
                                         }} onMouseOut={(e) => {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
-                                            }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                                }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
+                                        
                                     </div>      
-                                        <div className="movieDetails">
-                                            <div>
-                                          <div className="Div1">
-                                               <img src={Play} alt="" />
-                                               <span>Play</span>
-                                               <img src={plus} alt="" />
-                                               <img src={stop} alt="" />
-                                           </div>
-                                             <p>Included with Prime</p>
-                                            <div className="Div2">
-                                                <span > Bell Bottom</span>
-                                                <img src={UA13} alt="" />
-                                            </div>
-                                            <p>An undercover agent code-named Bellbottom embarks on a covert mission to free 210 hostages held by hijackers.</p>
-                                           <div className="Div3">
-                                                <span>2021</span>
-                                                <span>Family/Comedy </span>
-                                                <span>1h 41m </span>
-                                               <img className="subtitle" src={addToWishlist} alt="" />
-                                            </div>
-                                            </div>
-                                       </div>
-                                
+                                       
                                    </> 
                                 );
                             })
@@ -267,14 +249,14 @@ function LandingMain() {
                 </div>
             </div>
 
-            <div className={style.recommended1}>
+            <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>Recommended movies</h2>
                 <div>
                     <Slider {...settings}>
                         {
                             kids.map((el) => {
                                 return (
-                                    <div style={{ width: "0px", marginLeft: "10px" }}>
+                                    <div  style={{ width: "26px", marginLeft: "10px" }}>
                                         <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
                                             e.target.play();
@@ -298,7 +280,7 @@ function LandingMain() {
                     <Slider {...settingsLanguage}>
                         {language.map((e) => {
                             return (
-                                <div
+                                <div className="howerEffect"
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
@@ -317,11 +299,11 @@ function LandingMain() {
                         })}
                     </Slider>
                 </div>
-            </div>
+            </div> 
 
             <div className={style.recommended}>
                 <h2 className={style.recommendedHeading}>
-                    Amazon Original Movies
+                   <Link to="/originalMovies" style={{color:"white"}}>Amazon Original Movies</Link>
                 </h2>
                 <div>
                     <Slider {...settings}>
