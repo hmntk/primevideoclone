@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 *{
@@ -12,6 +13,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: Amazon Ember,Amazon Arabic Ember,Arial,sans-serif !important;
 }
 
 code {

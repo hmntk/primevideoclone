@@ -9,6 +9,7 @@ import Signin from '../Signin'
 import CreateAccount from '../CreateAccount'
 import { PaymentPage } from '../PaymentPage'
 import { Navbar2 } from '../Navbar2';
+import { Navbar3 } from '../Navbar3';
 import TvShows from '../TvShows';
 import { VideoPlayer1 } from '../VideoPlayer';
 import { MovieDetailPage } from '../MovieDetailPage';
@@ -17,7 +18,7 @@ import MoviesTabPage from '../MoviesTabPage';
 import Movies from '../Movies';
 import Watchlist from '../Watchlist';
 import OriginalMovies from '../OriginalMovies';
-
+import { PrivateRoutes } from '../Common/PrivateRoutes'
 // import axios from "axios";
 // import { useState } from "react";
 
@@ -39,66 +40,58 @@ export const Routes = () => {
                     <Homepage />
                     <Footer1 />
                 </Route>
-                <Route exact path="/subsciption">
-                    <Navbar1 />
-                    <SubscriptionPage />
-                    <Footer1 />
-                </Route>
                 <Route path="/signin">
                     <Signin />
                 </Route>
                 <Route path="/createaccount">
                     <CreateAccount />
                 </Route>
-                <Route path="/subscription">
-                    <Navbar2 />
+                <PrivateRoutes path="/subscription">
+                    <Navbar3 />
                     <SubscriptionPage />
                     <Footer1 />
-                </Route>
-                <Route path="/payment">
+                </PrivateRoutes>
+                <PrivateRoutes path="/payment">
                     <PaymentPage />
-                </Route>
-                <Route path="/home">
+                </PrivateRoutes>
+                <PrivateRoutes path="/home">
                     <Navbar2 displayPage="home" />
                     <LandingMain />
                     <Footer1 />
-                </Route>
-                <Route path="/tvshows">
+                </PrivateRoutes>
+                <PrivateRoutes path="/tvshows">
                     <Navbar2 displayPage="tvshows" />
                     <TvShows />
                     <Footer1 />
-                </Route>
-                <Route path="/movies">
-                    <Navbar2 displayPage="Movies" />
+                </PrivateRoutes>
+                <PrivateRoutes path="/movies">
+                    <Navbar2 displayPage="movies" />
                     <MoviesTabPage />
                     <Footer1 />
-                </Route>
-                <Route path="/kids">
-                    <Navbar2 displayPage="Kids" />
+                </PrivateRoutes>
+                <PrivateRoutes path="/kids">
+                    <Navbar2 displayPage="kids" />
                     <KidsPage />
                     <Footer1 />
-                </Route>
-                <Route path="/movie">
-                    <Movies />
-                </Route>
-                <Route path="/videoplayer">
+                </PrivateRoutes>
+                <PrivateRoutes path="/videoplayer">
                     <VideoPlayer1 />
-                </Route>
-                <Route path="/watchlist">
+                </PrivateRoutes>
+                <PrivateRoutes path="/watchlist">
                     <Navbar2 displayPage="WatchList" />
                     <Watchlist />
                      <Footer1 />
-                </Route>
-                 <Route path="/originalMovies">
+                </PrivateRoutes>
+                 <PrivateRoutes path="/originalMovies">
                     <Navbar2 displayPage="originalMovies" />
                     <OriginalMovies />
                      <Footer1 />
-                </Route>
-                <Route path="/moviedetail">
+                </PrivateRoutes>
+                <PrivateRoutes path="/moviedetail">
                     <Navbar2 displayPage="" />
                     <MovieDetailPage />
                     <Footer1 />
-                </Route>
+                </PrivateRoutes>
             </Switch>
         </div>
     );

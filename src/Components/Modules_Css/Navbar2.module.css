@@ -91,6 +91,7 @@
 
 .common_link_color {
     color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
 }
 
 .common_link_color:hover {
@@ -99,6 +100,7 @@
 
 .nav2_rightDiv_userImage {
     margin-right: 8px;
+    margin-bottom: -12px;
 }
 .nav2_rightDiv_un {
     margin-right: 11.33px;
@@ -127,6 +129,7 @@
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: -5%;
     z-index: 1;
+    top: 72px;
 }
 
 .profileDropdown1 {

@@ -183,3 +183,44 @@ a:hover {
 	cursor: pointer;
 	color: #b85f0699;
 }
+
+
+.ErrorBox {
+	margin-top: 24px !important;
+	margin-bottom: 16px !important;
+    width: 372px;
+    height: 88px;
+    box-shadow: inset 0px 0px 10px red;
+    margin: auto;
+	background-color: white;
+}
+.ErrorBox > :nth-child(1) {
+    display: flex;
+}
+
+.ErrorBox img {
+    margin: 18px 12px 0px 68px;
+}
+
+.ErrorBox h2 {
+    color: rgba(242, 33, 33, 0.7);
+    font-family: Amazon Ember Display;
+    font-style: Medium;
+    font-size: 16px;
+    letter-spacing: 2%;
+    /* margin: 21px 105px 0px 0px; */
+	margin-bottom: -4px !important;
+	padding-top: 23px;
+}
+
+.ErrorBox div {
+    color: #F55D5D;
+    font-style: Light;
+    font-size: 12px;
+    letter-spacing: 2%;
+	margin: 7px 26px 16px 27px;
+	text-align: center;
+}
+.errorBoxHide{
+	display: none;
+}

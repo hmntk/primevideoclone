@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./CreateAccount.css";
-
+import ErrorSign_Signin from "../images/ErrorSign_Signin.svg";
     const initState = {
         name: "",
         email: "",
@@ -13,6 +13,8 @@ import "./CreateAccount.css";
 
 const CreateAccount = () => {
     const [signUpData, setsignUpData] = useState(initState)
+    const [error, setError] = useState(false)
+    const [errorData, setErrorData] = useState('')
     const history = useHistory();
     
         const handleChange=((e) => {
@@ -29,12 +31,14 @@ const CreateAccount = () => {
         if (password === confirmPassword) {
             let res = await axios.post("/users/signup", signUpData);
             if (res.data === 'Email already exist') {
-                alert('Email already exist')
+                setErrorData("Account already exists");
+                setError(true);
             } else {
                 history.push("/signin");
             }
         } else {
-            alert('Password & Confirm Password not matched')
+            setErrorData("Mismatch between Password");
+            setError(true)
         }
     }
 
@@ -48,8 +52,18 @@ const CreateAccount = () => {
                 />
             </div>
 
+            <div className={error ? "ErrorBox" : "errorBoxHide"}>
+                <div>
+                    <img src={ErrorSign_Signin} alt="" />
+                    <h2>There Was a Problem</h2>
+                </div>
+                <div>
+                    <p>{errorData}</p>
+                </div>
+            </div>
+
             <div className="signupBox">
-                <form method='POST' onSubmit={sendDataToDatabase}>
+                <form method="POST" onSubmit={sendDataToDatabase}>
                     <h2>Create account</h2>
                     <label htmlFor="">Your name</label>
                     <input

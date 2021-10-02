@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Button_LoginToPrime = styled.button`
     width: 259px;
@@ -13,6 +13,7 @@ const Button_LoginToPrime = styled.button`
     font-size: 16px;
     line-height: 150%;
     border: none;
+    color: #ffffff;
 
     & > a {
         color: #ffffff;
