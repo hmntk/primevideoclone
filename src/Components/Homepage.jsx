@@ -27,9 +27,11 @@ function Homepage() {
                       Join Prime to watch the latest movies and TV Shows and
                       award-winning Amazon originals
                   </p>
-                  <Button_LoginToPrime>
-                      <Link to="/signin">Login to Prime Video</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/signin">
+                      <Button_LoginToPrime>
+                          Login to Prime Video
+                      </Button_LoginToPrime>
+                  </Link>
               </div>
           </div>
           <div className={styles.Home_mainDiv_flexDiv1}>
@@ -38,16 +40,16 @@ function Homepage() {
               </div>
               <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
                   <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
-                  Great Entertainment
+                      Great Entertainment
                   </h1>
                   <p className={styles.Home_mainDiv_flexDiv_ContentDiv_p}>
-                  With your Prime memberships, you have access to exclusive 
-                  Amazon Originals, blockbuster Bollywood movies, regional 
-                  movies and more.
+                      With your Prime memberships, you have access to exclusive
+                      Amazon Originals, blockbuster Bollywood movies, regional
+                      movies and more.
                   </p>
-                  <Button_LoginToPrime>
-                      <Link to="/signin">Get started</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/signin">
+                      <Button_LoginToPrime>Get started</Button_LoginToPrime>
+                  </Link>
               </div>
           </div>
           <div className={styles.Home_mainDiv_flexDiv}>
@@ -56,16 +58,16 @@ function Homepage() {
               </div>
               <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
                   <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
-                  One membership, many benefits
+                      One membership, many benefits
                   </h1>
                   <p className={styles.Home_mainDiv_flexDiv_ContentDiv_p}>
-                  Your Prime membership now also inccludes ad-free musicc
-along with umlimited free, fast delivery on eligible items,
-exclusive access to deals & more.
+                      Your Prime membership now also inccludes ad-free musicc
+                      along with umlimited free, fast delivery on eligible
+                      items, exclusive access to deals & more.
                   </p>
-                  <Button_LoginToPrime>
-                      <Link to="/signin">Get started</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/signin">
+                      <Button_LoginToPrime>Get started</Button_LoginToPrime>
+                  </Link>
               </div>
           </div>
           <div className={styles.Home_mainDiv_flexDiv1}>
@@ -74,17 +76,18 @@ exclusive access to deals & more.
               </div>
               <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
                   <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
-                  Even better with Fire TV Stick
+                      Even better with Fire TV Stick
                   </h1>
                   <p className={styles.Home_mainDiv_flexDiv_ContentDiv_p}>
-                  The biggest movies and TV shows are always better on a big
-sccreen. Simply plug in your Amazon Fire TV Stick and stream
-on any HDTV. Press the voicce button on the remote and say
-the name of the title you want to watcch to find it in seconds.
+                      The biggest movies and TV shows are always better on a big
+                      sccreen. Simply plug in your Amazon Fire TV Stick and
+                      stream on any HDTV. Press the voicce button on the remote
+                      and say the name of the title you want to watcch to find
+                      it in seconds.
                   </p>
-                  <Button_LoginToPrime>
-                      <Link to="/signin">Get started</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/signin">
+                      <Button_LoginToPrime>Get started</Button_LoginToPrime>
+                  </Link>
               </div>
           </div>
           <div className={styles.Home_mainDiv_flexDiv}>
@@ -93,15 +96,17 @@ the name of the title you want to watcch to find it in seconds.
               </div>
               <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
                   <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
-                  Family Friendly
+                      Family Friendly
                   </h1>
                   <p className={styles.Home_mainDiv_flexDiv_ContentDiv_p}>
-                  With easy to use Parental Controls and a dediccated kids page, enjoy
-seccure, ad-free kids entertainment , Kids ccan enjoy popular TVshows like Peppa Pig, Powerpuff Girls, and Cchhota Bheem
+                      With easy to use Parental Controls and a dediccated kids
+                      page, enjoy seccure, ad-free kids entertainment , Kids
+                      ccan enjoy popular TVshows like Peppa Pig, Powerpuff
+                      Girls, and Cchhota Bheem
                   </p>
-                  <Button_LoginToPrime>
-                      <Link to="/signin">Get started</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/signin">
+                      <Button_LoginToPrime>Get started</Button_LoginToPrime>
+                  </Link>
               </div>
           </div>
       </div>

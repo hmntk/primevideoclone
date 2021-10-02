@@ -27,16 +27,20 @@ function SubscriptionPage() {
                       Join Prime to watch the latest movies and TV Shows and
                       award-winning Amazon originals
                   </p>
-                  <Button_LoginToPrime>
-                      <Link to="/payment">Get Prime at Rs 129 per month</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/payment">
+                      <Button_LoginToPrime>
+                          Get Prime at Rs 999 per year
+                      </Button_LoginToPrime>
+                  </Link>
                   <p>With any credit card or select debit cards</p>
                   <br />
                   <p style={{ marginLeft: "18vh" }}>or</p>
 
-                  <Button_LoginToPrime>
-                      <Link to="/payment">Get Prime at Rs 999 per year</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/payment">
+                      <Button_LoginToPrime>
+                          Get Prime at Rs 999 per year
+                      </Button_LoginToPrime>
+                  </Link>
                   <p>
                       With all electronic payment methods and Payon Delivery for
                       select PINs
@@ -56,9 +60,9 @@ function SubscriptionPage() {
                       Amazon Originals, blockbuster Bollywood movies, regional
                       movies and more.
                   </p>
-                  <Button_LoginToPrime>
-                      <Link to="/payment">Get started</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/payment">
+                      <Button_LoginToPrime>Get started</Button_LoginToPrime>
+                  </Link>
               </div>
           </div>
           <div className={styles.Home_mainDiv_flexDiv}>
@@ -74,9 +78,9 @@ function SubscriptionPage() {
                       along with umlimited free, fast delivery on eligible
                       items, exclusive access to deals & more.
                   </p>
-                  <Button_LoginToPrime>
-                      <Link to="/signin">Get started</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/payment">
+                      <Button_LoginToPrime>Get started</Button_LoginToPrime>
+                  </Link>
               </div>
           </div>
           <div className={styles.Home_mainDiv_flexDiv1}>
@@ -94,9 +98,9 @@ function SubscriptionPage() {
                       and say the name of the title you want to watcch to find
                       it in seconds.
                   </p>
-                  <Button_LoginToPrime>
-                      <Link to="/payment">Get started</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/payment">
+                      <Button_LoginToPrime>Get started</Button_LoginToPrime>
+                  </Link>
               </div>
           </div>
           <div className={styles.Home_mainDiv_flexDiv}>
@@ -113,9 +117,9 @@ function SubscriptionPage() {
                       ccan enjoy popular TVshows like Peppa Pig, Powerpuff
                       Girls, and Cchhota Bheem
                   </p>
-                  <Button_LoginToPrime>
-                      <Link to="/payment">Get started</Link>
-                  </Button_LoginToPrime>
+                  <Link to="/payment">
+                      <Button_LoginToPrime>Get started</Button_LoginToPrime>
+                  </Link>
               </div>
           </div>
       </div>

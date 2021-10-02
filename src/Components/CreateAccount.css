@@ -176,6 +176,14 @@ body {
     margin-top: 50px;
 }
 
+.forSignin a{
+	color: #0F79AF;
+}
+
+.forSignin a:hover{
+	color: #00527a;
+}
+
 button:hover {
     cursor: pointer;
     opacity: 0.9;
