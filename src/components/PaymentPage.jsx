@@ -76,10 +76,12 @@ export const PaymentPage = () => {
             </div>
 
             <div className="continue">
-                <Button_continueAtPayment>
-                    {" "}
-                    <Link to="/home">Continue</Link>{" "}
-                </Button_continueAtPayment>
+                <Link to="/home">
+                    <Button_continueAtPayment>
+                        {" "}
+                        Continue{" "}
+                    </Button_continueAtPayment>
+                </Link>
             </div>
             <br />
         </div>

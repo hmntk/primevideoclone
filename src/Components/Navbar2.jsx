@@ -1,16 +1,18 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import styles from "./Modules_Css/Navbar2.module.css";
 import Primelogo from "../images/Primelogo.svg";
 import LanguageEnLogo from "../images/Nav1_LanguageEnglishLogo.svg";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import dropdownIcon from '../images/dropdownSign.svg'
 import userImageIcon from '../images/userImageIcon.png'
 import searchIcon from '../images/searchIcon.svg'
 import kidIcon_dropdown from "../images/kidIcon_dropdown.svg";
 import addIcon_dropdown from "../images/addIcon_dropdown.svg";
 import close_X_search_button from "../images/close_X_search_button.svg";
+import bhanu from "../images/bhanu.png";
 import axios from "axios";
 import debounce  from "lodash.debounce";
+import { AuthContext } from "./Context/AuthContext";
 
 const pageDisplay = {
     "textDecoration": "underline",
@@ -25,9 +27,9 @@ export const Navbar2 = ({ displayPage}) => {
     const [searchItem1, setSearchItem1] = useState('');
     const [storeSearchResult, setStoreSearchResult] = useState([]);
     const [closeDisplay, setCloseDisplay] = useState(false);
-    console.log('closeDisplay:', closeDisplay)
-    console.log("searchItem:", storeSearchResult);
-    let timer;
+    const [userDetail, setUserDetail] = useState([]);
+    const { isAuth, toggleAuth } = useContext(AuthContext);
+    const history = useHistory();
     
     const handleSearch = async() => {
         let res = await axios.get(
@@ -35,10 +37,17 @@ export const Navbar2 = ({ displayPage}) => {
         );
         if (res.data.Search !== undefined) {
             setStoreSearchResult(res.data.Search);
-            console.log('in',res.data.Search)
         }
-        console.log("out", res.data.Search);
     }
+
+    const getUserDetail = async() => {
+        let res = await axios.get("/users/userLoginDetail");
+        setUserDetail(res.data[0]);
+    }
+
+    useEffect(() => {
+        getUserDetail()
+    }, [])
 
     useEffect(() => {
         handleSearch();
@@ -63,6 +72,13 @@ export const Navbar2 = ({ displayPage}) => {
     const closeButtonSearch = () => {
         setCloseDisplay(false)
         setSearchItem1('')
+    }
+
+    const handleSignout = async () => {
+       let res = await axios.delete("/users/userSignout")
+        console.log(res.data)
+        toggleAuth('false');
+        history.push('/');
     }
 
     return (
@@ -159,9 +175,11 @@ export const Navbar2 = ({ displayPage}) => {
                     >
                         {" "}
                         <div className={styles.nav2_rightDiv_userImage}>
-                            <img src={userImageIcon} alt="" />
+                            <img src={bhanu} alt="" />
                         </div>
-                        <div className={styles.nav2_rightDiv_un}>Bhanu</div>
+                        <div className={styles.nav2_rightDiv_un}>
+                            {userDetail.name}
+                        </div>
                         <div className={styles.nav2_rightDiv_dd}>
                             <img src={dropdownIcon} alt="" />
                         </div>
@@ -191,17 +209,19 @@ export const Navbar2 = ({ displayPage}) => {
                 <div>Manage Profiles</div>
                 <div>Help</div>
                 <div>Learn more</div>
-                <div>
-                    <Link className={styles.common_link_color} to="/signout">
-                        Not Bhanu?Sign Out
-                    </Link>
+                <div
+                    className={styles.common_link_color}
+                    onClick={handleSignout}
+                >
+                    Not {userDetail.name}?Sign Out
                 </div>
             </div>
 
             <div className={styles.searchDropdown}>
                 {setStoreSearchResult.length !== 0 && closeDisplay
                     ? storeSearchResult.map((item) => (
-                        <Link onClick={closeButtonSearch}
+                          <Link
+                              onClick={closeButtonSearch}
                               className={styles.common_link_color}
                               to="/moviedetail"
                           >

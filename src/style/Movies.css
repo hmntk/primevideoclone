@@ -31,11 +31,18 @@
 	padding-top: 18px;
 	font-family: Amazon Ember;
 	display: none;
-	/* position:relative; */
+	position:relative;
 	/* top:146px; */
 	margin-top: -5px;
 	z-index: 50;
 }
+
+/* .LandingMain_recommended1__bS602 {
+    width: 96%;
+    margin: 20px 30px;
+    position: absolute;
+    /* z-index: -1; */
+    /* top: -250px; */ 
 
 .movies:hover + .movieDetails {
 	display: block;

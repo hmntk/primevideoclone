@@ -16,6 +16,7 @@ import plus from "../images/plus.png";
 import stop from "../images/stop.png";
 import UA13 from "../images/UA13.png";
 import addToWishlist from "../images/addToWishlist.png"
+import { Link } from "react-router-dom";
 
 
 
@@ -274,6 +275,7 @@ function LandingMain() {
                         {
                             kids.map((el) => {
                                 return (
+                                    <Link to='/moviedetail'>
                                     <div style={{ width: "0px", marginLeft: "10px" }}>
                                         <video muted className="howerEffect" poster={el.imgUrl} onMouseEnter={(e) => {
                                             e.target.src = el.videoUrl;
@@ -282,7 +284,7 @@ function LandingMain() {
                                             e.target.pause();
                                             e.target.src = el.videoUrl;
                                             }} src={el.videoUrl} style={{ width: "250px", height: "146px" }} />
-                                    </div> 
+                                    </div> </Link>
                                 );
                             })
                         }

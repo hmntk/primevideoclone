@@ -1,6 +1,8 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
+import { AuthContext } from "./Context/AuthContext";
+import ErrorSign_Signin from "../images/ErrorSign_Signin.svg";
 import "./Signin.css";
 
 const initState = {
@@ -10,7 +12,10 @@ const initState = {
 
 const Signin = () => {
     const [signinData, setsigninData] = useState(initState);
+    const [error, setError] = useState(false);
+    const [errorData, setErrorData] = useState("");
     const history = useHistory();
+    const {toggleAuth } = useContext(AuthContext)
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,11 +25,12 @@ const Signin = () => {
 
     const sendDataToDatabase = async (e) => {
         e.preventDefault();
-        const { email } = signinData;
-        let res = await axios.get(`/users/logindata/${email}`);
+        let res = await axios.post(`/users/logindata`, signinData);
         if (res.data === 'Invalid credentials') {
-            alert("Invalid credentials");
+            setError(true);
+            setErrorData("Invalid credentials");
         } else {
+            toggleAuth('true');
             history.push("/subscription");
         }
     };
@@ -36,6 +42,15 @@ const Signin = () => {
                     src="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/avod/AV_Logo_150._CB430404026_.png"
                     alt=""
                 />
+            </div>
+            <div className={error ? "ErrorBox" : "errorBoxHide"}>
+                <div>
+                    <img src={ErrorSign_Signin} alt="" />
+                    <h2>There Was a Problem</h2>
+                </div>
+                <div>
+                    <p>{errorData}</p>
+                </div>
             </div>
 
             <div className="signupBox">

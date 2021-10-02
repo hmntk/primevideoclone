@@ -79,7 +79,7 @@ export const MovieDetailPage = () => {
                     By clicking play, you agree to our <span>Terms of Use</span>
                 </div>
             </div>
-            <div>
+            <div className={styles.backGroundVideo_mainDiv}>
                 <video className={styles.backGroundVideo} autoPlay loop muted>
                     <source src={AeDilHeMuskil} type="video/mp4" />
                 </video>
