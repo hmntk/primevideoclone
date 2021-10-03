@@ -18,19 +18,7 @@ import MoviesTabPage from '../MoviesTabPage';
 import Watchlist from '../Watchlist';
 import OriginalMovies from '../OriginalMovies';
 import { PrivateRoutes } from '../Common/PrivateRoutes'
-// import axios from "axios";
-// import { useState } from "react";
-
 export const Routes = () => {
-
-    // const [test, setTest] = useState("");
-
-    // async function getData() {
-    //     let res = await axios.get("/prime");
-    //     console.log(res);
-    //     setTest(res.data);
-    // }
-    // getData();
     return (
         <div>
             <Switch>

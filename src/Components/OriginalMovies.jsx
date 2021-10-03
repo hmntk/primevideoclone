@@ -6,60 +6,71 @@ import Play from "../images/Play.png";
 import plus from "../images/plus.png";
 import stop from "../images/stop.png";
 import UA13 from "../images/UA13.png";
+import vector from "../images/Vector.png";
 import addToWishlist from "../images/addToWishlist.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
 function OriginalMovies() {
-
     const [original, setOriginal] = useState([]);
+    const [storeUser, setStoreUser] = useState([]);
+    const [status, setStatus] = useState(false);
 
     useEffect(() => {
         dataFetchForOriginal();
+        handleWatchlist();
     }, []);
+
+    const handleWatchlist = async () => {
+        const res = await axios.get("/users/userLoginDetail");
+        console.log("loginData", res.data);
+        setStoreUser(res.data[0]);
+    };
+
+    const handleAddToWatchList = async (el) => {
+        console.log(el);
+        const id = storeUser._id;
+        const res = await axios.patch(`/users/watched${id}`, el);
+    };
 
     const dataFetchForOriginal = async () => {
         const res = await axios.get("/OriginalMovies");
-          setOriginal(res.data[0].AmazonOriginalMovies);
-    }
+        setOriginal(res.data[0].AmazonOriginalMovies);
+    };
 
     const dummyList = [
         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/3eb50ab78523d4d785a208d0cb697a7365a9ca634b00508fd50a7288d7e95b13._UR1920,1080_RI_UX667_UY375_.jpg"
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/3eb50ab78523d4d785a208d0cb697a7365a9ca634b00508fd50a7288d7e95b13._UR1920,1080_RI_UX667_UY375_.jpg",
         },
         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/65cbb8507cfa9e3a2fcb8fd691bc1b37fbb926ee2d83458586366a923caadf4c._UR1920,1080_RI_UX667_UY375_.jpg"
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/65cbb8507cfa9e3a2fcb8fd691bc1b37fbb926ee2d83458586366a923caadf4c._UR1920,1080_RI_UX667_UY375_.jpg",
         },
         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/792d75a7465ee9349f771cccf859b5e85b1bb4a8c6762e32f3f3ad34acf17b62._UR1920,1080_RI_UX400_UY225_.jpg"
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/792d75a7465ee9349f771cccf859b5e85b1bb4a8c6762e32f3f3ad34acf17b62._UR1920,1080_RI_UX400_UY225_.jpg",
         },
         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/39d15f8ad9df1233fe8db93de54ff780f5d1dbcac50d7d533eae13813fac85a3._UR1920,1080_RI_UX400_UY225_.jpg"
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/39d15f8ad9df1233fe8db93de54ff780f5d1dbcac50d7d533eae13813fac85a3._UR1920,1080_RI_UX400_UY225_.jpg",
         },
         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/9478c3fdc01fcaf24e417716057b741bc717672ae248b934a2150db38203caa6._UR1920,1080_RI_UX400_UY225_.jpg"
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/9478c3fdc01fcaf24e417716057b741bc717672ae248b934a2150db38203caa6._UR1920,1080_RI_UX400_UY225_.jpg",
         },
         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/50cf89643301e3532a3448862f3d1647f01841fcb3343d433621ffd4b0551c33._UR1920,1080_RI_UX400_UY225_.jpg"
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/50cf89643301e3532a3448862f3d1647f01841fcb3343d433621ffd4b0551c33._UR1920,1080_RI_UX400_UY225_.jpg",
         },
         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/e538445df25c5ba39500c82dcab9bd947331f87d445b5762039522ed97b34e8c._UR1920,1080_RI_UX400_UY225_.jpg"
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/e538445df25c5ba39500c82dcab9bd947331f87d445b5762039522ed97b34e8c._UR1920,1080_RI_UX400_UY225_.jpg",
         },
         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/803ead2c03fa23d664a32328a48468bccdae94659b5cb620c84e30f9f9f8482d._UR1920,1080_RI_UX400_UY225_.jpg"
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/803ead2c03fa23d664a32328a48468bccdae94659b5cb620c84e30f9f9f8482d._UR1920,1080_RI_UX400_UY225_.jpg",
         },
+    ];
 
-    ]
-
-     const settings = {
+    const settings = {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 3,
         width: "269px",
     };
-
-   
 
     return (
         <div
@@ -102,7 +113,7 @@ function OriginalMovies() {
                                         e.target.src = el.videoUrl;
                                     }}
                                     src={el.videoUrl}
-                                    style={{ width: "250px", height: "146px" }}
+                                    style={{ width: "84%", height: "146px" }}
                                 />
 
                                 <div className={style.playDiv}>
@@ -120,6 +131,9 @@ function OriginalMovies() {
                                         <img
                                             className={style.plusImg}
                                             src={plus}
+                                            onClick={() => {
+                                                handleAddToWatchList(el);
+                                            }}
                                         />
                                     </div>
                                 </div>

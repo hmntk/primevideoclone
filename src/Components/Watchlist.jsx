@@ -7,21 +7,37 @@ import plus from "../images/plus.png"
 import stop from "../images/stop.png" 
 import UA13 from "../images/UA13.png"
 import addToWishlist from "../images/addToWishlist.png"
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { UserContext } from "./Context/userContext";
 
 
 function Watchlist() {
-
+ 
+    const { userId } = useContext(UserContext);
+    const [storeUser, setStoreUser] = useState([]);
     const [list, setList] = useState([]);
 
-    // useEffect(() => {
-    //     fetchUserWatchList();
-    // })
+    useEffect(() => {
+       // handleWatchlist();
+        fetchUserWatchList();
+    },[]);
 
-    // const fetchUserWatchList = async () => {
-    //     const res = await axios.get();
-    // }
+     const handleWatchlist = async () => {
+        const res = await axios.get("/users/userLoginDetail")
+        console.log("loginData", res.data);
+         setStoreUser(res.data[0]);
+    };
+
+    const fetchUserWatchList = async () => {
+        // console.log("id",storeUser)
+        // const id = storeUser._id;  
+        console.log("userId", userId);
+        const res = await axios.get(`/users/userData${userId}`);
+        console.log(res.data);
+        setList(res.data.wishList);
+    }
+
 
     const dummyList = [
         {
@@ -120,36 +136,25 @@ function Watchlist() {
                         </div>
                     </div>
 
-                    <div className={style.showGrid}>
-                        {recommended.map((e) => {
+            <div className={style.showGrid}>
+                    {
+                        list.map((e) => {
                             return (
                                 <div className={style.watchlistEveryDiv}>
-                                    <img src={e.imgUrl} alt="" />
-
-                                    <div className={style.playDiv}>
-                                        <p className={style.movieName}>
-                                            Name of Movie
-                                        </p>
-                                        <div style={{ display: "flex" }}>
-                                            <p>
-                                                2021{" "}
-                                                <img
-                                                    className={
-                                                        style.subtitleImg
-                                                    }
-                                                    src={addToWishlist}
-                                                />
-                                            </p>
-                                            <img
-                                                className={style.plusUa13}
-                                                src={UA13}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+                                    <img src={e.imgUrl} alt="" style={{width:'89%', height:"200px"}}/>
+                                
+                                    <div className={style.playDiv} >
+                                        <p className={style.movieName}>Name of Movie</p>
+                                        <div style={{display:"flex"}}>
+                                            <p>2021 <img className={style.subtitleImg} src={addToWishlist} /></p>
+                                            <img className={style.plusUa13} src={UA13}/>
+                                        </div> 
+                                    </div>   
+                                </div>  
+                            )
+                        })
+                  }  
+            </div>
 
                     <div className={style.recommended23}>
                         <h2
@@ -189,12 +194,12 @@ function Watchlist() {
                     </div>
                 </div>
             </div>
-            <div
+            {/* <div
                 style={{
                     height: "30px",
                     background: "#0F171E",
                 }}
-            ></div>
+            ></div> */}
         </>
     );
 }

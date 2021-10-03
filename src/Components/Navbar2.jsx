@@ -3,51 +3,50 @@ import styles from "./Modules_Css/Navbar2.module.css";
 import Primelogo from "../images/Primelogo.svg";
 import LanguageEnLogo from "../images/Nav1_LanguageEnglishLogo.svg";
 import { Link, useHistory } from "react-router-dom";
-import dropdownIcon from '../images/dropdownSign.svg'
-import userImageIcon from '../images/userImageIcon.png'
-import searchIcon from '../images/searchIcon.svg'
+import dropdownIcon from "../images/dropdownSign.svg";
+import userImageIcon from "../images/userImageIcon.png";
+import searchIcon from "../images/searchIcon.svg";
 import kidIcon_dropdown from "../images/kidIcon_dropdown.svg";
 import addIcon_dropdown from "../images/addIcon_dropdown.svg";
 import close_X_search_button from "../images/close_X_search_button.svg";
 import bhanu from "../images/bhanu.png";
 import axios from "axios";
-import debounce  from "lodash.debounce";
+import debounce from "lodash.debounce";
 import { AuthContext } from "./Context/AuthContext";
 
 const pageDisplay = {
-    "textDecoration": "underline",
-    "color": "#ffffff"
-}
-const empty = {
+    textDecoration: "underline",
+    color: "#ffffff",
 };
+const empty = {};
 
-export const Navbar2 = ({ displayPage}) => {
+export const Navbar2 = ({ displayPage }) => {
     const [displayDD, setDisplayDD] = useState(false);
-    const [searchItem, setSearchItem] = useState('');
-    const [searchItem1, setSearchItem1] = useState('');
+    const [searchItem, setSearchItem] = useState("");
+    const [searchItem1, setSearchItem1] = useState("");
     const [storeSearchResult, setStoreSearchResult] = useState([]);
     const [closeDisplay, setCloseDisplay] = useState(false);
     const [userDetail, setUserDetail] = useState([]);
     const { isAuth, toggleAuth } = useContext(AuthContext);
     const history = useHistory();
-    
-    const handleSearch = async() => {
+
+    const handleSearch = async () => {
         let res = await axios.get(
             `http://www.omdbapi.com/?s=${searchItem}&i=tt4559006&apikey=3b96dacc&_limit=5`
         );
         if (res.data.Search !== undefined) {
             setStoreSearchResult(res.data.Search);
         }
-    }
+    };
 
-    const getUserDetail = async() => {
+    const getUserDetail = async () => {
         let res = await axios.get("/users/userLoginDetail");
         setUserDetail(res.data[0]);
-    }
+    };
 
     useEffect(() => {
-        getUserDetail()
-    }, [])
+        getUserDetail();
+    }, []);
 
     useEffect(() => {
         handleSearch();
@@ -58,36 +57,34 @@ export const Navbar2 = ({ displayPage}) => {
         setDisplayDD(false);
     }, [displayPage]);
 
-    const deb = useCallback(
-        debounce((txt) => setSearchItem(txt), 500)
-    );
+    const deb = useCallback(debounce((txt) => setSearchItem(txt), 500));
 
     const handleText = (e) => {
-        console.log('e:', e)
+        console.log("e:", e);
         let txt = e.target.value;
         setCloseDisplay(true);
-        setSearchItem1(txt)
-        deb(txt)
-    }
+        setSearchItem1(txt);
+        deb(txt);
+    };
 
     const closeButtonSearch = () => {
-        setCloseDisplay(false)
-        setSearchItem1('')
-    }
+        setCloseDisplay(false);
+        setSearchItem1("");
+    };
 
     const handleSignout = async () => {
-       let res = await axios.delete("/users/userSignout")
-        console.log(res.data)
-        toggleAuth('false');
-        history.push('/');
-    }
+        let res = await axios.delete("/users/userSignout");
+        console.log(res.data);
+        toggleAuth("false");
+        history.push("/");
+    };
 
     return (
         <>
             <div className={styles.nav2_mainDiv}>
                 <div className={styles.nav2_leftDiv}>
                     <div className={styles.nav2_leftDiv_primelogo}>
-                        <img src={Primelogo} alt="" />
+                        <Link to='/home'><img src={Primelogo} alt="" /></Link>
                     </div>
                     <div className={styles.nav2_leftDiv_home}>
                         <Link

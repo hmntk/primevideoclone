@@ -133,4 +133,18 @@
     z-index: -1;
 }
 
+.recommended {
+	width: 95%;
+	margin: 20px 30px 0px;
+}
+
+
+.recommendedHeading {
+	font-size: 18px;
+	line-height: 22px;
+	color: #ffffff;
+	margin-bottom: 10px;
+    cursor: pointer;
+}
+
 

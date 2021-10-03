@@ -155,29 +155,30 @@ function TvShows() {
                     <Slider {...settings}>
                         {continu.map((el) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{ width: "0px", marginLeft: "10px" }}
                                 >
-                                    <video
-                                        muted
-                                        className="howerEffect"
-                                        poster={el.imgUrl}
-                                        onMouseEnter={(e) => {
-                                            e.target.src = el.videoUrl;
-                                            e.target.play();
-                                        }}
-                                        onMouseOut={(e) => {
-                                            e.target.pause();
-                                            e.target.src = el.videoUrl;
-                                        }}
-                                        src={el.videoUrl}
-                                        style={{
-                                            width: "250px",
-                                            height: "146px",
-                                        }}
-                                    />
-                                </div></Link>
+                                    <Link to="/moviedetail">
+                                        <video
+                                            muted
+                                            className="howerEffect"
+                                            poster={el.imgUrl}
+                                            onMouseEnter={(e) => {
+                                                e.target.src = el.videoUrl;
+                                                e.target.play();
+                                            }}
+                                            onMouseOut={(e) => {
+                                                e.target.pause();
+                                                e.target.src = el.videoUrl;
+                                            }}
+                                            src={el.videoUrl}
+                                            style={{
+                                                width: "250px",
+                                                height: "146px",
+                                            }}
+                                        />
+                                    </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -191,10 +192,11 @@ function TvShows() {
                 <div>
                     <Slider {...settings}>
                         {original.map((el) => {
-                            return (<Link to="/moviedetail">
+                            return (
                                 <div
                                     style={{ width: "0px", marginLeft: "10px" }}
                                 >
+                                    <Link to="/moviedetail">
                                     <video
                                         muted
                                         className="howerEffect"
@@ -213,8 +215,8 @@ function TvShows() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -229,13 +231,13 @@ function TvShows() {
                     <Slider {...settings}>
                         {toprated.map((e) => {
                             return (
-                                <Link to="/moviedetail">
+                                
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
-                                >
+                                ><Link to="/moviedetail">
                                     <img
                                         src={e.imgUrl}
                                         alt=""
@@ -244,8 +246,8 @@ function TvShows() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -260,13 +262,13 @@ function TvShows() {
                     <Slider {...settings}>
                         {popular.map((e) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
                                 >
+                                    <Link to="/moviedetail">
                                     <img
                                         src={e.imgUrl}
                                         alt=""
@@ -275,8 +277,8 @@ function TvShows() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -291,13 +293,13 @@ function TvShows() {
                     <Slider {...settings}>
                         {action.map((e) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
                                 >
+                                    <Link to="/moviedetail">
                                     <img
                                         src={e.imgUrl}
                                         alt=""
@@ -306,8 +308,8 @@ function TvShows() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -320,13 +322,13 @@ function TvShows() {
                     <Slider {...settings}>
                         {kids.map((e) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
                                 >
+                                    <Link to="/moviedetail">
                                     <img
                                         src={e.imgUrl}
                                         alt=""
@@ -335,8 +337,8 @@ function TvShows() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -349,13 +351,13 @@ function TvShows() {
                     <Slider {...settings}>
                         {dubbed.map((e) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
                                 >
+                                    <Link to="/moviedetail">
                                     <img
                                         src={e.imgUrl}
                                         alt=""
@@ -364,8 +366,8 @@ function TvShows() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -378,13 +380,13 @@ function TvShows() {
                     <Slider {...settings}>
                         {thriller.map((e) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
                                 >
+                                    <Link to="/moviedetail">
                                     <img
                                         src={e.imgUrl}
                                         alt=""
@@ -393,8 +395,8 @@ function TvShows() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -407,13 +409,13 @@ function TvShows() {
                     <Slider {...settings}>
                         {telgu.map((e) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
                                 >
+                                    <Link to="/moviedetail">
                                     <img
                                         src={e.imgUrl}
                                         alt=""
@@ -422,8 +424,8 @@ function TvShows() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>

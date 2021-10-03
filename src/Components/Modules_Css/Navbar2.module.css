@@ -41,12 +41,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid #67757e;
 }
 
 .nav2_rightDiv_search:hover {
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255);
+    border: 1px solid #8197a4;
 }
 
 .nav2_rightDiv_signIn {

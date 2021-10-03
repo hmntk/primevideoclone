@@ -185,10 +185,10 @@ function MoviesTabPage() {
                     <Slider {...settings}>
                         {continu.map((el) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{ width: "0px", marginLeft: "10px" }}
                                 >
+                                <Link to="/moviedetail">
                                     <video
                                         muted
                                         className="movieHower"
@@ -207,8 +207,8 @@ function MoviesTabPage() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -250,10 +250,10 @@ function MoviesTabPage() {
                     <Slider {...settings}>
                         {popular.map((el) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{ width: "0px", marginLeft: "10px" }}
                                 >
+                                <Link to="/moviedetail">
                                     <video
                                         muted
                                         className="howerEffect"
@@ -272,8 +272,8 @@ function MoviesTabPage() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -286,10 +286,10 @@ function MoviesTabPage() {
                     <Slider {...settings}>
                         {marathi.map((el) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{ width: "0px", marginLeft: "10px" }}
                                 >
+                                <Link to="/moviedetail">
                                     <video
                                         muted
                                         className="howerEffect"
@@ -308,8 +308,8 @@ function MoviesTabPage() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -322,10 +322,10 @@ function MoviesTabPage() {
                     <Slider {...settings}>
                         {kids.map((el) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{ width: "0px", marginLeft: "10px" }}
                                 >
+                                <Link to="/moviedetail">
                                     <video
                                         muted
                                         className="howerEffect"
@@ -344,8 +344,8 @@ function MoviesTabPage() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -358,10 +358,10 @@ function MoviesTabPage() {
                     <Slider {...settings}>
                         {horrer.map((el) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{ width: "0px", marginLeft: "10px" }}
                                 >
+                                <Link to="/moviedetail">
                                     <video
                                         muted
                                         className="howerEffect"
@@ -380,8 +380,8 @@ function MoviesTabPage() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -394,10 +394,10 @@ function MoviesTabPage() {
                     <Slider {...settings}>
                         {dubbed.map((el) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{ width: "0px", marginLeft: "10px" }}
                                 >
+                                <Link to="/moviedetail">
                                     <video
                                         muted
                                         className="howerEffect"
@@ -416,8 +416,8 @@ function MoviesTabPage() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -430,10 +430,10 @@ function MoviesTabPage() {
                     <Slider {...settings}>
                         {thriller.map((el) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{ width: "0px", marginLeft: "10px" }}
                                 >
+                                <Link to="/moviedetail">
                                     <video
                                         muted
                                         className="howerEffect"
@@ -452,8 +452,8 @@ function MoviesTabPage() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -466,10 +466,10 @@ function MoviesTabPage() {
                     <Slider {...settings}>
                         {telgu.map((el) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{ width: "0px", marginLeft: "10px" }}
                                 >
+                                <Link to="/moviedetail">
                                     <video
                                         muted
                                         className="howerEffect"
@@ -488,8 +488,8 @@ function MoviesTabPage() {
                                             height: "146px",
                                         }}
                                     />
-                                </div>
                                 </Link>
+                                </div>
                             );
                         })}
                     </Slider>

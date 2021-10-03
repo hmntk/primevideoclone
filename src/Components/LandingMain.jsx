@@ -9,7 +9,7 @@ import marathi from "../images/marathi.png";
 import telugu from "../images/telugu.png";
 import axios from "axios";
 import "./carausol.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 // import "../style/hower.css";
 import Play from "../images/Play.png";
 import plus from "../images/plus.png";
@@ -18,11 +18,13 @@ import UA13 from "../images/UA13.png";
 import "../style/Movies.css";
 import addToWishlist from "../images/addToWishlist.png"
 import { Link } from "react-router-dom";
-
+import { UserContext } from "./Context/userContext";
 
 
 function LandingMain() {
 
+    const { handleUserId } = useContext(UserContext);
+    const [storeUser, setStoreUser] = useState([]);
     const [popular, setPopular] = useState([]);
     const [original, setOriginal] = useState([]);
     const [toprated, setToprated] = useState([]);
@@ -39,8 +41,19 @@ function LandingMain() {
         dataFetch();
         dataFetchForContinue();
         dataFetchForkidsCumRecommended();
+        handleWatchlist();
     }, []);
     
+    const handleWatchlist = async () => {
+        const res = await axios.get("/users/userLoginDetail")
+        console.log("loginData", res.data);
+        setStoreUser(res.data[0]);
+    };
+
+    if (storeUser._id != "") {
+        handleUserId(storeUser._id);
+    }
+
     const dataFetchForContinue = async () => {
         const res = await axios.get("/continue");
         console.log(res.data[0].recommended);
@@ -402,22 +415,23 @@ function LandingMain() {
                     <Slider {...settings}>
                         {popular.map((e) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
                                 >
-                                    <img
-                                        src={e.imgUrl}
-                                        alt=""
-                                        style={{
-                                            width: "250px",
-                                            height: "146px",
-                                        }}
-                                    />
-                                </div></Link>
+                                    <Link to="/moviedetail">
+                                        <img
+                                            src={e.imgUrl}
+                                            alt=""
+                                            style={{
+                                                width: "250px",
+                                                height: "146px",
+                                            }}
+                                        />
+                                    </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -432,22 +446,23 @@ function LandingMain() {
                     <Slider {...settings}>
                         {action.map((e) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
                                 >
-                                    <img
-                                        src={e.imgUrl}
-                                        alt=""
-                                        style={{
-                                            width: "250px",
-                                            height: "146px",
-                                        }}
-                                    />
-                                </div></Link>
+                                    <Link to="/moviedetail">
+                                        <img
+                                            src={e.imgUrl}
+                                            alt=""
+                                            style={{
+                                                width: "250px",
+                                                height: "146px",
+                                            }}
+                                        />
+                                    </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -460,22 +475,23 @@ function LandingMain() {
                     <Slider {...settings}>
                         {telgu.map((e) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
                                 >
-                                    <img
-                                        src={e.imgUrl}
-                                        alt=""
-                                        style={{
-                                            width: "250px",
-                                            height: "146px",
-                                        }}
-                                    />
-                                </div></Link>
+                                    <Link to="/moviedetail">
+                                        <img
+                                            src={e.imgUrl}
+                                            alt=""
+                                            style={{
+                                                width: "250px",
+                                                height: "146px",
+                                            }}
+                                        />
+                                    </Link>
+                                </div>
                             );
                         })}
                     </Slider>
@@ -490,22 +506,23 @@ function LandingMain() {
                     <Slider {...settings}>
                         {toprated.map((e) => {
                             return (
-                                <Link to="/moviedetail">
                                 <div
                                     style={{
                                         width: "26px",
                                         marginLeft: "10px",
                                     }}
                                 >
-                                    <img
-                                        src={e.imgUrl}
-                                        alt=""
-                                        style={{
-                                            width: "250px",
-                                            height: "146px",
-                                        }}
-                                    />
-                                </div></Link>
+                                    <Link to="/moviedetail">
+                                        <img
+                                            src={e.imgUrl}
+                                            alt=""
+                                            style={{
+                                                width: "250px",
+                                                height: "146px",
+                                            }}
+                                        />
+                                    </Link>
+                                </div>
                             );
                         })}
                     </Slider>
