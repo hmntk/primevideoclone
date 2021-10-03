@@ -7,21 +7,37 @@ import plus from "../images/plus.png"
 import stop from "../images/stop.png" 
 import UA13 from "../images/UA13.png"
 import addToWishlist from "../images/addToWishlist.png"
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { UserContext } from "./Context/userContext";
 
 
 function Watchlist() {
-
+ 
+    const { userId } = useContext(UserContext);
+    const [storeUser, setStoreUser] = useState([]);
     const [list, setList] = useState([]);
 
-    // useEffect(() => {
-    //     fetchUserWatchList();
-    // })
+    useEffect(() => {
+       // handleWatchlist();
+        fetchUserWatchList();
+    },[]);
 
-    // const fetchUserWatchList = async () => {
-    //     const res = await axios.get();
-    // }
+     const handleWatchlist = async () => {
+        const res = await axios.get("/users/userLoginDetail")
+        console.log("loginData", res.data);
+         setStoreUser(res.data[0]);
+    };
+
+    const fetchUserWatchList = async () => {
+        // console.log("id",storeUser)
+        // const id = storeUser._id;  
+        console.log("userId", userId);
+        const res = await axios.get(`/users/userData${userId}`);
+        console.log(res.data);
+        setList(res.data.wishList);
+    }
+
 
     const dummyList = [
         {
@@ -109,10 +125,10 @@ function Watchlist() {
 
             <div className={style.showGrid}>
                     {
-                        recommended.map((e) => {
+                        list.map((e) => {
                             return (
                                 <div className={style.watchlistEveryDiv}>
-                                <img src={e.imgUrl} alt="" />
+                                    <img src={e.imgUrl} alt="" style={{width:"355px", height:"200px"}}/>
                                 
                                     <div className={style.playDiv} >
                                         <p className={style.movieName}>Name of Movie</p>

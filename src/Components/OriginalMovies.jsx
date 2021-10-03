@@ -6,6 +6,7 @@ import Play from "../images/Play.png";
 import plus from "../images/plus.png";
 import stop from "../images/stop.png";
 import UA13 from "../images/UA13.png";
+import vector from "../images/Vector.png"
 import addToWishlist from "../images/addToWishlist.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -14,10 +15,27 @@ import axios from "axios";
 function OriginalMovies() {
 
     const [original, setOriginal] = useState([]);
+    const [storeUser, setStoreUser] = useState([]);
+    const [status, setStatus] = useState(false);
 
     useEffect(() => {
-        dataFetchForOriginal();
+         dataFetchForOriginal();
+        handleWatchlist();
     }, []);
+
+    const handleWatchlist = async () => {
+        const res = await axios.get("/users/userLoginDetail")
+        console.log("loginData", res.data);
+        setStoreUser(res.data[0]);
+    };
+
+
+    const handleAddToWatchList = async (el) => {   
+        console.log(el);
+        const id = storeUser._id;
+        const res = await axios.patch(`/users/watched${id}`, el);
+    };
+
 
     const dataFetchForOriginal = async () => {
         const res = await axios.get("/OriginalMovies");
@@ -93,7 +111,7 @@ function OriginalMovies() {
                                         <p className={style.movieName}>{el.title}</p>
                                         <div style={{display:"flex"}}>
                                             <p style={{marginTop:"5px"}}>{el.year} <img className={style.subtitleImg} src={addToWishlist} /></p>
-                                            <img className={style.plusImg} src={plus}/>
+                                            <img className={style.plusImg} src={plus}  onClick={()=>{handleAddToWatchList(el)}}/>
                                         </div> 
                                     </div>   
                                 </div>  
