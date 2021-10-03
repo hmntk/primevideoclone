@@ -46,7 +46,7 @@ All the resources which are used in the project either we fetch those from main 
 We don't have anykind of ownership over any resources. All images are taken from pepperfry.com are only for educational and learning puropose. We have no copyrights over
 images, icons or fonts.
 
-Deploy Link -
+Deploy Link -  https://primevideoclone.vercel.app/
 
 KEY CONTRIBUTIONS :-
 
