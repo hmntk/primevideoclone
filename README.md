@@ -27,11 +27,13 @@ Tools & Technology Used:
 
 Guide to Project:
 
-
-
-
-
-We have Implemented Sign Up and Login Functionality where we are storing users details in the mongoose atlas database.
+* on the welcome page it shows the benifits of joining Prime video subscription and on clicking on get started it redirects to signin page from where user can sign In or create accounnt if new to prime .
+* We have Implemented Sign In and create Account Functionality where we are storing users details in the mongoose atlas database.
+* After creating the account user will get an option to select prime subscription and then he will be redirected to the Payment Page where he can pay the required amount .
+* Then user will be taken to the Home Page , where user can see a variety of movies like Kids and family movies , popular movies , Action and Adventure movies , Recommended movies , etc.. 
+* we have added sliders for each of the movies categories , where the user can slide to see more movies .
+* In the Navbar there are links to other pages also like Tv shows , Movies and Kids Section . Also in the Navbar there is a searchbar  , and from here user can search for any movie . We have implemented debouncing in the searchbar also .
+* On Clicking on any movie user can see the detailed information about the movie like Movie Name , IMDb Rating ,  Small Summary , Release date , Movie Genere , option to add to washlist etc...
 
 So this is basically our project. We were four members in the team and we completed the whole project in the construct week timeline.
 
@@ -43,6 +45,8 @@ Credit:
 All the resources which are used in the project either we fetch those from main website or we take from google. All the resources are belongs to their respective owners. 
 We don't have anykind of ownership over any resources. All images are taken from pepperfry.com are only for educational and learning puropose. We have no copyrights over
 images, icons or fonts.
+
+Deploy Link -
 
 KEY CONTRIBUTIONS :-
 
