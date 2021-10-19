@@ -11,7 +11,9 @@ export const Navbar3 = () => {
     const [userDetail, setUserDetail] = useState([]);
 
 const getUserDetail = async () => {
-    let res = await axios.get("/users/userLoginDetail");
+    let res = await axios.get(
+        "https://cryptic-garden-15081.herokuapp.com/users/userLoginDetail"
+    );
     console.log("my_res:", res.data[0]);
     setUserDetail(res.data[0]);
 };

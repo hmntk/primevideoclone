@@ -16,13 +16,11 @@ import plus from "../images/plus.png";
 import stop from "../images/stop.png";
 import UA13 from "../images/UA13.png";
 import "../style/Movies.css";
-import addToWishlist from "../images/addToWishlist.png"
+import addToWishlist from "../images/addToWishlist.png";
 import { Link } from "react-router-dom";
 import { UserContext } from "./Context/userContext";
 
-
 function LandingMain() {
-
     const { handleUserId } = useContext(UserContext);
     const [storeUser, setStoreUser] = useState([]);
     const [popular, setPopular] = useState([]);
@@ -43,9 +41,11 @@ function LandingMain() {
         dataFetchForkidsCumRecommended();
         handleWatchlist();
     }, []);
-    
+
     const handleWatchlist = async () => {
-        const res = await axios.get("/users/userLoginDetail")
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/users/userLoginDetail"
+        );
         console.log("loginData", res.data);
         setStoreUser(res.data[0]);
     };
@@ -55,17 +55,23 @@ function LandingMain() {
     }
 
     const dataFetchForContinue = async () => {
-        const res = await axios.get("/continue");
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/continue"
+        );
         console.log(res.data[0].recommended);
         setContinu(res.data[0].recommended);
-    }
+    };
 
-     const dataFetchForkidsCumRecommended = async () => {
-        const res = await axios.get("/kids");
-         setKids(res.data[0].kidsAndFamilyMovies);
-    }
+    const dataFetchForkidsCumRecommended = async () => {
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/kids"
+        );
+        setKids(res.data[0].kidsAndFamilyMovies);
+    };
     const dataFetch = async () => {
-        const res = await axios.get("/prime");
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/prime"
+        );
         console.log(res.data[0]);
         setPopular(res.data[0].PopularMovies);
         setOriginal(res.data[0].AmazonOriginalMovies);
@@ -74,7 +80,7 @@ function LandingMain() {
         setThriller(res.data[0].ThrillerMovies);
         setDubbed(res.data[0].MoviesDubbedInHindi);
         setTelgu(res.data[0].TeluguMovies);
-    }
+    };
 
     const settings = {
         infinite: true,
@@ -83,91 +89,88 @@ function LandingMain() {
         width: "269px",
     };
 
-
-     const settingsLanguage = {
+    const settingsLanguage = {
         infinite: true,
         slidesToShow: 8,
         slidesToScroll: 3,
-         width: "269px",
-        
+        width: "269px",
     };
 
     const recommended = [
         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/94eabbaa620f5da40abdbd02587e6faa169838b28d2faf4d188e6ec1a28b9634._UR1920,1080_RI_SX356_FMwebp_.jpg",
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/94eabbaa620f5da40abdbd02587e6faa169838b28d2faf4d188e6ec1a28b9634._UR1920,1080_RI_SX356_FMwebp_.jpg",
         },
-         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/7cd672232f542925bce006887946293883c698b57821a668bab1c85795a93233._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        {
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/7cd672232f542925bce006887946293883c698b57821a668bab1c85795a93233._UR1920,1080_RI_SX356_FMwebp_.jpg",
         },
-          {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/4157149fd198b33b353ead1e45328f8b9aafc816826ed953bda0c97b25897259._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        {
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/4157149fd198b33b353ead1e45328f8b9aafc816826ed953bda0c97b25897259._UR1920,1080_RI_SX356_FMwebp_.jpg",
         },
-           {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/f387592b927d1b21ace38e9f42f2525d4ec9f1b66029cd32ed8e96f873263b33._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        {
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/f387592b927d1b21ace38e9f42f2525d4ec9f1b66029cd32ed8e96f873263b33._UR1920,1080_RI_SX356_FMwebp_.jpg",
         },
-            {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/221c6de30cbbfa729760fbb648c2ce2967eef09996a2ae7b6f8b68c003de0a95._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        {
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/221c6de30cbbfa729760fbb648c2ce2967eef09996a2ae7b6f8b68c003de0a95._UR1920,1080_RI_SX356_FMwebp_.jpg",
         },
-             {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/d71f272ec92a04236f123f934e810b99ae855f6f9a15ebc771115a9122696c9f._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        {
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/d71f272ec92a04236f123f934e810b99ae855f6f9a15ebc771115a9122696c9f._UR1920,1080_RI_SX356_FMwebp_.jpg",
         },
-         {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/94d515b0c5e14f12c842cc52a254e0f15c586782076ea5e3ade3bba286b58228._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        {
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/94d515b0c5e14f12c842cc52a254e0f15c586782076ea5e3ade3bba286b58228._UR1920,1080_RI_SX356_FMwebp_.jpg",
         },
-          {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/6e323fc56618beed340bb15edb735dbae73162d812debae9b746f4d9c9eede5f._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        {
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/6e323fc56618beed340bb15edb735dbae73162d812debae9b746f4d9c9eede5f._UR1920,1080_RI_SX356_FMwebp_.jpg",
         },
-           {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/aed3ef6cf3a23590a421d0765d1ed1238cef16f4de02840efe7b00033ab2815a._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        {
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/aed3ef6cf3a23590a421d0765d1ed1238cef16f4de02840efe7b00033ab2815a._UR1920,1080_RI_SX356_FMwebp_.jpg",
         },
-            {
-            imgUrl:"https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/bee4c34123ee1b254dc1d55abc8f708b34a3827892588d6819d5c20fd6a5da13._UR1920,1080_RI_SX356_FMwebp_.jpg",
+        {
+            imgUrl: "https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/bee4c34123ee1b254dc1d55abc8f708b34a3827892588d6819d5c20fd6a5da13._UR1920,1080_RI_SX356_FMwebp_.jpg",
         },
-    ]
+    ];
     const language = [
         {
             imgPath: english,
         },
-         {
+        {
             imgPath: marathi,
         },
-          {
+        {
             imgPath: telugu,
         },
-           {
+        {
             imgPath: kanadaa,
         },
-            {
+        {
             imgPath: lang7,
         },
-             {
+        {
             imgPath: telugu,
         },
-             {
+        {
             imgPath: kanadaa,
         },
-             {
+        {
             imgPath: marathi,
         },
-             {
+        {
             imgPath: telugu,
         },
-             {
+        {
             imgPath: lang7,
         },
-             {
+        {
             imgPath: english,
         },
-             
-    ]
-   
+    ];
+
     const handleWatchLish = (el) => {
         //console.log(el);
-    }
+    };
 
     console.log(popular);
     return (
-        <div style={{ background: "#0F171E", marginBottom:'-20px' }}>
+        <div style={{ background: "#0F171E", marginBottom: "-20px" }}>
             <div
                 style={{
                     margin: "24px",
@@ -241,34 +244,37 @@ function LandingMain() {
                         {continu.map((el) => {
                             return (
                                 <>
-                                   <Link to="/moviedetail"> <div
-                                        onClick={() => {
-                                            handleWatchLish(el);
-                                        }}
-                                        style={{
-                                            width: "26px",
-                                            marginLeft: "10px",
-                                        }}
-                                    >
-                                        <video
-                                            muted
-                                            className="howerEffect"
-                                            poster={el.imgUrl}
-                                            onMouseEnter={(e) => {
-                                                e.target.src = el.videoUrl;
-                                                e.target.play();
+                                    <Link to="/moviedetail">
+                                        {" "}
+                                        <div
+                                            onClick={() => {
+                                                handleWatchLish(el);
                                             }}
-                                            onMouseOut={(e) => {
-                                                e.target.pause();
-                                                e.target.src = el.videoUrl;
-                                            }}
-                                            src={el.videoUrl}
                                             style={{
-                                                width: "250px",
-                                                height: "146px",
+                                                width: "26px",
+                                                marginLeft: "10px",
                                             }}
-                                        />
-                                    </div></Link>
+                                        >
+                                            <video
+                                                muted
+                                                className="howerEffect"
+                                                poster={el.imgUrl}
+                                                onMouseEnter={(e) => {
+                                                    e.target.src = el.videoUrl;
+                                                    e.target.play();
+                                                }}
+                                                onMouseOut={(e) => {
+                                                    e.target.pause();
+                                                    e.target.src = el.videoUrl;
+                                                }}
+                                                src={el.videoUrl}
+                                                style={{
+                                                    width: "250px",
+                                                    height: "146px",
+                                                }}
+                                            />
+                                        </div>
+                                    </Link>
                                 </>
                             );
                         })}
@@ -325,22 +331,24 @@ function LandingMain() {
                     <Slider {...settingsLanguage}>
                         {language.map((e) => {
                             return (
-                                <Link to="/moviedetail"><div
-                                    className="howerEffect"
-                                    style={{
-                                        width: "26px",
-                                        marginLeft: "10px",
-                                    }}
-                                >
-                                    <img
-                                        src={e.imgPath}
-                                        alt=""
+                                <Link to="/moviedetail">
+                                    <div
+                                        className="howerEffect"
                                         style={{
-                                            width: "128px",
-                                            height: "126px",
+                                            width: "26px",
+                                            marginLeft: "10px",
                                         }}
-                                    />
-                                </div></Link>
+                                    >
+                                        <img
+                                            src={e.imgPath}
+                                            alt=""
+                                            style={{
+                                                width: "128px",
+                                                height: "126px",
+                                            }}
+                                        />
+                                    </div>
+                                </Link>
                             );
                         })}
                     </Slider>
@@ -358,21 +366,22 @@ function LandingMain() {
                         {original.map((e) => {
                             return (
                                 <Link to="/moviedetail">
-                                <div
-                                    style={{
-                                        width: "26px",
-                                        marginLeft: "10px",
-                                    }}
-                                >
-                                    <img
-                                        src={e.imgUrl}
-                                        alt=""
+                                    <div
                                         style={{
-                                            width: "250px",
-                                            height: "146px",
+                                            width: "26px",
+                                            marginLeft: "10px",
                                         }}
-                                    />
-                                </div></Link>
+                                    >
+                                        <img
+                                            src={e.imgUrl}
+                                            alt=""
+                                            style={{
+                                                width: "250px",
+                                                height: "146px",
+                                            }}
+                                        />
+                                    </div>
+                                </Link>
                             );
                         })}
                     </Slider>
@@ -388,21 +397,22 @@ function LandingMain() {
                         {recommended.map((e) => {
                             return (
                                 <Link to="/moviedetail">
-                                <div
-                                    style={{
-                                        width: "26px",
-                                        marginLeft: "10px",
-                                    }}
-                                >
-                                    <img
-                                        src={e.imgUrl}
-                                        alt=""
+                                    <div
                                         style={{
-                                            width: "250px",
-                                            height: "146px",
+                                            width: "26px",
+                                            marginLeft: "10px",
                                         }}
-                                    />
-                                </div></Link>
+                                    >
+                                        <img
+                                            src={e.imgUrl}
+                                            alt=""
+                                            style={{
+                                                width: "250px",
+                                                height: "146px",
+                                            }}
+                                        />
+                                    </div>
+                                </Link>
                             );
                         })}
                     </Slider>

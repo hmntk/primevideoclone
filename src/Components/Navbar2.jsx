@@ -40,13 +40,15 @@ export const Navbar2 = ({ displayPage }) => {
     };
 
     const getUserDetail = async () => {
-        let res = await axios.get("/users/userLoginDetail");
+        let res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/users/userLoginDetail"
+        );
         setUserDetail(res.data[0]);
     };
-
-    useEffect(() => {
-        getUserDetail();
-    }, []);
+//cryptic-garden-15081.herokuapp.com
+https: useEffect(() => {
+    getUserDetail();
+}, []);
 
     useEffect(() => {
         handleSearch();
@@ -73,7 +75,9 @@ export const Navbar2 = ({ displayPage }) => {
     };
 
     const handleSignout = async () => {
-        let res = await axios.delete("/users/userSignout");
+        let res = await axios.delete(
+            "https://cryptic-garden-15081.herokuapp.com/users/userSignout"
+        );
         console.log(res.data);
         toggleAuth("false");
         history.push("/");

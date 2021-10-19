@@ -30,17 +30,23 @@ function TvShows() {
     }, []);
     
      const dataFetchForContinue = async () => {
-        const res = await axios.get("/continue");
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/continue"
+        );
         setContinu(res.data[0].recommended);
     }
 
       const dataFetchForOriginal = async () => {
-        const res = await axios.get("/OriginalMovies");
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/OriginalMovies"
+        );
           setOriginal(res.data[0].AmazonOriginalMovies);
     }
 
     const dataFetch = async () => {
-        const res = await axios.get("/prime");
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/prime"
+        );
         console.log(res.data[0]);
         setPopular(res.data[0].PopularMovies);
         setToprated(res.data[0].AmazonOriginalSeries);

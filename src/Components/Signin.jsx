@@ -25,7 +25,10 @@ const Signin = () => {
 
     const sendDataToDatabase = async (e) => {
         e.preventDefault();
-        let res = await axios.post(`/users/logindata`, signinData);
+        let res = await axios.post(
+            `https://cryptic-garden-15081.herokuapp.com/users/logindata`,
+            signinData
+        );
         if (res.data === 'Invalid credentials') {
             setError(true);
             setErrorData("Invalid credentials");

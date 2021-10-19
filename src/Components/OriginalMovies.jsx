@@ -22,7 +22,9 @@ function OriginalMovies() {
     }, []);
 
     const handleWatchlist = async () => {
-        const res = await axios.get("/users/userLoginDetail");
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/users/userLoginDetail"
+        );
         console.log("loginData", res.data);
         setStoreUser(res.data[0]);
     };
@@ -30,11 +32,16 @@ function OriginalMovies() {
     const handleAddToWatchList = async (el) => {
         console.log(el);
         const id = storeUser._id;
-        const res = await axios.patch(`/users/watched${id}`, el);
+        const res = await axios.patch(
+            `https://cryptic-garden-15081.herokuapp.com/users/watched${id}`,
+            el
+        );
     };
 
     const dataFetchForOriginal = async () => {
-        const res = await axios.get("/OriginalMovies");
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/OriginalMovies"
+        );
         setOriginal(res.data[0].AmazonOriginalMovies);
     };
 

@@ -28,13 +28,17 @@ function MoviesTabPage() {
     }, []);
     
      const dataFetchForContinue = async () => {
-        const res = await axios.get("/continue");
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/continue"
+        );
         console.log(res.data[0].recommended);
         setContinu(res.data[0].recommended);
     }
 
     const dataFetch = async () => {
-        const res = await axios.get("/prime");
+        const res = await axios.get(
+            "https://cryptic-garden-15081.herokuapp.com/prime"
+        );
         console.log(res.data[0]);
         setPopular(res.data[0].PopularMovies);
         setOriginal(res.data[0].AmazonOriginalMovies);

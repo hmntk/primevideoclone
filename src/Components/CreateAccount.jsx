@@ -29,7 +29,10 @@ const CreateAccount = () => {
         e.preventDefault();
         const {password, confirmPassword } = signUpData;
         if (password === confirmPassword) {
-            let res = await axios.post("/users/signup", signUpData);
+            let res = await axios.post(
+                "https://cryptic-garden-15081.herokuapp.com/users/signup",
+                signUpData
+            );
             if (res.data === 'Email already exist') {
                 setErrorData("Account already exists");
                 setError(true);
