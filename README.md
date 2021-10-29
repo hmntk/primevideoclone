@@ -84,10 +84,10 @@ Your application is now running on http://localhost:5000/
 
 
 All the resources which are used in the project either we fetch those from main website or we take from google. All the resources are belongs to their respective owners. 
-We don't have anykind of ownership over any resources. All images are taken from pepperfry.com are only for educational and learning puropose. We have no copyrights over
+We don't have anykind of ownership over any resources. All images are taken from primevideo.com are only for educational and learning puropose. We have no copyrights over
 images, icons or fonts.
 
-Deploy Link -  https://primevideoclone.vercel.app/
+
 
 ----
 # Team Members:
