@@ -32,7 +32,7 @@ export const Navbar2 = ({ displayPage }) => {
 
     const handleSearch = async () => {
         let res = await axios.get(
-            `http://www.omdbapi.com/?s=${searchItem}&i=tt4559006&apikey=3b96dacc&_limit=5`
+            `https://www.omdbapi.com/?s=${searchItem}&i=tt4559006&apikey=3b96dacc&_limit=5`
         );
         if (res.data.Search !== undefined) {
             setStoreSearchResult(res.data.Search);
