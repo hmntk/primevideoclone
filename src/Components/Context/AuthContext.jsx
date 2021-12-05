@@ -12,10 +12,10 @@ export const AuthContextProvider = ({ children }) => {
 
      const toggleAuth = (tru) => {
          if (tru === "true") {
-             localStorage.setItem("Auth", JSON.stringify(loginTrue));
+             sessionStorage.setItem("Auth", JSON.stringify(loginTrue));
          }
          if (tru === "false") {
-             localStorage.setItem("Auth", JSON.stringify(loginFalse));
+             sessionStorage.setItem("Auth", JSON.stringify(loginFalse));
          }
      }; 
 

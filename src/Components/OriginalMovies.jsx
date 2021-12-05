@@ -34,6 +34,7 @@ function OriginalMovies() {
             `https://cryptic-garden-15081.herokuapp.com/users/watched${id}`,
             el
         );
+        alert('Your video has added to watchlist')
     };
 
     const dataFetchForOriginal = async () => {

@@ -7,13 +7,8 @@ import { useEffect, useState } from "react";
 export const PrivateRoutes = ({ children, path }) => {
     const [userDetail, setUserDetail] = useState([]);
 
-    // const getUserDetail = async () => {
-    //     let res = await axios.get("/users/userLoginDetail");
-    //     console.log("my_res:", res.data);
-    //     setUserDetail(res.data);
-    // };
 
-    let authStatus = localStorage.getItem("Auth");
+    let authStatus = sessionStorage.getItem("Auth");
     console.log('authStatus:', authStatus)
 
     

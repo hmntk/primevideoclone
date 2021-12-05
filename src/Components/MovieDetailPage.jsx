@@ -58,6 +58,7 @@ export const MovieDetailPage = () => {
             `https://cryptic-garden-15081.herokuapp.com/users/watched${id}`,
             AeDil
         );
+        alert("Your video has added to watchlist");
     };
 
      const settings = {
