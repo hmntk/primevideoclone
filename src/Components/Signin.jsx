@@ -21,7 +21,6 @@ const Signin = () => {
         const { name, value } = e.target;
         setsigninData({ ...signinData, [name]: value });
     };
-    //   console.log(formdata);
 
     const sendDataToDatabase = async (e) => {
         e.preventDefault();

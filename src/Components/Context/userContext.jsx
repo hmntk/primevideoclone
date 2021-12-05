@@ -9,7 +9,6 @@ export const UserContextProvider = ({ children }) => {
     const [userId, setUserId] = useState("");
 
     const handleUserId = (id) => {
-        console.log("userContext", id);
         setUserId(id);
     }
    

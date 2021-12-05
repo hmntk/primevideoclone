@@ -34,7 +34,6 @@ export const MovieDetailPage = () => {
         const res = await axios.get(
             "https://cryptic-garden-15081.herokuapp.com/users/userLoginDetail"
         );
-        console.log("loginData", res.data);
         setStoreUser(res.data[0]);
     };
 
@@ -54,7 +53,6 @@ export const MovieDetailPage = () => {
     }
 
     const handleAddToWatchList = async () => {
-        console.log("Adddd");
         const id = storeUser._id;
         const res = await axios.patch(
             `https://cryptic-garden-15081.herokuapp.com/users/watched${id}`,

@@ -28,7 +28,6 @@ function KidsPage() {
         const res = await axios.get(
             "https://cryptic-garden-15081.herokuapp.com/prime"
         );
-        console.log(res.data[0]);
         setRecommend(res.data[0].recommended);
         setPopular(res.data[0].PopularMovies);
         setOriginal(res.data[0].AmazonOriginalMovies);

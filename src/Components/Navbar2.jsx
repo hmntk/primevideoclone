@@ -62,7 +62,6 @@ https: useEffect(() => {
     const deb = useCallback(debounce((txt) => setSearchItem(txt), 500));
 
     const handleText = (e) => {
-        console.log("e:", e);
         let txt = e.target.value;
         setCloseDisplay(true);
         setSearchItem1(txt);
@@ -78,7 +77,6 @@ https: useEffect(() => {
         let res = await axios.delete(
             "https://cryptic-garden-15081.herokuapp.com/users/userSignout"
         );
-        console.log(res.data);
         toggleAuth("false");
         history.push("/");
     };

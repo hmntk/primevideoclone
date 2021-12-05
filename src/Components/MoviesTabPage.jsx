@@ -31,7 +31,6 @@ function MoviesTabPage() {
         const res = await axios.get(
             "https://cryptic-garden-15081.herokuapp.com/continue"
         );
-        console.log(res.data[0].recommended);
         setContinu(res.data[0].recommended);
     }
 
@@ -39,7 +38,6 @@ function MoviesTabPage() {
         const res = await axios.get(
             "https://cryptic-garden-15081.herokuapp.com/prime"
         );
-        console.log(res.data[0]);
         setPopular(res.data[0].PopularMovies);
         setOriginal(res.data[0].AmazonOriginalMovies);
         setToprated(res.data[0].AmazonOriginalSeries);

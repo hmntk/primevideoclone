@@ -11,12 +11,7 @@ import axios from "axios";
 import "./carausol.css";
 import { useState, useEffect, useContext } from "react";
 // import "../style/hower.css";
-import Play from "../images/Play.png";
-import plus from "../images/plus.png";
-import stop from "../images/stop.png";
-import UA13 from "../images/UA13.png";
 import "../style/Movies.css";
-import addToWishlist from "../images/addToWishlist.png";
 import { Link } from "react-router-dom";
 import { UserContext } from "./Context/userContext";
 
@@ -35,7 +30,6 @@ function LandingMain() {
     const [continu, setContinu] = useState([]);
 
     useEffect(() => {
-        console.log("hey I am here");
         dataFetch();
         dataFetchForContinue();
         dataFetchForkidsCumRecommended();
@@ -46,7 +40,6 @@ function LandingMain() {
         const res = await axios.get(
             "https://cryptic-garden-15081.herokuapp.com/users/userLoginDetail"
         );
-        console.log("loginData", res.data);
         setStoreUser(res.data[0]);
     };
 
@@ -58,7 +51,6 @@ function LandingMain() {
         const res = await axios.get(
             "https://cryptic-garden-15081.herokuapp.com/continue"
         );
-        console.log(res.data[0].recommended);
         setContinu(res.data[0].recommended);
     };
 
@@ -72,7 +64,6 @@ function LandingMain() {
         const res = await axios.get(
             "https://cryptic-garden-15081.herokuapp.com/prime"
         );
-        console.log(res.data[0]);
         setPopular(res.data[0].PopularMovies);
         setOriginal(res.data[0].AmazonOriginalMovies);
         setToprated(res.data[0].AmazonOriginalSeries);
@@ -165,10 +156,8 @@ function LandingMain() {
     ];
 
     const handleWatchLish = (el) => {
-        //console.log(el);
     };
 
-    console.log(popular);
     return (
         <div style={{ background: "#0F171E", marginBottom: "-20px" }}>
             <div

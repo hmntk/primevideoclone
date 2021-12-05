@@ -25,18 +25,14 @@ function Watchlist() {
         const res = await axios.get(
             "https://cryptic-garden-15081.herokuapp.com/users/userLoginDetail"
         );
-        console.log("loginData", res.data);
         setStoreUser(res.data[0]);
     };
 
     const fetchUserWatchList = async () => {
-        // console.log("id",storeUser)
         // const id = storeUser._id;
-        console.log("userId", userId);
         const res = await axios.get(
             `https://cryptic-garden-15081.herokuapp.com/users/userData${userId}`
         );
-        console.log(res.data);
         setList(res.data.wishList);
     };
 

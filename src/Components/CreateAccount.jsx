@@ -24,7 +24,6 @@ const CreateAccount = () => {
                 [name]: value,
             })
         })
-    // console.log(signUpData);
     const sendDataToDatabase = async(e) => {
         e.preventDefault();
         const {password, confirmPassword } = signUpData;
