@@ -24,6 +24,11 @@ const Signin = () => {
 
     const sendDataToDatabase = async (e) => {
         e.preventDefault();
+        await axios.delete(
+            "https://cryptic-garden-15081.herokuapp.com/users/userSignout"
+        );
+        toggleAuth("false");
+
         let res = await axios.post(
             `https://cryptic-garden-15081.herokuapp.com/users/logindata`,
             signinData
