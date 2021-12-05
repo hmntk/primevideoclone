@@ -155,8 +155,7 @@ function LandingMain() {
         },
     ];
 
-    const handleWatchLish = (el) => {
-    };
+    const handleWatchLish = (el) => {};
 
     return (
         <div style={{ background: "#0F171E", marginBottom: "-20px" }}>
@@ -171,7 +170,7 @@ function LandingMain() {
                         <img
                             style={{ width: "100%", height: "50vh" }}
                             alt=""
-                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_RARALaunch/0a9db673-4715-4013-9b81-63207f969f17._UR3000,600_SX1500_FMwebp_.jpeg"
+                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_ADHM_Film/en_us-hero_in_adhm_film-3000-600._UR3000,600_SX1500_FMwebp_.jpg"
                         ></img>
                     </div>
                     <div>
@@ -199,7 +198,7 @@ function LandingMain() {
                         <img
                             style={{ width: "100%", height: "50vh" }}
                             alt=""
-                            src="https://m.media-amazon.com/images/G/01/digital/video/sonata/Hero_IN_ADHM_Film/en_us-hero_in_adhm_film-3000-600._UR3000,600_SX1500_FMwebp_.jpg"
+                            src="https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_RARALaunch/0a9db673-4715-4013-9b81-63207f969f17._UR3000,600_SX1500_FMwebp_.jpeg"
                         ></img>
                     </div>
                     <div>
